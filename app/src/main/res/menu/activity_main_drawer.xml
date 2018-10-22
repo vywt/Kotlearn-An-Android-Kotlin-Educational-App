@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_technews"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Tech News" />
+        <item
+            android:id="@+id/nav_techvideos"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Tech Videos" />
+        <item
+            android:id="@+id/nav_kotlinquizzes"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Kotlin Quizzes" />
+        <item
+            android:id="@+id/nav_kotlintutorialvideos"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Kotlin Tutorial Videos" />
+        <item
+            android:id="@+id/nav_javatokotlin"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Java to Kotlin" />
+        <item
+            android:id="@+id/nav_exampleprograms"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Example Programs" />
+    </group>
+
+    <item android:title="Facebook">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send Invite" />
+        </menu>
+    </item>
+
+</menu>
