@@ -28,6 +28,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.kotlearn.kotlearn.IntroHelloWorld"
+            android:label="@string/title_activity_intro_hello_world"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

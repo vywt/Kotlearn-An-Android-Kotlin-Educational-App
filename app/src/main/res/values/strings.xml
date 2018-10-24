@@ -6,4 +6,8 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_basic__syntax">Basic_Syntax</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_intro_hello_world">IntroHelloWorld</string>
+    <string name="helloworld1">A "Hello, World!" is a simple program that outputs Hello, World! on the screen. Since its a very simple program, its often used to introduce a new programming language. \n \n Before you write the program, make sure your computer can run Kotlin. For that visit: How to Run Kotlin on Your Computer? \n \n Let's explore how "Hello, World!" program works in Kotlin.</string>
 </resources>
