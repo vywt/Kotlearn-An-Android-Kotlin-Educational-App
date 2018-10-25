@@ -13,5 +13,5 @@
     <string name="helloworld2"><b>//Hello World Program</b> \n \nAny line starting with // is a comment in Kotlin (similar to Java). Comments are ignored by the compiler. They are intended for person reading the code to better understand the intent and functionality of the program. To learn more, visit Kotlin comments. <b>\n \nfun main(args : Array&lt;String&gt;)</b> { ... }
 \n \nThis is the main function, which is mandatory in every Kotlin application. The Kotlin compiler starts executing the code from the main function.
 \n \nThe function takes array of strings as a parameter and returns Unit. You will learn about functions and parameters in later chapters.
-\n \nFor now, just remember that main function is a mandatory function which is the entry point of every Kotlin program. The signature of main function is:</string>
+\n \nFor now, just remember that main function is a mandatory function which is the entry point of every Kotlin program. The signature of main function is: \n \n</string>
 </resources>
