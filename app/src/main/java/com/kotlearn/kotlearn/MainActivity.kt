@@ -69,7 +69,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             }
             R.id.nav_techvideos -> {
-
+                val myIntent = Intent(this, Intro2VariablesBasicTypes::class.java)
+                startActivity(myIntent)
             }
             R.id.nav_kotlinquizzes -> {
 

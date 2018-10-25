@@ -14,4 +14,9 @@
 \n \nThis is the main function, which is mandatory in every Kotlin application. The Kotlin compiler starts executing the code from the main function.
 \n \nThe function takes array of strings as a parameter and returns Unit. You will learn about functions and parameters in later chapters.
 \n \nFor now, just remember that main function is a mandatory function which is the entry point of every Kotlin program. The signature of main function is: \n \n</string>
+    <string name="title_activity_intro_variables_basic_types">IntroVariablesBasicTypes</string>
+    <string name="title_activity_intro2_variables_basic_types">Intro2VariablesBasicTypes</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

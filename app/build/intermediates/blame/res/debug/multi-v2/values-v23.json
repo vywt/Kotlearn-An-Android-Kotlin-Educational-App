@@ -1,10 +1,21 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/victor/Desktop/kotlinnew/Kotlearn/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
+            "outputFile": "/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/victor/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/bd6fe1c3c9c12c82009e19c2a7fadd83/res/values-v23/values-v23.xml",
+                    "source": "/Users/fabian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/11fc30aae4ff72a06d5fe4c11219d45e/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,19,32,33,34,35,36",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1277,2079,2206,2311,2426,2533",
+                        "endLines": "2,3,4,5,18,31,32,33,34,35,36",
+                        "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
+                        "endOffsets": "185,320,395,482,1272,2074,2201,2306,2421,2528,2641"
+                    }
+                },
+                {
+                    "source": "/Users/fabian/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/8618bd1faf922e0a1aa6e9a9114602cd/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,17 +31,6 @@
                         "endLines": "39",
                         "endColumns": "12",
                         "endOffsets": "2791"
-                    }
-                },
-                {
-                    "source": "/Users/victor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/f081febf64370248056cd4ffcd35823a/res/values-v23/values-v23.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,19,32,33,34,35,36",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,190,325,400,487,1277,2079,2206,2311,2426,2533",
-                        "endLines": "2,3,4,5,18,31,32,33,34,35,36",
-                        "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
-                        "endOffsets": "185,320,395,482,1272,2074,2201,2306,2421,2528,2641"
                     }
                 }
             ]
