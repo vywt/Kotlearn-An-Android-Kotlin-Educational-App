@@ -2,13 +2,13 @@
 <instant-run
     abi="x86"
     api-level="28"
-    build-mode="HOT_WARM"
+    build-mode="COLD"
     density="420dpi"
     format="10"
     plugin-version="3.1.4"
-    timestamp="1540434581544"
+    timestamp="1540434947231"
     token="2194304967122335382"
-    verifier="COMPATIBLE" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
@@ -22,10 +22,6 @@
     <task
         name="verifier"
         duration="0" />
-
-    <artifact
-        location="/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-        type="SPLIT" />
 
     <build
         build-mode="FULL"
@@ -91,12 +87,8 @@
             type="SPLIT" />
     </build>
     <build
-        build-mode="HOT_WARM"
-        timestamp="1540434581544"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-            type="SPLIT" />
-    </build>
+        build-mode="COLD"
+        timestamp="1540434947231"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>
