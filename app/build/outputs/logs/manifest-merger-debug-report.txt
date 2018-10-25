@@ -1,10 +1,11 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-28:12
+ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-29:12
 MERGED from [com.android.support:design:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/bcf2b0ea76ba32ba3f42aa8448aa4efe/AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.kbiakov:CodeView-android:1.3.1] /Users/fabian/.gradle/caches/transforms-1/files-1.1/CodeView-android-1.3.1.aar/fbab56dc19f258df1ae8cd88573abcfa/AndroidManifest.xml:2:1-16:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/11fc30aae4ff72a06d5fe4c11219d45e/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:cardview-v7:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/8618bd1faf922e0a1aa6e9a9114602cd/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-v4:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/23834775bbe26b557c59dc0c44ed6a4e/AndroidManifest.xml:17:1-22:12
@@ -14,7 +15,6 @@ MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/fabian/
 MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/8420ac5f95ee597aefaf0b996483a3e6/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-ui:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/14600efea5456a0b3ab7e7823fb2f4d1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-utils:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/92132e9f31c2074aaae11057f2b8a3bd/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/84976c6592dc82c3f7ddff58b1d4595a/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-media-compat:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/17fe24af8ed1f133c235c6ebc78cd592/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:transition:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/93766c9df4156487f4d9df05ddda830a/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:loader:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/7b505e1f446af0dd412448f12ff96d83/AndroidManifest.xml:17:1-22:12
@@ -25,39 +25,46 @@ MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/fabian/.gradle
 MERGED from [com.android.support:customview:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/45c7b1e42a44aef1ec869346d09bc88d/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/e45c8cc629587ab1b6a9560a2f670263/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/dbc0fa7ca172329b1ea080714d390781/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/84976c6592dc82c3f7ddff58b1d4595a/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-compat:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f01043f2437a9f2173115859090db9fb/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c443bd2d39f690e34b1648ff9426a163/AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/c41a61b75d75eea175407a463b023574/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/fabian/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/1f638e2a4fb0d2a161dede791b8650f1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:documentfile:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/0232b033890ff4a924d6bfaafb4a4133/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/0d1eaf1cee843d899306a5dce551d650/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:print:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/a986c89406b0d852be065608fcfc0908/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/fabian/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/dd1bda70d9dd93bf33a553c8ef06a5ac/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:interpolator:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/c2e000adbe082ae9ebf1393259392c89/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/c41a61b75d75eea175407a463b023574/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/fabian/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/2a42ae1f0e129280ed944a3a723b1282/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/fabian/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/29810d445ca797c910d04e8b95bc15dd/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /Users/fabian/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/a22026185376b8291ae5de1fd80955f7/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-29:12
 	package
 		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:3:5-36
 		INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml
-		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-28:12
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-29:12
 		INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml
-		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-28:12
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:1-29:12
 		INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:5:5-83
+	android:name
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:5:5-26:19
+ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:6:5-27:19
 MERGED from [com.android.support:design:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/bcf2b0ea76ba32ba3f42aa8448aa4efe/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/bcf2b0ea76ba32ba3f42aa8448aa4efe/AndroidManifest.xml:22:5-20
+MERGED from [com.github.kbiakov:CodeView-android:1.3.1] /Users/fabian/.gradle/caches/transforms-1/files-1.1/CodeView-android-1.3.1.aar/fbab56dc19f258df1ae8cd88573abcfa/AndroidManifest.xml:11:5-14:19
+MERGED from [com.github.kbiakov:CodeView-android:1.3.1] /Users/fabian/.gradle/caches/transforms-1/files-1.1/CodeView-android-1.3.1.aar/fbab56dc19f258df1ae8cd88573abcfa/AndroidManifest.xml:11:5-14:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/fabian/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/4e2832f22038b7bb5880df99e559e8cb/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/fabian/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/4e2832f22038b7bb5880df99e559e8cb/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:support-compat:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f01043f2437a9f2173115859090db9fb/AndroidManifest.xml:22:5-94
@@ -67,49 +74,51 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/fabian/.grad
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f01043f2437a9f2173115859090db9fb/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:11:9-35
 	android:label
-		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:9:9-41
 	android:roundIcon
-		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:9:9-54
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:10:9-54
 	android:icon
-		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:8:9-43
 	android:allowBackup
-		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:7:9-35
 	android:theme
-		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:11:9-40
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:12:9-40
 activity#com.kotlearn.kotlearn.MainActivity
-ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:12:9-21:20
+ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:13:9-22:20
 	android:label
-		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:14:13-45
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:15:13-45
 	android:theme
-		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:15:13-56
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:16:13-56
 	android:name
-		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:13:13-41
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:14:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:16:13-20:29
+ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:17:17-69
+ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:17:25-66
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:19:17-77
+ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:19:27-74
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:20:27-74
 activity#com.kotlearn.kotlearn.IntroHelloWorld
-ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:22:9-25:68
+ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:23:9-26:68
 	android:label
-		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:24:13-69
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:25:13-69
 	android:theme
-		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:25:13-56
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:26:13-56
 	android:name
-		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:23:13-44
+		ADDED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml:24:13-44
 uses-sdk
 INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml
 INJECTED from /Users/fabian/Documents/GitHub/Kotlearn/app/src/main/AndroidManifest.xml
 MERGED from [com.android.support:design:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/bcf2b0ea76ba32ba3f42aa8448aa4efe/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:design:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/bcf2b0ea76ba32ba3f42aa8448aa4efe/AndroidManifest.xml:20:5-44
+MERGED from [com.github.kbiakov:CodeView-android:1.3.1] /Users/fabian/.gradle/caches/transforms-1/files-1.1/CodeView-android-1.3.1.aar/fbab56dc19f258df1ae8cd88573abcfa/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.kbiakov:CodeView-android:1.3.1] /Users/fabian/.gradle/caches/transforms-1/files-1.1/CodeView-android-1.3.1.aar/fbab56dc19f258df1ae8cd88573abcfa/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/11fc30aae4ff72a06d5fe4c11219d45e/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/11fc30aae4ff72a06d5fe4c11219d45e/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:cardview-v7:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/8618bd1faf922e0a1aa6e9a9114602cd/AndroidManifest.xml:20:5-44
@@ -128,8 +137,6 @@ MERGED from [com.android.support:support-core-ui:28.0.0] /Users/fabian/.gradle/c
 MERGED from [com.android.support:support-core-ui:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/14600efea5456a0b3ab7e7823fb2f4d1/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-utils:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/92132e9f31c2074aaae11057f2b8a3bd/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-utils:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/92132e9f31c2074aaae11057f2b8a3bd/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/84976c6592dc82c3f7ddff58b1d4595a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/84976c6592dc82c3f7ddff58b1d4595a/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-media-compat:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/17fe24af8ed1f133c235c6ebc78cd592/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-media-compat:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/17fe24af8ed1f133c235c6ebc78cd592/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/93766c9df4156487f4d9df05ddda830a/AndroidManifest.xml:20:5-44
@@ -150,12 +157,12 @@ MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/fabian/.gradl
 MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/e45c8cc629587ab1b6a9560a2f670263/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/dbc0fa7ca172329b1ea080714d390781/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/dbc0fa7ca172329b1ea080714d390781/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/84976c6592dc82c3f7ddff58b1d4595a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/84976c6592dc82c3f7ddff58b1d4595a/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f01043f2437a9f2173115859090db9fb/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f01043f2437a9f2173115859090db9fb/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c443bd2d39f690e34b1648ff9426a163/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c443bd2d39f690e34b1648ff9426a163/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/c41a61b75d75eea175407a463b023574/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/c41a61b75d75eea175407a463b023574/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/fabian/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/1f638e2a4fb0d2a161dede791b8650f1/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/fabian/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/1f638e2a4fb0d2a161dede791b8650f1/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:documentfile:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/0232b033890ff4a924d6bfaafb4a4133/AndroidManifest.xml:20:5-44
@@ -168,6 +175,8 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/fabian/.gradle/cache
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/fabian/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/dd1bda70d9dd93bf33a553c8ef06a5ac/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:interpolator:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/c2e000adbe082ae9ebf1393259392c89/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:interpolator:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/c2e000adbe082ae9ebf1393259392c89/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/c41a61b75d75eea175407a463b023574/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/fabian/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/c41a61b75d75eea175407a463b023574/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/fabian/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/2a42ae1f0e129280ed944a3a723b1282/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/fabian/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/2a42ae1f0e129280ed944a3a723b1282/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/fabian/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/29810d445ca797c910d04e8b95bc15dd/AndroidManifest.xml:20:5-44

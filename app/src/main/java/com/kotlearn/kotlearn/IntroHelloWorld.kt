@@ -17,12 +17,16 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.Button
 import android.widget.TextView
 import com.kotlearn.kotlearn.R.id.*
+import io.github.kbiakov.codeview.CodeView
 
 import kotlinx.android.synthetic.main.activity_intro_hello_world.*
 import kotlinx.android.synthetic.main.fragment_intro_hello_world.view.*
+import java.security.AccessController.getContext
 
 class IntroHelloWorld : AppCompatActivity() {
 
@@ -53,10 +57,12 @@ class IntroHelloWorld : AppCompatActivity() {
                     .setAction("Action", null).show()
         }
 
-        val text = "<ol><li><code>// Hello World Program</code><br><br>Any line starting with <code>//</code> is a comment in Kotlin (similar to Java). Comments are ignored by the compiler. They are intended for person reading the code to better understand the intent and functionality of the program. To learn more, visit <em>Kotlin comments</em>.</li><li><code>fun main(args : Array&lt;String&gt;) { ... }</code><br><br>This is the <code>main</code> function, which is mandatory in every Kotlin application. The Kotlin compiler starts executing the code from the <code>main</code> function.<br><br>The function takes array of strings as a parameter and returns Unit. You will learn about functions and parameters in later chapters.<br><br> For now, just remember that <code>main</code> function is a mandatory function which is the entry point of every Kotlin program. The signature of <code>main</code> function is:<pre>fun main(args : Array&lt;String&gt;) { ... .. ... }</pre></li><li><code>println(Hello, World!)</code><br><br>The <code>println()</code> function prints the given message inside the quotation marks and newline to the standard output stream. In this program, it prints <code>Hello, World!</code> and new line.</li></ol>"
+//        val wb = findViewById<WebView>(R.id.wb1)
+//        //wb!!.loadUrl("file:///android_asset/demoweb.html");
+//        wb!!.loadUrl("www.google.com");
 
-        val textView7 = findViewById<TextView>(R.id.textView7)
-        textView7.text = Html.fromHtml(text)
+
+
     }
 
 
