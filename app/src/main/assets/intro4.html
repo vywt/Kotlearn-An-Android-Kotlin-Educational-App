@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+<section class="main-content">
+<h1>Kotlin Type Conversion</h1>
+
+<div class="page-short-description">
+In this article, you will learn about type conversion; how to convert a variable of one type to another with the help of example.</div>
+<div class="inside-content">
+  <div class="region region-content-inside">
+    <div id="block-block-164" class="block block-block">
+
+<div class="clearfix">
+
+
+  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+
+  <div class="content">
+    <div id="node-1077" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/type-conversion" typeof="sioc:Item foaf:Document">
+<span property="dc:title" content="Kotlin Type Conversion" class="rdf-meta element-hidden"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="introduction" name="introduction"></a>In Kotlin, a numeric value of one type is not automatically converted to another type even when&nbsp;the other type is larger. This is different from how Java handles numeric conversions. For example;</p>
+
+<p>In Java,</p>
+
+<pre>int number1 = 55;
+long number2 = number1;    // Valid code </pre>
+
+<p>Here, value of <code>number1</code>&nbsp;of type&nbsp;<code>int</code>&nbsp;is automatically converted to type <code>long</code>, and assigned to variable <var>number2</var>.</p>
+
+<p>In Kotlin,</p>
+
+<pre>val number1: Int = 55
+val number2: Long = number1   // Error: type mismatch.</pre>
+
+<p>Though the size of <tt>Long</tt> is larger than <code>Int</code>, Kotlin doesn't automatically convert <var>Int</var> to <var>Long</var>.&nbsp;</p>
+
+<p>Instead, you need to use<code>&nbsp;toLong()</code>&nbsp;explicitly&nbsp;(to convert to type&nbsp;<var>Long</var>). Kotlin does it for type safety to avoid surprises.</p>
+
+<pre>val number1: Int = 55
+val number2: Long = number1.toLong()</pre>
+
+<hr>
+<p></p><div id="block-inject-1" class="block-inject block-inject-1"><div id="block-block-123" class="block block-block">
+
+
+  <div class="content">
+    <!-- /8095840/.2_A.34657.4_Programiz.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth < 900) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+
+<!-- /8095840/.2_A.34660.4_Programiz.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth >= 900) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div>  </div>
+</div>
+</div><div class="clearfix"></div><p><a id="conversion-functions" name="conversion-functions"></a>Here's a&nbsp;list of functions in Kotlin used for type conversion:</p>
+
+<ul>
+	<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/to-byte.html"><code>toByte()</code></a>&nbsp;</li>
+	<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/to-short.html"><code>toShort()</code></a></li>
+	<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/to-int.html"><code>toInt()</code></a></li>
+	<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/to-long.html"><code>toLong()</code></a></li>
+	<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/to-float.html"><code>toFloat()</code></a></li>
+	<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/to-double.html"><code>toDouble()</code></a></li>
+	<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/to-char.html"><code>toChar()</code></a></li>
+</ul>
+
+<p>Note, there is no conversion for <code>Boolean</code> types.</p>
+
+<hr>
+<h3><a id="larger-smaller" name="larger-smaller"></a>Conversion from Larger to Smaller Type</h3>
+
+<p>The functions mentioned above can be used in both directions (conversion from larger to smaller type and conversion from smaller to larger type).</p>
+
+<p>However, conversion from larger to smaller type may truncate the value. For example,</p>
+
+<pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val number1</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">545344</span><span class="pln">
+    val number2</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Byte</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> number1</span><span class="pun">.</span><span class="pln">toByte</span><span class="pun">()</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"number1 = $number1"</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"number2 = $number2"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>When you run the program, the output will be:</p>
+
+<pre><samp>number1 = 545344
+number2 = 64</samp>
+</pre>

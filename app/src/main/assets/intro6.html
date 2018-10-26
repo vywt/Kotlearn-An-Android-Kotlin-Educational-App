@@ -1,0 +1,181 @@
+<link rel="stylesheet" href="styles.css">
+
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Basic Input/Output</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn to display output to the screen, and take input from the user in Kotlin.</div>
+        <div class="inside-content">
+            <div class="region region-content-inside">
+                <div id="block-block-164" class="block block-block">
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1106" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/input-output" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Basic Input/Output" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h2><a id="output" name="output"></a>Koltin Output</h2>
+
+                                <p>You can use <code>println()</code> and <code>print()</code> functions to send output to the standard output (screen). Let's take an example:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"Kotlin is interesting."</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>Kotlin is interesting.</samp>
+</pre>
+
+                                <p>Here, <code>println()</code> outputs the string (inside quotes).</p>
+
+                                <hr>
+                                <h3>Difference Between println() and print()</h3>
+
+                                <ul>
+                                    <li><code>print()</code> - prints string inside the quotes.</li>
+                                    <li><code>println()</code> - prints string inside the quotes similar like <code>print()</code> function. Then the cursor moves to the beginning of the next line.</li>
+                                </ul>
+
+                                <hr>
+                                <p>When you use <code>println()</code> function, it calls <code>System.out.println()</code> function internally. (<code>System.out.println()</code> is used to print output to the screen in Java).</p>
+
+                                <p>If you are using IntelliJ IDEA, put your mouse cursor next to <code>println</code> and go to <code>Navigate</code> &gt; <code>Declaration</code> ( Shortcut: <strong>Ctrl + B</strong> . For Mac: <strong>Cmd + B</strong>), this will open <code>Console.kt</code> (declaration file). You can see that <code>println()</code> function is internally calling <code>System.out.println()</code>.</p>
+
+                                <p>Similarly, when you use <code>print()</code> function, it calls <code>System.out.print()</code> function.</p>
+
+                                <hr>
+                                <h3><a id="print-println" name="print-println"></a>Example 1: print() and println()</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"1. println "</span><span class="pun">);</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"2. println "</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"1. print "</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"2. print"</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>1. println
+2. println
+1. print 2. print</samp></pre>
+
+                                <hr>
+                                <h3><a id="print-variables" name="print-variables"></a>Example 2: Print Variables and Literals</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val score </span><span class="pun">=</span><span class="pln"> </span><span class="lit">12.3</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"score"</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"$score"</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"score = $score"</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"${score + score}"</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="lit">12.3</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>score
+12.3
+score = 12.3
+24.6
+12.3</samp></pre>
+
+                                <hr>
+                                <h2><a id="input" name="input"></a>Kotlin Input</h2>
+
+                                <p>In this section, you will learn to take input from the user..</p>
+
+                                <p>To read a line of string in Kotlin, you can use <code>readline()</code> function.</p>
+
+                                <hr>
+                                <h3><a id="input-string" name="input-string"></a>Example 3: Print String Entered By the User</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Enter text: "</span><span class="pun">)</span><span class="pln">
+
+    val stringInput </span><span class="pun">=</span><span class="pln"> readLine</span><span class="pun">()!!</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"You entered: $stringInput"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p></p><div id="block-inject-1" class="block-inject block-inject-1"><div id="block-block-123" class="block block-block">
+
+
+                                    <div class="content">
+                                        <!-- /8095840/.2_A.34657.4_Programiz.com_tier1 -->
+                                        <div id="div-gpt-ad-1527670353707-0">
+                                            <script>
+if (window.innerWidth < 900) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+                                        </div>
+
+                                        <!-- /8095840/.2_A.34660.4_Programiz.com_tier1 -->
+                                        <div id="div-gpt-ad-1527670429257-0">
+                                            <script>
+if (window.innerWidth >= 900) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+                                        </div>  </div>
+                                </div>
+                                </div><div class="clearfix"></div><p>When you run the program, the output will be:</p>
+
+                                <pre><samp>Enter text: Hmm, interesting!
+You entered: Hmm, interesting!</samp></pre>
+
+                                <p>It's possible to take input as a string using <code>readLine()</code> function, and convert it to values of other data type (like <code>Int</code>) explicitly.</p>
+
+                                <hr>
+                                <p>If you want input of other data types, you can use <code>Scanner</code> object.</p>
+
+                                <p>For that, you need to import <code>Scanner</code> class from Java standard library using:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">import</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">util</span><span class="pun">.</span><span class="typ">Scanner</span></code></pre>
+
+                                <p>Then, you need to create <code>Scanner </code>object from this class.</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">val reader </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Scanner</span><span class="pun">(</span><span class="typ">System</span><span class="pun">.</span><span class="str">`in`</span><span class="pun">)</span></code></pre>
+
+                                <p>Now, the <var>reader</var> object is used to take input from the user.</p>
+
+                                <hr>
+                                <h3><a id="input-integer" name="input-integer"></a>Example 4: Getting Integer Input from the User</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">import</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">util</span><span class="pun">.</span><span class="typ">Scanner</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="com">// Creates an instance which takes input from standard input (keyboard)</span><span class="pln">
+    val reader </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Scanner</span><span class="pun">(</span><span class="typ">System</span><span class="pun">.</span><span class="str">`in`</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Enter a number: "</span><span class="pun">)</span><span class="pln">
+
+    </span><span class="com">// nextInt() reads the next integer from the keyboard</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> integer</span><span class="pun">:</span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> reader</span><span class="pun">.</span><span class="pln">nextInt</span><span class="pun">()</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"You entered: $integer"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>Enter a number: -12
+You entered: -</samp><samp>12</samp></pre>
+
+                                <p>Here, <code>reader</code> object of <code>Scanner</code> class is created. Then, the <code>nextInt()</code> method is called which takes integer input from the user which is stored in variable <var>integer</var>.</p>
+
+                                <hr>
+                                <p>To get <code>Long</code>, <code>Float</code>, <code>double</code> and <code>Boolean</code> input from the user, you can use <code>nextLong()</code>, <code>nextFloat()</code>, <code>nextDouble()</code> and <code>nextBoolean()</code> methods respectively.</p>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>
+

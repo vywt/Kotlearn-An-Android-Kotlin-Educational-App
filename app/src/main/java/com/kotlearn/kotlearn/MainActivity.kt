@@ -77,12 +77,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(myIntent)
             }
             R.id.nav_kotlintutorialvideos -> {
-
+                val myIntent = Intent(this, Intro4TypeConversion::class.java)
+                startActivity(myIntent)
             }
             R.id.nav_javatokotlin -> {
+                val myIntent = Intent(this, Intro5Expression::class.java)
+                startActivity(myIntent)
 
             }
             R.id.nav_exampleprograms -> {
+
+                val myIntent = Intent(this, Intro6BasicIO::class.java)
+                startActivity(myIntent)
 
             }
         }

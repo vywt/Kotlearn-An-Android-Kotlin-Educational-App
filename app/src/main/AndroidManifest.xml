@@ -23,7 +23,14 @@
         </activity>
         <activity android:name=".Intro2VariablesBasicTypes" />
         <activity android:name=".Intro1HelloWorld" />
-        <activity android:name=".Intro3Operators"></activity>
+        <activity android:name=".Intro3Operators" />
+        <activity android:name=".Intro4TypeConversion" />
+        <activity android:name=".Intro5Expression" />
+        <activity android:name=".Intro6BasicIO" />
+        <activity
+            android:name=".Intro"
+            android:label="@string/title_activity_intro"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

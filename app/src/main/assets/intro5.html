@@ -1,0 +1,126 @@
+<link rel="stylesheet" href="styles.css">
+
+
+<div id="programiz-main-content">
+<section class="main-content">
+<h1>Kotlin Expression, Statements and Blocks</h1>
+
+<div class="page-short-description">
+In this article, you will learn about Kotlin expressions, Kotlin statements, difference between expression and statement, and Kotlin blocks.</div>
+<div class="inside-content">
+  <div class="region region-content-inside">
+    <div id="block-block-164" class="block block-block">
+
+
+<div class="clearfix">
+
+
+  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+
+  <div class="content">
+    <div id="node-1100" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/statement-expression" typeof="sioc:Item foaf:Document">
+<span property="dc:title" content="Kotlin Expression, Statements and Blocks" class="rdf-meta element-hidden"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h2><a id="expressions" name="expressions"></a>Kotlin Expressions</h2>
+
+<p>Expressions consist of <a href="/kotlin-programming/variable-types" title="Kotlin Variables">variables</a>, <a href="/kotlin-programming/operators" title="Kotlin Operators">operators</a> etc that evaluates to a single value.</p>
+
+<p>Let's take an example,</p>
+
+<pre>val score: Int
+score = 90 + 25</pre>
+
+<p>Here, <code>90 + 25</code> is an expression that returns <code>Int</code> value.</p>
+
+<hr>
+<p>In Kotlin, <code>if</code> is an expression unlike Java (In Java, <code>if</code> is a statement). For example,</p>
+
+<pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">12</span><span class="pln">
+    val b </span><span class="pun">=</span><span class="pln"> </span><span class="lit">13</span><span class="pln">
+    val max</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln">
+
+    max </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">a </span><span class="pun">&gt;</span><span class="pln"> b</span><span class="pun">)</span><span class="pln"> a </span><span class="kwd">else</span><span class="pln"> b
+    println</span><span class="pun">(</span><span class="str">"$max"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+<p>Here, <code>if (a &gt; b) a else b</code> is an expression. Then value of the expression is assigned to <code>max</code> variable in the above program. Visit this page to learn more about <em>Kotlin if expression</em>.</p>
+
+<hr>
+<h2><a id="statements" name="statements"></a>Kotlin Statements</h2>
+
+<p>Statements are everything that make up a complete unit of execution. For example,</p>
+
+<pre>val score = 90 + 25</pre>
+
+<p></p><div id="block-inject-1" class="block-inject block-inject-1"><div id="block-block-123" class="block block-block">
+
+
+  <div class="content">
+    <!-- /8095840/.2_A.34657.4_Programiz.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth < 900) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+
+<!-- /8095840/.2_A.34660.4_Programiz.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth >= 900) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div>  </div>
+</div>
+</div><div class="clearfix"></div><p>Here, <code>90 + 25</code> is an expression that returns 115, and <code>val score = 9*5;</code> is a statement.</p>
+
+<p>Expressions are part of statements.</p>
+
+<p>Some examples:</p>
+
+<pre>println("Howdy")</pre>
+
+<pre>var a = 5
+++a</pre>
+
+<pre>max = if (a &gt; b) a else b</pre>
+
+<hr>
+<h2><a id="blocks" name="blocks"></a>Kotlin Blocks</h2>
+
+<p>A block is a group of statements (zero or more) that is enclosed in curly braces <code>{ }</code>. For example,</p>
+
+<pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">  </span><span class="com">// main function block</span><span class="pln">
+    val flag </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">flag </span><span class="pun">==</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">      </span><span class="com">// start of if block</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Hey "</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"jude!"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">                        </span><span class="com">// end of if block</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">                            </span><span class="com">// end of main function block</span></code></pre>
+
+<p>There are two statements <code>print("Hey ")</code> and <code>print(" jude!")</code> inside <code>if</code> branch block.</p>
+
+<pre>print("Hey ")
+print("jude!")</pre>
+
+<p>Similarly, the <code>main()</code> function also has a block body.</p>
+
+<pre>val flag = true
+
+if (flag == true) {      // start of block
+    print("Hey ")
+    print("jude!")
+}                        // end of block
+</pre>
+</div></div></div></div>
+</div>  </div>
+</div>
+  </div>
+</div>

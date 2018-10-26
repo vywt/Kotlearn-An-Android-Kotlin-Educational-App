@@ -33,6 +33,13 @@
         <activity android:name="com.kotlearn.kotlearn.Intro2VariablesBasicTypes" />
         <activity android:name="com.kotlearn.kotlearn.Intro1HelloWorld" />
         <activity android:name="com.kotlearn.kotlearn.Intro3Operators" />
+        <activity android:name="com.kotlearn.kotlearn.Intro4TypeConversion" />
+        <activity android:name="com.kotlearn.kotlearn.Intro5Expression" />
+        <activity android:name="com.kotlearn.kotlearn.Intro6BasicIO" />
+        <activity
+            android:name="com.kotlearn.kotlearn.Intro"
+            android:label="@string/title_activity_intro"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
