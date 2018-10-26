@@ -1,0 +1,699 @@
+<style>
+
+pre {
+    font-size: 15px;
+    margin-bottom: 1.8em;
+    background: #F6F6F6;
+    padding: 15px 2.5%;
+    overflow: auto;
+    border: 1px solid #eaeaec;
+    font-family: Consolas,Menlo,Monaco,"Lucida Console",Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,"Courier New",Courier,monospace;
+}
+
+pre.prettyprint {
+    padding: 5px;
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+    margin-bottom: 10px;
+    background-color: #eee;
+    overflow: auto;
+    width: auto;
+    width: 650px !ie7;
+    padding-bottom: 20px !ie7;
+    max-height: 600px;
+}
+
+p code.prettyprint{padding:1px 5px 1px 5px;}.str{color:maroon;}.kwd{color:#00008b;}.com{color:gray;}.typ{color:#2b91af;}.lit{color:maroon;}.pun{color:#000;}.pln{color:#000;}.tag{color:maroon;}.atn{color:red;}.atv{color:blue;}.dec{color:purple;}@media print{.str{color:#060;}.kwd{color:#006;font-weight:bold;}.com{color:#600;font-style:italic;}.typ{color:#404;font-weight:bold;}.lit{color:#044;}.pun{color:#440;}.pln{color:#000;}.tag{color:#006;font-weight:bold;}.atn{color:#404;}.atv{color:#060;}
+
+p var, p code, li var, li code, table var, table code {
+    font-size: 0.86em;
+    font-family: Menlo,Consolas,'Open Sans',sans-serif;
+    background: #EFF0F1;
+    padding: 1px 5px;
+    border-radius: 2px;
+    font-weight: 300;
+}
+
+table th {
+    font-weight: normal;
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 14px;
+    background-color: #EAEAEC;
+    font-size: 17px;
+}
+
+table td, table th {
+    border: 1px solid #EAEAEC;
+    padding: 10px 8px 9px 10px;
+}
+
+
+</style>
+
+<div id="programiz-main-content">
+<section class="main-content">
+<h1>Kotlin Operators</h1>
+
+<div class="page-short-description">
+Kotlin has a set of operators to perform arithmetic, assignment, comparison operators and more. You will learn to use these operators in this article.</div>
+<div class="inside-content">
+  <div class="region region-content-inside">
+    <div id="block-block-164" class="block block-block">
+
+
+  <div class="content">
+
+<div class="clearfix">
+
+
+  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+
+  <div class="content">
+    <div id="node-1082" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/operators" typeof="sioc:Item foaf:Document">
+<span property="dc:title" content="Kotlin Operators" class="rdf-meta element-hidden"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="operator-meaning" name="operator-meaning"></a>Operators are special symbols (characters) that carry out operations on operands (variables and values). For example, <code>+</code> is an operator that performs addition.</p>
+
+<p>In <a href="/kotlin-programming/variable-types" title="Kotlin Variables">Java variables</a> article, you learned to declare variables and assign values to variables. Now, you will learn to use operators perform various operations on them.</p>
+
+<hr>
+<h2><a id="arithmetic" name="arithmetic"></a>1. Arithmetic Operators</h2>
+
+<p>Here's a list of arithmetic operators in Kotlin:</p>
+
+<table>
+	<caption>Kotlin Arithmetic Operators</caption>
+	<thead>
+		<tr>
+			<th scope="col">Operator</th>
+			<th scope="col">Meaning</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>+</td>
+			<td>Addition (also used for string concatenation)</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td>Subtraction Operator</td>
+		</tr>
+		<tr>
+			<td>*</td>
+			<td>Multiplication Operator</td>
+		</tr>
+		<tr>
+			<td>/</td>
+			<td>Division Operator</td>
+		</tr>
+		<tr>
+			<td>%</td>
+			<td>Modulus Operator</td>
+		</tr>
+	</tbody>
+</table>
+
+<hr>
+<h3><a id="arithmetic-example" name="arithmetic-example"></a>Example: Arithmetic Operators</h3>
+
+<pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val number1 </span><span class="pun">=</span><span class="pln"> </span><span class="lit">12.5</span><span class="pln">
+    val number2 </span><span class="pun">=</span><span class="pln"> </span><span class="lit">3.5</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> result</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Double</span><span class="pln">
+
+    result </span><span class="pun">=</span><span class="pln"> number1 </span><span class="pun">+</span><span class="pln"> number2
+    println</span><span class="pun">(</span><span class="str">"number1 + number2 = $result"</span><span class="pun">)</span><span class="pln">
+
+    result </span><span class="pun">=</span><span class="pln"> number1 </span><span class="pun">-</span><span class="pln"> number2
+    println</span><span class="pun">(</span><span class="str">"number1 - number2 = $result"</span><span class="pun">)</span><span class="pln">
+
+    result </span><span class="pun">=</span><span class="pln"> number1 </span><span class="pun">*</span><span class="pln"> number2
+    println</span><span class="pun">(</span><span class="str">"number1 * number2 = $result"</span><span class="pun">)</span><span class="pln">
+
+    result </span><span class="pun">=</span><span class="pln"> number1 </span><span class="pun">/</span><span class="pln"> number2
+    println</span><span class="pun">(</span><span class="str">"number1 / number2 = $result"</span><span class="pun">)</span><span class="pln">
+
+    result </span><span class="pun">=</span><span class="pln"> number1 </span><span class="pun">%</span><span class="pln"> number2
+    println</span><span class="pun">(</span><span class="str">"number1 % number2 = $result"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+<p>When you run the program, the output will be:</p>
+
+<pre><samp>number1 + number2 = 16.0
+number1 - number2 = 9.0
+number1 * number2 = 43.75
+number1 / number2 = 3.5714285714285716
+number1 % number2 = 2.0</samp></pre>
+
+<p>The <code>+</code> operator is also used for the concatenation of <code>String</code> values.</p>
+
+<hr>
+<h3>Example: Concatenation of Strings</h3>
+
+<pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val start </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Talk is cheap. "</span><span class="pln">
+    val middle </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Show me the code. "</span><span class="pln">
+    val </span><span class="kwd">end</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">"- Linus Torvalds"</span><span class="pln">
+
+    val result </span><span class="pun">=</span><span class="pln"> start </span><span class="pun">+</span><span class="pln"> middle </span><span class="pun">+</span><span class="pln"> </span><span class="kwd">end</span><span class="pln">
+    println</span><span class="pun">(</span><span class="pln">result</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>When you run the program, the output will be:</p>
+
+<pre><samp>Talk is cheap. Show me the code. - Linus Torvalds</samp></pre>
+
+<hr>
+<h3><a id="arithmetic-work" name="arithmetic-work"></a>How arithmetic operators actually work?</h3>
+
+<p>Suppose, you are using <code>+</code> arithmetic operator to add two numbers <var>a</var> and <var>b</var>.</p>
+
+<p>Under the hood, the expression <code>a + b</code> calls <code>a.plus(b)</code> member function. The <code>plus</code> operator is overloaded to work with <code>String</code> values and other basic data types (except <a href="/kotlin-programming/variable-types#char" title="Kotlin Char Type">Char</a> and <a href="/kotlin-programming/variable-types#boolean" title="Kotlin Boolean Type">Boolean</a>).</p>
+
+<pre>// + operator for basic types
+operator fun plus(other: Byte): Int
+operator fun plus(other: Short): Int
+operator fun plus(other: Int): Int
+operator fun plus(other: Long): Long
+operator fun plus(other: Float): Float
+operator fun plus(other: Double): Double
+
+// for string concatenation
+operator fun String?.plus(other: Any?): String
+</pre>
+
+<p>You can also use <code>+</code> operator to work with user-defined types (like objects) by overloading <code>plus()</code> function.</p>
+
+<p><strong>Recommended Reading:</strong> <a href="/kotlin-programming/operator-overloading" title="Kotlin Operator Overloading">Kotlin Operator Overloading</a></p>
+
+<p>Here's a table of arithmetic operators and their corresponding functions:</p>
+
+<table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+		<tr>
+			<th scope="col">Expression</th>
+			<th scope="col">Function name</th>
+			<th scope="col">Translates to</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>a + b</td>
+			<td>plus</td>
+			<td>a.plus(b)</td>
+		</tr>
+		<tr>
+			<td>a - b</td>
+			<td>minus</td>
+			<td>a.minus(b)</td>
+		</tr>
+		<tr>
+			<td>a * b</td>
+			<td>times</td>
+			<td>a.times(b)</td>
+		</tr>
+		<tr>
+			<td>a / b</td>
+			<td>div</td>
+			<td>a.div(b)</td>
+		</tr>
+		<tr>
+			<td>a % b</td>
+			<td>mod</td>
+			<td>a.mod(b)</td>
+		</tr>
+	</tbody>
+</table>
+
+<hr>
+<h2><a id="assignment" name="assignment"></a>2. Assignment Operators</h2>
+
+<p>Assignment operators are used to assign value to a variable. We have already used simple assignment operator <code>=</code> before.</p>
+
+<pre>val age = 5</pre>
+
+<p>Here, 5 is assigned to variable <var>age</var> using <code>=</code> operator.</p>
+
+<p>Here's a list of all assignment operators and their corresponding functions:</p>
+
+<table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+		<tr>
+			<th scope="col">Expression</th>
+			<th scope="col">Equivalent to</th>
+			<th scope="col">Translates to</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>a +=b</td>
+			<td>a = a + b</td>
+			<td>a.plusAssign(b)</td>
+		</tr>
+		<tr>
+			<td>a -= b</td>
+			<td>a = a - b</td>
+			<td>a.minusAssign(b)</td>
+		</tr>
+		<tr>
+			<td>a *= b</td>
+			<td>a = a * b</td>
+			<td>a.timesAssign(b)</td>
+		</tr>
+		<tr>
+			<td>a /= b</td>
+			<td>a = a / b</td>
+			<td>a.divAssign(b)</td>
+		</tr>
+		<tr>
+			<td>a %= b</td>
+			<td>a = a % b</td>
+			<td>a.modAssign(b)</td>
+		</tr>
+	</tbody>
+</table>
+
+<hr>
+<h3><a id="assignment-example" name="assignment-example"></a>Example: Assignment Operators</h3>
+
+<pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> number </span><span class="pun">=</span><span class="pln"> </span><span class="lit">12</span><span class="pln">
+
+    number </span><span class="pun">*=</span><span class="pln"> </span><span class="lit">5</span><span class="pln">   </span><span class="com">// number = number*5</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"number  = $number"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>When you run the program, the output will be:</p>
+
+<pre>number = 60</pre>
+
+<p><strong>Recommended Reading:</strong> <em>Overloading assignment operators in Kotlin</em>.</p>
+
+<hr>
+<h2><a id="unary" name="unary"></a>3. Unary prefix and Increment / Decrement Operators</h2>
+
+<p>Here's a table of unary operators, their meaning, and corresponding functions:</p>
+
+<table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+		<tr>
+			<th scope="col">Operator</th>
+			<th scope="col">Meaning</th>
+			<th scope="col">Expression</th>
+			<th scope="col">Translates to</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>+</td>
+			<td>Unary plus</td>
+			<td>+a</td>
+			<td>a.unaryPlus()</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td>Unary minus (inverts sign)</td>
+			<td>-a</td>
+			<td>a.unaryMinus()</td>
+		</tr>
+		<tr>
+			<td>!</td>
+			<td>not (inverts value)</td>
+			<td>!a</td>
+			<td>a.not()</td>
+		</tr>
+		<tr>
+			<td>++</td>
+			<td>Increment: increases value by1</td>
+			<td>++a</td>
+			<td>a.inc()</td>
+		</tr>
+		<tr>
+			<td>--</td>
+			<td>Decrement: decreases value by 1</td>
+			<td>--a</td>
+			<td>a.dec()</td>
+		</tr>
+	</tbody>
+</table>
+
+<hr>
+<h3><a id="unary-example" name="unary-example"></a>Example: Unary Operators</h3>
+
+<pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pln">
+    val b </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> c </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pln">
+
+    </span><span class="kwd">var</span><span class="pln"> result</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> booleanResult</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Boolean</span><span class="pln">
+
+    result </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-</span><span class="pln">a
+    println</span><span class="pun">(</span><span class="str">"-a = $result"</span><span class="pun">)</span><span class="pln">
+
+    booleanResult </span><span class="pun">=</span><span class="pln"> </span><span class="pun">!</span><span class="pln">b
+    println</span><span class="pun">(</span><span class="str">"!b = $booleanResult"</span><span class="pun">)</span><span class="pln">
+
+    </span><span class="pun">--</span><span class="pln">c
+    println</span><span class="pun">(</span><span class="str">"--c = $c"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>When you run the program, the output will be:</p>
+
+<pre class="prettyprint prettyprinted" style=""><code><span class="pun">-</span><span class="pln">a </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-</span><span class="lit">1</span><span class="pln">
+</span><span class="pun">!</span><span class="pln">b </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">c </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span></code></pre>
+
+<p><strong>Recommended Reading:</strong> <em>Overloading Unary Operators</em></p>
+
+<hr>
+<h2><a id="comparison-equality" name="comparison-equality"></a>4. Comparison and Equality Operators</h2>
+
+<p>Here's a table of equality and comparison operators, their meaning, and corresponding functions:</p>
+
+<table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+		<tr>
+			<th scope="col">Operator</th>
+			<th scope="col">Meaning</th>
+			<th scope="col">Expression</th>
+			<th scope="col">Translates to</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>&gt;</td>
+			<td>greater than</td>
+			<td>a &gt; b</td>
+			<td>a.compareTo(b) &gt; 0</td>
+		</tr>
+		<tr>
+			<td>&lt;</td>
+			<td>less than</td>
+			<td>a &lt; b</td>
+			<td>a.compareTo(b) &lt; 0</td>
+		</tr>
+		<tr>
+			<td>&gt;=</td>
+			<td>greater than or equals to</td>
+			<td>a &gt;= b</td>
+			<td>a.compareTo(b) &gt;= 0</td>
+		</tr>
+		<tr>
+			<td>&lt;=</td>
+			<td>less than or equals to</td>
+			<td>a &lt; = b</td>
+			<td>a.compareTo(b) &lt;= 0</td>
+		</tr>
+		<tr>
+			<td>==</td>
+			<td>is equal to</td>
+			<td>a == b</td>
+			<td>a?.equals(b) ?: (b === null)</td>
+		</tr>
+		<tr>
+			<td>!=</td>
+			<td>not equal to</td>
+			<td>a != b</td>
+			<td>!(a?.equals(b) ?: (b === null))</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Comparison and equality operators are used in control flow such as <em>if expression</em>, <em>when expression</em>, and <em>loops</em>.</p>
+
+<hr>
+<h3><a id="comparison-equality-example" name="comparison-equality-example"></a>Example: Comparison and Equality Operators</h3>
+
+<pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val a </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-</span><span class="lit">12</span><span class="pln">
+    val b </span><span class="pun">=</span><span class="pln"> </span><span class="lit">12</span><span class="pln">
+
+    </span><span class="com">// use of greater than operator</span><span class="pln">
+    val max </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">a </span><span class="pun">&gt;</span><span class="pln"> b</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"a is larger than b."</span><span class="pun">)</span><span class="pln">
+        a
+    </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"b is larger than a."</span><span class="pun">)</span><span class="pln">
+        b
+    </span><span class="pun">}</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"max = $max"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+<p></p><div id="block-inject-1" class="block-inject block-inject-1"><div id="block-block-123" class="block block-block">
+
+
+  <div class="content">
+    <!-- /8095840/.2_A.34657.4_Programiz.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth < 900) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+
+<!-- /8095840/.2_A.34660.4_Programiz.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth >= 900) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div>  </div>
+</div>
+</div><div class="clearfix"></div><p>When you run the program, the output will be:</p>
+
+<pre><samp>b is larger than a.
+max = 12</samp>
+</pre>
+
+<p><strong>Recommended Reading:</strong> <em>Overloading of Comparison and Equality Operators in Kotlin</em></p>
+
+<hr>
+<h2><a id="logical" name="logical"></a>5. Logical Operators</h2>
+
+<p>There are two logical operators in Kotlin: <code>||</code> and <code>&amp;&amp;</code></p>
+
+<p>Here's a table of logical operators, their meaning, and corresponding functions.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+	<thead>
+		<tr>
+			<th scope="col">Operator</th>
+			<th scope="col">Description</th>
+			<th scope="col">Expression</th>
+			<th scope="col">Corresponding Function</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>||</td>
+			<td><code>true</code> if either of the Boolean expression is <code>true</code></td>
+			<td><code>(a&gt;b)||(a&lt;c)</code></td>
+			<td><code>(a&gt;b)or(a&lt;c)</code></td>
+		</tr>
+		<tr>
+			<td>&amp;&amp;</td>
+			<td>true if all Boolean expressions are <code>true</code></td>
+			<td><code>(a&gt;b)&amp;&amp;(a&lt;c)</code></td>
+			<td><code>(a&gt;b)and(a&lt;c)</code></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Note that, <code>or</code> and <code>and</code> are functions that support <a href="https://en.wikipedia.org/wiki/Infix_notation">infix notation</a>.</p>
+
+<p>Logical operators are used in control flow such as <em>if expression</em>, <em>when expression</em>, and <em>loops</em>.</p>
+
+<hr>
+<h3><a id="logical-example" name="logical-example"></a>Example: Logical Operators</h3>
+
+<pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">10</span><span class="pln">
+    val b </span><span class="pun">=</span><span class="pln"> </span><span class="lit">9</span><span class="pln">
+    val c </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-</span><span class="lit">1</span><span class="pln">
+    val result</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Boolean</span><span class="pln">
+
+    </span><span class="com">// result is true is a is largest</span><span class="pln">
+    result </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">a</span><span class="pun">&gt;</span><span class="pln">b</span><span class="pun">)</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> </span><span class="pun">(</span><span class="pln">a</span><span class="pun">&gt;</span><span class="pln">c</span><span class="pun">)</span><span class="pln"> </span><span class="com">// result = (a&gt;b) and (a&gt;c)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="pln">result</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>When you run the program, the output will be:</p>
+
+<pre>true</pre>
+
+<p><strong>Recommended Reading:</strong> <em>Overloading of Logical&nbsp;Operators in Kotlin</em></p>
+
+<hr>
+<h2><a id="in" name="in"></a>6. in Operator</h2>
+
+<p>The <code>in</code> operator is used to check whether an object belongs to a collection.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+	<thead>
+		<tr>
+			<th scope="col">Operator</th>
+			<th scope="col">Expression</th>
+			<th scope="col">Translates to</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>in</td>
+			<td>a in b</td>
+			<td>b.contains(a)</td>
+		</tr>
+		<tr>
+			<td>!in</td>
+			<td>a !in b</td>
+			<td>!b.contains(a)</td>
+		</tr>
+	</tbody>
+</table>
+
+<hr>
+<h3><a id="in-example" name="in-example"></a>Example: in Operator</h3>
+
+<pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val numbers </span><span class="pun">=</span><span class="pln"> intArrayOf</span><span class="pun">(</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln"> </span><span class="lit">42</span><span class="pun">,</span><span class="pln"> </span><span class="pun">-</span><span class="lit">3</span><span class="pun">)</span><span class="pln">
+
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="lit">4</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> numbers</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"numbers array contains 4."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>When you run the program, the output will be:</p>
+
+<pre><samp>numbers array contains 4.</samp></pre>
+
+<p><strong>Recommended Reading:</strong> <em>Kotlin in Operator Overloading</em></p>
+
+<hr>
+<h2><a id="index-access" name="index-access"></a>7. Index access Operator</h2>
+
+<p>Here are some expressions using index access operator with corresponding functions in Kotlin.</p>
+
+<table>
+	<thead>
+		<tr>
+			<th>Expression</th>
+			<th>Translated to</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>a[i]</code></td>
+			<td><code>a.get(i)</code></td>
+		</tr>
+		<tr>
+			<td><code>a[i, n]</code></td>
+			<td><code>a.get(i, n)</code></td>
+		</tr>
+		<tr>
+			<td><code>a[i1, i2, ..., in]</code></td>
+			<td><code>a.get(i1, i2, ..., in)</code></td>
+		</tr>
+		<tr>
+			<td><code>a[i] = b</code></td>
+			<td><code>a.set(i, b)</code></td>
+		</tr>
+		<tr>
+			<td><code>a[i, n] = b</code></td>
+			<td><code>a.set(i, n, b)</code></td>
+		</tr>
+		<tr>
+			<td><code>a[i1, i2, ..., in] = b</code></td>
+			<td><code>a.set(i1, i2, ..., in, b)</code></td>
+		</tr>
+	</tbody>
+</table>
+
+<hr>
+<h3>Example: Index access Operator</h3>
+
+<pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val a  </span><span class="pun">=</span><span class="pln"> intArrayOf</span><span class="pun">(</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="pln">a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">])</span><span class="pln">
+    a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]=</span><span class="pln"> </span><span class="lit">12</span><span class="pln">
+    println</span><span class="pun">(</span><span class="pln">a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">])</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+<p>When you run the program, the output will be:</p>
+
+<pre><samp>2
+12</samp></pre>
+
+<p><strong>Recommended Reading:</strong> <em>Kotlin Index access operator Overloading</em></p>
+
+<hr>
+<h2><a id="invoke" name="invoke"></a>8. Invoke Operator</h2>
+
+<p>Here are some expressions using invoke operator with corresponding functions in Kotlin.</p>
+
+<table>
+	<thead>
+		<tr>
+			<th>Expression</th>
+			<th>Translated to</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>a()</code></td>
+			<td><code>a.invoke()</code></td>
+		</tr>
+		<tr>
+			<td><code>a(i)</code></td>
+			<td><code>a.invoke(i)</code></td>
+		</tr>
+		<tr>
+			<td><code>a(i1, i2, ..., in)</code></td>
+			<td><code>a.inkove(i1, i2, ..., in)</code></td>
+		</tr>
+		<tr>
+			<td><code>a[i] = b</code></td>
+			<td><code>a.set(i, b)</code></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>In Kotlin, parenthesis are translated to call <code>invoke</code> member function.</p>
+
+<p><strong>Recommended Reading:</strong> <em>Invoke Operator Overloading in Kotlin</em></p>
+
+<hr>
+<h3>Bitwise Operation</h3>
+
+<p>Unlike Java, there are no bitwise and bitshift operators in Kotlin. To perform these task, various functions (supporting infix notation) are used:</p>
+
+<ul>
+	<li><code>shl</code> - Signed shift left</li>
+	<li><code>shr</code> - Signed shift right</li>
+	<li><code>ushr</code> - Unsigned shift right</li>
+	<li><code>and</code> - Bitwise and</li>
+	<li><code>or</code> - Bitwise or</li>
+	<li><code>xor</code> - Bitwise xor</li>
+	<li><code>inv</code> - Bitwise inversion</li>
+</ul>
+
+<p>Visit this page to learn more about <a href="/kotlin-programming/bitwise" title="Kotlin Bitwise Operations">Bitwise Operations in Kotlin</a>.</p>
+
+<hr>
+<p>Also, there is no ternary operator in Kotlin unlike Java.</p>
+</div></div></div></div>
+</div>  </div>
+</div>
+  </div>

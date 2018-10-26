@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_technews -> {
-                    val myIntent = Intent(this, IntroHelloWorld::class.java)
+                    val myIntent = Intent(this, Intro1HelloWorld::class.java)
                     startActivity(myIntent)
 
             }
@@ -73,7 +73,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(myIntent)
             }
             R.id.nav_kotlinquizzes -> {
-
+                val myIntent = Intent(this, Intro3Operators::class.java)
+                startActivity(myIntent)
             }
             R.id.nav_kotlintutorialvideos -> {
 

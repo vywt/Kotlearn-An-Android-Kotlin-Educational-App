@@ -16,7 +16,7 @@ class Intro2VariablesBasicTypes : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro2_variables_basic_types)
 
-        val wb = findViewById<WebView>(R.id.wb1)
+        val wb = findViewById<WebView>(R.id.wbIntro2)
         wb!!.loadUrl("file:///android_asset/Intro2.html");
 
 

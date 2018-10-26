@@ -30,11 +30,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.kotlearn.kotlearn.IntroHelloWorld"
-            android:label="@string/title_activity_intro_hello_world"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.kotlearn.kotlearn.Intro2VariablesBasicTypes" />
+        <activity android:name="com.kotlearn.kotlearn.Intro1HelloWorld" />
+        <activity android:name="com.kotlearn.kotlearn.Intro3Operators" />
     </application>
 
 </manifest>

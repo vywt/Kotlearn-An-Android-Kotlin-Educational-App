@@ -236,6 +236,10 @@
         "source": "/Users/fabian/Documents/GitHub/Kotlearn/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/res/merged/debug/layout_activity_intro1_hello_world.xml.flat",
+        "source": "/Users/fabian/Documents/GitHub/Kotlearn/app/src/main/res/layout/activity_intro1_hello_world.xml"
+    },
+    {
         "merged": "/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "/Users/fabian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/11fc30aae4ff72a06d5fe4c11219d45e/res/drawable-xxxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
@@ -1060,10 +1064,6 @@
         "source": "/Users/fabian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/11fc30aae4ff72a06d5fe4c11219d45e/res/layout/abc_screen_content_include.xml"
     },
     {
-        "merged": "/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/res/merged/debug/layout_activity_intro_hello_world.xml.flat",
-        "source": "/Users/fabian/Documents/GitHub/Kotlearn/app/src/main/res/layout/activity_intro_hello_world.xml"
-    },
-    {
         "merged": "/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/res/merged/debug/interpolator-v21_mtrl_linear_out_slow_in.xml.flat",
         "source": "/Users/fabian/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/bcf2b0ea76ba32ba3f42aa8448aa4efe/res/interpolator-v21/mtrl_linear_out_slow_in.xml"
     },
@@ -1692,6 +1692,10 @@
         "source": "/Users/fabian/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/f01043f2437a9f2173115859090db9fb/res/layout-v21/notification_action.xml"
     },
     {
+        "merged": "/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/res/merged/debug/layout_activity_intro3_operators.xml.flat",
+        "source": "/Users/fabian/Documents/GitHub/Kotlearn/app/src/main/res/layout/activity_intro3_operators.xml"
+    },
+    {
         "merged": "/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/res/merged/debug/drawable_abc_ic_go_search_api_material.xml.flat",
         "source": "/Users/fabian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/11fc30aae4ff72a06d5fe4c11219d45e/res/drawable/abc_ic_go_search_api_material.xml"
     },
@@ -1838,10 +1842,6 @@
     {
         "merged": "/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "/Users/fabian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/11fc30aae4ff72a06d5fe4c11219d45e/res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/res/merged/debug/layout_fragment_intro_hello_world.xml.flat",
-        "source": "/Users/fabian/Documents/GitHub/Kotlearn/app/src/main/res/layout/fragment_intro_hello_world.xml"
     },
     {
         "merged": "/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
