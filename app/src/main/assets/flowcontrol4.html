@@ -1,0 +1,189 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin for Loop</h1>
+
+        <div class="page-short-description">
+            The for loop in Kotlin iterates through anything that provides an iterator. In this article, you learn to create for loop (with the help of examples).</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+                    <div class="content">
+                        <div id="node-1126" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/for-loop" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin for Loop" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="introduction" name="introduction"></a>There is&nbsp;no <a href="/java-programming/for-loop" title="Java traditional for loop">traditional for loop</a> in Kotlin unlike Java and other languages.</p>
+
+                                <p>In Kotlin, <code>for</code> loop is used to iterate through ranges, arrays, maps and so on (anything that provides an iterator).</p>
+
+                                <p>The&nbsp;syntax of <code>for</code> loop in Kotlin is:</p>
+
+                                <pre>for (item in collection) {
+    // body of loop
+}</pre>
+
+                                <hr>
+                                <h3>Example: Iterate Through a Range</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">1.</span><span class="pun">.</span><span class="lit">5</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>Here, the loop iterates through&nbsp;the&nbsp;range and prints individual item.</p>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>1
+2
+3
+4
+5</samp></pre>
+
+                                <hr>
+                                <p>If the body of the loop contains only one statement (like above example), it's not necessary to use curly braces <code>{ }</code>.</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">1.</span><span class="pun">.</span><span class="lit">5</span><span class="pun">)</span><span class="pln"> println</span><span class="pun">(</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <hr>
+                                <p>It's possible to iterate&nbsp;through a range using <code>for</code> loop because ranges provides an iterator. To learn more, visit <em>Kotlin iterators</em>.</p>
+
+                                <hr>
+                                <h3><a id="example-range" name="example-range"></a>Example: Different Ways to Iterate Through a Range</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"for (i in 1..5) print(i) = "</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">1.</span><span class="pun">.</span><span class="lit">5</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+
+    println</span><span class="pun">()</span><span class="pln">
+
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"for (i in 5..1) print(i) = "</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">5.</span><span class="pun">.</span><span class="lit">1</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">i</span><span class="pun">)</span><span class="pln">             </span><span class="com">// prints nothing</span><span class="pln">
+
+    println</span><span class="pun">()</span><span class="pln">
+
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"for (i in 5 downTo 1) print(i) = "</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">5</span><span class="pln"> downTo </span><span class="lit">1</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+
+    println</span><span class="pun">()</span><span class="pln">
+
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"for (i in 1..4 step 2) print(i) = "</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">1.</span><span class="pun">.</span><span class="lit">5</span><span class="pln"> step </span><span class="lit">2</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+
+    println</span><span class="pun">()</span><span class="pln">
+
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"for (i in 4 downTo 1 step 2) print(i) = "</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">5</span><span class="pln"> downTo </span><span class="lit">1</span><span class="pln"> step </span><span class="lit">2</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>for (i in 1..5) print(i) = 12345
+for (i in 5..1) print(i) =
+for (i in 5 downTo 1) print(i) = 54321
+for (i in 1..4 step 2) print(i) = 135
+for (i in 4 downTo 1 step 2) print(i) = 531</samp></pre>
+
+                                <hr>
+                                <h2><a id="iterate-array" name="iterate-array"></a>Iterating Through an Array</h2>
+
+                                <p>Here's an example to iterate through a <code>String</code> array.</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">var</span><span class="pln"> language </span><span class="pun">=</span><span class="pln"> arrayOf</span><span class="pun">(</span><span class="str">"Ruby"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Koltin"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Python"</span><span class="pln"> </span><span class="str">"Java"</span><span class="pun">)</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">item </span><span class="kwd">in</span><span class="pln"> language</span><span class="pun">)</span><span class="pln">
+        println</span><span class="pun">(</span><span class="pln">item</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p></p><div id="block-inject-1" class="block-inject block-inject-1"><div id="block-block-123" class="block block-block">
+
+                                </div>
+                                </div><div class="clearfix"></div><p>When you run the program, the output will be:</p>
+
+                                <p><code>Ruby<br>
+                                    Koltin<br>
+                                    Python<br>
+                                    Java</code></p>
+
+                                <hr>
+                                <p>It's possible to&nbsp;iterate through an array with an index. For example,</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">var</span><span class="pln"> language </span><span class="pun">=</span><span class="pln"> arrayOf</span><span class="pun">(</span><span class="str">"Ruby"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Koltin"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Python"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Java"</span><span class="pun">)</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">item </span><span class="kwd">in</span><span class="pln"> language</span><span class="pun">.</span><span class="pln">indices</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+        </span><span class="com">// printing array elements having even index only</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">item</span><span class="pun">%</span><span class="lit">2</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+            </span></code><span class="pln">println</span><span class="pun">(</span><span class="pln">language</span><span class="pun">[</span><span class="pln">item</span><span class="pun">])</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="typ">Ruby</span><span class="pln">
+</span><span class="typ">Python</span></code></pre>
+
+                                <p>If you want to learn more about arrays, visit <em>Kotlin arrays</em>.</p>
+
+                                <hr>
+                                <h2><a id="iterate-string" name="iterate-string"></a>Iterating Through a String</h2>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">var</span><span class="pln"> text</span><span class="pun">=</span><span class="pln"> </span><span class="str">"Kotlin"</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">letter </span><span class="kwd">in</span><span class="pln"> text</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="pln">letter</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>K
+o
+t
+l
+i
+n</samp></pre>
+
+                                <hr>
+                                <p>Similar like arrays, you can iterate through a <code>String</code> with an index. For example,</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">var</span><span class="pln"> text</span><span class="pun">=</span><span class="pln"> </span><span class="str">"Kotlin"</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">item </span><span class="kwd">in</span><span class="pln"> text</span><span class="pun">.</span><span class="pln">indices</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="pln">text</span><span class="pun">[</span><span class="pln">item</span><span class="pun">])</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>K
+o
+t
+l
+i
+n</samp>
+</pre>
+
+                                <hr>
+                                <p>You will learn to iterate over a map using <code>for</code> loop in <em>Kotin map</em> article.</p>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>

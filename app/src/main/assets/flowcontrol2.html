@@ -1,0 +1,181 @@
+<link rel="stylesheet" href="styles.css">
+
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin when Expression</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn about when construct in Kotlin with the help of various examples.</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1110" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/when-expression" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin when Expression" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h2><a id="introduction" name="introduction"></a>Kotlin when Construct</h2>
+
+                                <p>The <code>when</code> construct in Kotlin can be thought of as a replacement for <a href="/java-programming/hello-world">Java switch Statement</a>. It evaluates a section of code among many alternatives.</p>
+
+                                <hr>
+                                <h3><a id="when-example" name="when-example"></a>Example: Simple when Expression</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">12</span><span class="pln">
+    val b </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"Enter operator either +, -, * or /"</span><span class="pun">)</span><span class="pln">
+    val </span><span class="kwd">operator</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> readLine</span><span class="pun">()</span><span class="pln">
+
+    val result </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">when</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">operator</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="str">"+"</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> a </span><span class="pun">+</span><span class="pln"> b
+        </span><span class="str">"-"</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> a </span><span class="pun">-</span><span class="pln"> b
+        </span><span class="str">"*"</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> a </span><span class="pun">*</span><span class="pln"> b
+        </span><span class="str">"/"</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> a </span><span class="pun">/</span><span class="pln"> b
+        </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="str">"$operator operator is invalid operator."</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"result = $result"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+                                <p>When you run the program, the output will be something like:</p>
+
+                                <pre><samp>Enter operator either +, -, * or /
+*
+result = 60</samp></pre>
+
+                                <p>The program above takes an input string from the user (Recommended Reading: <a href="/kotlin-programming/input-output#input-string">Get String Input from the User in Kotlin</a>). Suppose, the user entered <code>*</code>. In this case, the expression <code>a * b</code> is evaluated, and the value is assigned to variable <var>result</var>.</p>
+
+                                <p>If none of the branch conditions are satisfied (user entered anything except <code>+</code>, <code>-</code>, <var>*</var>, or <code>/</code>) , <code>else</code> branch is evaluated.</p>
+
+                                <hr>
+                                <p>In the above example, we used <code>when</code> as an expression. However, it's not mandatory to use <code>when</code> as an expression. For example,</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">12</span><span class="pln">
+    val b </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"Enter operator either +, -, * or /"</span><span class="pun">)</span><span class="pln">
+    val </span><span class="kwd">operator</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> readLine</span><span class="pun">()</span><span class="pln">
+
+    </span><span class="kwd">when</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">operator</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="str">"+"</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"$a + $b = ${a + b}"</span><span class="pun">)</span><span class="pln">
+        </span><span class="str">"-"</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"$a - $b = ${a - b}"</span><span class="pun">)</span><span class="pln">
+        </span><span class="str">"*"</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"$a * $b = ${a * b}"</span><span class="pun">)</span><span class="pln">
+        </span><span class="str">"/"</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"$a / $b = ${a / b}"</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"$operator is invalid"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be something like:</p>
+
+                                <pre><samp>Enter operator either +, -, * or /
+-
+12 - 5 = 7</samp>
+</pre>
+
+                                <p>Here, <code>when</code> is not an expression (return value from <code>when</code> is not assigned to anything). In this case, the <code>else</code> branch is not mandatory.</p>
+
+                                <hr>
+                                <h2>Few possibilities</h2>
+
+                                <p><strong><a id="combine-branch" name="combine-branch"></a>Combine two or more branch conditions with a comma.</strong> For example,</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val n </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-</span><span class="lit">1</span><span class="pln">
+
+    </span><span class="kwd">when</span><span class="pln"> </span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"n is a positive integer less than 4."</span><span class="pun">)</span><span class="pln">
+        </span><span class="lit">0</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"n is zero"</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">-</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="pun">-</span><span class="lit">2</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"n is a negative integer greater than 3."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p></p><div id="block-inject-1" class="block-inject block-inject-1"><div id="block-block-123" class="block block-block">
+
+
+                                    <div class="content">
+                                        <!-- /8095840/.2_A.34657.4_Programiz.com_tier1 -->
+                                        <div id="div-gpt-ad-1527670353707-0">
+                                            <script>
+if (window.innerWidth < 900) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+                                        </div>
+
+                                        <!-- /8095840/.2_A.34660.4_Programiz.com_tier1 -->
+                                        <div id="div-gpt-ad-1527670429257-0">
+                                            <script>
+if (window.innerWidth >= 900) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+                                        </div>  </div>
+                                </div>
+                                </div><div class="clearfix"></div><p>When you run the program, the output will be:</p>
+
+                                <pre><samp>n is a negative integer greater than 3.</samp></pre>
+
+                                <hr>
+                                <p><strong><a id="check-range" name="check-range"></a>Check value&nbsp;in the&nbsp;range.</strong> For example,</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">100</span><span class="pln">
+
+    </span><span class="kwd">when</span><span class="pln"> </span><span class="pun">(</span><span class="pln">a</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">1.</span><span class="pun">.</span><span class="lit">10</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"A positive number less than 11."</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">10.</span><span class="pun">.</span><span class="lit">100</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"A positive number between 10 and 100 (inclusive)"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>A positive number between 10 and 100 (inclusive)</samp></pre>
+
+                                <hr>
+                                <p><strong><a id="type-check" name="type-check"></a>Check if a value is of a particular type.</strong></p>
+
+                                <p>To check whether a value is of a particular type in runtime, we can use <a href="https://kotlinlang.org/docs/reference/typecasts.html">is and !is operator</a>. For example,</p>
+
+                                <pre>when (x) {
+    is Int -&gt; print(x + 1)
+    is String -&gt; print(x.length + 1)
+    is IntArray -&gt; print(x.sum())
+}
+</pre>
+
+                                <hr>
+                                <p><strong><a id="expressions-branch" name="expressions-branch"></a>Use expressions as branch condition.</strong> For example,</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">11</span><span class="pln">
+    val n </span><span class="pun">=</span><span class="pln"> </span><span class="str">"11"</span><span class="pln">
+
+    </span><span class="kwd">when</span><span class="pln"> </span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="str">"cat"</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"Cat? Really?"</span><span class="pun">)</span><span class="pln">
+        </span><span class="lit">12.toString</span><span class="pun">()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"Close but not close enough."</span><span class="pun">)</span><span class="pln">
+        a</span><span class="pun">.</span><span class="pln">toString</span><span class="pun">()</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"Bingo! It's eleven."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>Bingo! It's eleven.</samp>
+</pre>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>
+

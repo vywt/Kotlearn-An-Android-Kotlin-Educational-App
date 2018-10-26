@@ -1,0 +1,212 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin if Expression</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn to use if expression in Kotlin with the help of examples.</div>
+
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1109" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/if-expression" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin if Expression" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h2><a id="traditional-usage" name="traditional-usage"></a>Traditional Usage of if...else</h2>
+
+                                <p>The syntax of if...else is:</p>
+
+                                <pre>if (testExpression) {
+   // codes to run if testExpression is true
+}
+else {
+  // codes to run if testExpression is false
+}</pre>
+
+                                <p><code>if</code> executes a certain section of code if the <var>testExpression</var> is evaluated to <code>true</code>. It can have optional <var>else</var> clause. Codes inside <code>else</code> clause are executed if the <code>testExpression</code> is false.</p>
+
+                                <hr>
+                                <h3><a id="example-traditional-usage" name="example-traditional-usage"></a>Example: Traditional Usage of if...else</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val number </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-</span><span class="lit">10</span><span class="pln">
+
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">number </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Positive number"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Negative number"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre>Negative number
+</pre>
+
+                                <hr>
+                                <h2><a id="if-expression" name="if-expression"></a>Kotlin if expression</h2>
+
+                                <p>Unlike Java (and other many programming languages), <code>if</code>&nbsp;can be used an expression in Kotlin; it returns a value. <strong>Recommended Reading:</strong> <a href="/kotlin-programming/statement-expression#expressions" title="Kotlin Expression">Kotlin expression</a></p>
+
+                                <hr>
+                                <p>Here is an example:</p>
+
+                                <h3><a id="example-if-expression" name="example-if-expression"></a>Example: Kotin if expression</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val number </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-</span><span class="lit">10</span><span class="pln">
+
+    val result </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">number </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="str">"Positive number"</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="str">"Negative number"</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="pln">result</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre>Negative number
+</pre>
+
+                                <p>The <code>else</code> branch is mandatory when using <code>if</code> as an expression.</p>
+
+                                <hr>
+                                <p>The curly braces are optional if the body of <code>if</code> has only one statement. For example,</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val number </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-</span><span class="lit">10</span><span class="pln">
+    val result </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">number </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="str">"Positive number"</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="str">"Negative number"</span><span class="pln">
+    println</span><span class="pun">(</span><span class="pln">result</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>This is similar to <a href="/java-programming/ternary-operator" title="Java ternary operator.">ternary operator in Java</a>. Hence, there is no ternary operator in Kotlin.</p>
+
+                                <hr>
+                                <h3><a id="example-multiple-expressions" name="example-multiple-expressions"></a>Example: if block With Multiple Expressions</h3>
+
+                                <p></p><div id="block-inject-1" class="block-inject block-inject-1"><div id="block-block-123" class="block block-block">
+
+
+                                    <div class="content">
+                                        <!-- /8095840/.2_A.34657.4_Programiz.com_tier1 -->
+                                        <div id="div-gpt-ad-1527670353707-0">
+                                            <script>
+if (window.innerWidth < 900) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+                                        </div>
+
+                                        <!-- /8095840/.2_A.34660.4_Programiz.com_tier1 -->
+                                        <div id="div-gpt-ad-1527670429257-0">
+                                            <script>
+if (window.innerWidth >= 900) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+                                        </div>  </div>
+                                </div>
+                                </div><div class="clearfix"></div><p>If the block of <code>if</code> branch contains more than one expression, the last expression is returned as the value of the block.</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val a </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-</span><span class="lit">9</span><span class="pln">
+    val b </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-</span><span class="lit">11</span><span class="pln">
+
+    val max </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">a </span><span class="pun">&gt;</span><span class="pln"> b</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"$a is larger than $b."</span><span class="pun">)</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"max variable holds value of a."</span><span class="pun">)</span><span class="pln">
+        a
+    </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"$b is larger than $a."</span><span class="pun">)</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"max variable holds value of b."</span><span class="pun">)</span><span class="pln">
+        b
+    </span><span class="pun">}</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"max = $max"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>-9 is larger than -11.
+max variable holds value of a.
+max = -9</samp></pre>
+
+                                <p><strong>Recommended Reading:</strong> <em>Kotlin when Statement</em></p>
+
+                                <hr>
+                                <h2><a id="if-else-ladder" name="if-else-ladder"></a>Kotlin if..else..if Ladder</h2>
+
+                                <p>You can return a block of code among many blocks in Kotlin using <code>if..else...if</code> ladder.</p>
+
+                                <hr>
+                                <h3>Example: if...else...if Ladder</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val number </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pln">
+
+    val result </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">number </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+        </span><span class="str">"positive number"</span><span class="pln">
+    </span><span class="kwd">else</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">number </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+        </span><span class="str">"negative number"</span><span class="pln">
+    </span><span class="kwd">else</span><span class="pln">
+        </span><span class="str">"zero"</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"number is $result"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+                                <p>This program checks whether <var>number</var> is positive number, negative number, or zero.</p>
+
+                                <hr>
+                                <h2><a id="nested-if" name="nested-if"></a>Kotlin Nested if Expression</h2>
+
+                                <p>An <var>if</var> expression can be inside the block of another <var>if</var> expression known as nested if expression.</p>
+
+                                <hr>
+                                <h3>Example: Nested if Expression</h3>
+
+                                <p>This program computes the largest number among three numbers.</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val n1 </span><span class="pun">=</span><span class="pln"> </span><span class="lit">3</span><span class="pln">
+    val n2 </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pln">
+    val n3 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-</span><span class="lit">2</span><span class="pln">
+
+    val max </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">n1 </span><span class="pun">&gt;</span><span class="pln"> n2</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">n1 </span><span class="pun">&gt;</span><span class="pln"> n3</span><span class="pun">)</span><span class="pln">
+            n1
+        </span><span class="kwd">else</span><span class="pln">
+            n3
+    </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">n2 </span><span class="pun">&gt;</span><span class="pln"> n3</span><span class="pun">)</span><span class="pln">
+            n2
+        </span><span class="kwd">else</span><span class="pln">
+            n3
+    </span><span class="pun">}</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"max = $max"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>max = 5</samp>
+</pre>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>
+

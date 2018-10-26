@@ -1,0 +1,161 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin continue Expression</h1>
+
+        <div class="page-short-description">
+            In this tutorial, you will learn to use continue to skip the current iteration of a loop. Also, you will also learn about continue labels in this article.</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1144" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/continue" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin continue Expression" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="introduction" name="introduction"></a>Suppose you are working with loops. It is sometimes desirable to skip the current iteration of the loop.</p>
+
+                                <p>In such case, <code>continue</code> is used. The <code>continue</code> construct skips the current iteration of the enclosing loop, and the control of the program jumps to the end of the loop body.</p>
+
+                                <hr>
+                                <h2><a id="working-of-continue" name="working-of-continue"></a>How continue works?</h2>
+
+                                <p>It is almost always used with <a href="/kotlin-programming/if-expression" title="Kotlin if...else">if...else</a> construct. For example,</p>
+
+                                <pre>while (testExpression1) {
+
+    // codes1
+    if (testExpression2) {
+        continue
+    }
+    // codes2
+}</pre>
+
+                                <p>If the <var>testExpression2</var> is evaluated to <code>true</code>, <code>continue</code> is executed which skips all the codes inside <code>while</code> loop after it for that iteration.</p>
+
+                                <p><img alt="How continue expression works in Kotlin?" src="./images/flowcontrol6image1.jpg" width="100%"></p>
+
+                                <hr>
+                                <h3><a id="continue-example" name="continue-example"></a>Example: Kotlin continue</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">1.</span><span class="pun">.</span><span class="lit">5</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"$i Always printed."</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">5</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="kwd">continue</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"$i Not always printed."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>1 Always printed.
+1 Not always printed.
+2 Always printed.
+3 Always printed.
+4 Always printed.
+5 Always printed.
+5 Not always printed.</samp></pre>
+
+                                <p>When the value of <var>i</var> is greater than 1 and less than 5, <code>continue</code> is executed, which skips the execution of</p>
+
+                                <pre>println("$i Not always printed.")</pre>
+
+                                <p>statement.</p>
+
+                                <p>However, the statement</p>
+
+                                <pre>println("$i Always printed.")</pre>
+
+                                <p>is executed in each iteration of the loop because this statement exists before the <code>continue</code> construct.</p>
+
+                                <hr>
+                                <h3>Example: Calculate Sum of Positive Numbers Only</h3>
+
+                                <p></p>
+                                </div><div class="clearfix"></div><p>The program below calculates the sum of maximum of 6 positive numbers entered by the user. If the user enters negative number or zero, it is skipped from calculation.</p>
+
+                                <p>Visit <a href="https://www.programiz.com/kotlin-programming/input-output">Kotlin Basic Input Output</a> to learn more on how to take input from the user.</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">var</span><span class="pln"> number</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> sum </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">1.</span><span class="pun">.</span><span class="lit">6</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Enter an integer: "</span><span class="pun">)</span><span class="pln">
+        number </span><span class="pun">=</span><span class="pln"> readLine</span><span class="pun">()!!.</span><span class="pln">toInt</span><span class="pun">()</span><span class="pln">
+
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">number </span><span class="pun">&lt;=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+            </span><span class="kwd">continue</span><span class="pln">
+
+        sum </span><span class="pun">+=</span><span class="pln"> number
+    </span><span class="pun">}</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"sum = $sum"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>Enter an integer: 4
+Enter an integer: 5
+Enter an integer: -50
+Enter an integer: 10
+Enter an integer: 0
+Enter an integer: 12
+sum = 31</samp></pre>
+
+                                <hr>
+                                <h2><a id="labeled-continue" name="labeled-continue"></a>Kotlin Labeled continue</h2>
+
+                                <p>What you have learned till now is unlabeled form of <code>continue</code>, which skips current iteration of the nearest enclosing loop. <code>continue</code> can also be used to skip the iteration of the desired loop (can be outer loop) by using <code>continue</code> labels.</p>
+
+                                <hr>
+                                <h3><a id="working-labeled-continue" name="working-labeled-continue"></a>How labeled continue works?</h3>
+
+                                <p><img alt="How labeled continue works?" src="./images/flowcontrol6image2.jpg" width="100%"></p>
+
+                                <p>Label in Kotlin starts with an <a href="https://www.programiz.com/kotlin-programming/keywords-identifiers#identifiers" title="Kotlin identifier">identifier</a> which is followed by <code>@</code>.</p>
+
+                                <p>Here, <var>outerloop@</var> is a label marked at outer <a href="https://www.programiz.com/kotlin-programming/while-loop" title="Kotlin while Loop">while loop</a>. Now, by using <code>continue</code> with the label (<code>continue@outerloop</code> in this case), you can skip the execution of codes of the specific loop for that iteration.</p>
+
+                                <hr>
+                                <h3><a id="example-labeled-continue" name="example-labeled-continue"></a>Example: labeled continue</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    here@ </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">1.</span><span class="pun">.</span><span class="lit">5</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">j </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">1.</span><span class="pun">.</span><span class="lit">4</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="pun">==</span><span class="pln"> </span><span class="lit">3</span><span class="pln"> </span><span class="pun">||</span><span class="pln"> j </span><span class="pun">==</span><span class="pln"> </span><span class="lit">2</span><span class="pun">)</span><span class="pln">
+                </span><span class="kwd">continue</span><span class="lit">@here</span><span class="pln">
+            println</span><span class="pun">(</span><span class="str">"i = $i; j = $j"</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>i = 1; j = 1
+i = 2; j = 1
+i = 4; j = 1
+i = 5; j = 1</samp>
+</pre>
+
+                                <p>The use of labeled <code>continue</code> is often discouraged as it makes your code hard to understand. If you are in a situation where you have to use labeled <code>continue</code>, refactor your code and try to solve it in a different way to make it more readable.</p>
+
+                                <hr>
+                                <p>There are 3 structural jump expressions in Kotlin: <code>break</code>, <code>continue</code> and <code>return</code>. To learn about <code>break</code> and <code>return</code> expression, visit:</p>
+
+                                <ul>
+                                    <li><em>Kotlin break</em></li>
+                                    <li><em>Kotlin function</em></li>
+                                </ul>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>
