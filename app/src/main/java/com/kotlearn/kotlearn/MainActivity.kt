@@ -63,33 +63,31 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_technews -> {
+            R.id.nav_intro1 -> {
                     val myIntent = Intent(this, Intro1HelloWorld::class.java)
                     startActivity(myIntent)
 
             }
-            R.id.nav_techvideos -> {
+            R.id.nav_intro2 -> {
                 val myIntent = Intent(this, Intro2VariablesBasicTypes::class.java)
                 startActivity(myIntent)
             }
-            R.id.nav_kotlinquizzes -> {
+            R.id.nav_intro3 -> {
                 val myIntent = Intent(this, Intro3Operators::class.java)
                 startActivity(myIntent)
             }
-            R.id.nav_kotlintutorialvideos -> {
+            R.id.nav_intro4 -> {
                 val myIntent = Intent(this, Intro4TypeConversion::class.java)
                 startActivity(myIntent)
             }
-            R.id.nav_javatokotlin -> {
+            R.id.nav_intro5 -> {
                 val myIntent = Intent(this, Intro5Expression::class.java)
                 startActivity(myIntent)
 
             }
-            R.id.nav_exampleprograms -> {
-
+            R.id.nav_intro6 -> {
                 val myIntent = Intent(this, Intro6BasicIO::class.java)
                 startActivity(myIntent)
-
             }
         }
 

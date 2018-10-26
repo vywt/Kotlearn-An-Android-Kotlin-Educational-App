@@ -2679,7 +2679,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -4817,14 +4817,14 @@ public final class R {
     public static final int mtrl_child_content_container=0x7f08006f;
     public static final int mtrl_internal_children_alpha_tag=0x7f080070;
     public static final int multiply=0x7f080071;
-    public static final int nav_exampleprograms=0x7f080072;
-    public static final int nav_javatokotlin=0x7f080073;
-    public static final int nav_kotlinquizzes=0x7f080074;
-    public static final int nav_kotlintutorialvideos=0x7f080075;
-    public static final int nav_send=0x7f080076;
-    public static final int nav_share=0x7f080077;
-    public static final int nav_technews=0x7f080078;
-    public static final int nav_techvideos=0x7f080079;
+    public static final int nav_intro1=0x7f080072;
+    public static final int nav_intro2=0x7f080073;
+    public static final int nav_intro3=0x7f080074;
+    public static final int nav_intro4=0x7f080075;
+    public static final int nav_intro5=0x7f080076;
+    public static final int nav_intro6=0x7f080077;
+    public static final int nav_send=0x7f080078;
+    public static final int nav_share=0x7f080079;
     public static final int nav_view=0x7f08007a;
     public static final int navigation_dashboard=0x7f08007b;
     public static final int navigation_header_container=0x7f08007c;
@@ -11671,7 +11671,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>

@@ -1,34 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_technews"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Tech News" />
-        <item
-            android:id="@+id/nav_techvideos"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Tech Videos" />
-        <item
-            android:id="@+id/nav_kotlinquizzes"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Kotlin Quizzes" />
-        <item
-            android:id="@+id/nav_kotlintutorialvideos"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Kotlin Tutorial Videos" />
-        <item
-            android:id="@+id/nav_javatokotlin"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Java to Kotlin" />
-        <item
-            android:id="@+id/nav_exampleprograms"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Example Programs" />
-    </group>
+    <item app:showAsAction="collapseActionView"  android:title="Introduction">
+        <menu>
+            <item
+                android:id="@+id/nav_intro1"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="Hello World" />
+            <item
+                android:id="@+id/nav_intro2"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="Variables and Basic Types" />
+            <item
+                android:id="@+id/nav_intro3"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Operators" />
+            <item
+                android:id="@+id/nav_intro4"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Type Conversion" />
+            <item
+                android:id="@+id/nav_intro5"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Expressions" />
+            <item
+                android:id="@+id/nav_intro6"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Basic Input and Output" />
+        </menu>
+    </item>
+
+    <!--<group android:checkableBehavior="single">-->
+        <!--<item-->
+            <!--android:id="@+id/nav_intro1"-->
+            <!--android:icon="@drawable/ic_menu_camera"-->
+            <!--android:title="Hello World" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_intro2"-->
+            <!--android:icon="@drawable/ic_menu_slideshow"-->
+            <!--android:title="Variables and Basic Types" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_intro3"-->
+            <!--android:icon="@drawable/ic_menu_manage"-->
+            <!--android:title="Kotlin Operators" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_intro4"-->
+            <!--android:icon="@drawable/ic_menu_manage"-->
+            <!--android:title="Type Conversion" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_intro5"-->
+            <!--android:icon="@drawable/ic_menu_manage"-->
+            <!--android:title="Kotlin Expressions" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_intro6"-->
+            <!--android:icon="@drawable/ic_menu_manage"-->
+            <!--android:title="Basic Input and Output" />-->
+    <!--</group>-->
 
     <item android:title="Facebook">
         <menu>
