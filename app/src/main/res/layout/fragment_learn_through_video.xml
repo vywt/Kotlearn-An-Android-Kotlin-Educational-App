@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LearnThroughVideos.LearnThroughVideoFragment">
+
+
+    <Button
+        android:id="@+id/btnIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/introtokotlin" />
+    <Button
+        android:id="@+id/btnGs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gettingstarted" />
+    <Button
+        android:id="@+id/btnbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/basics" />
+    <Button
+        android:id="@+id/btncao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/classesandobjects" />
+    <Button
+        android:id="@+id/btnfal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/functionsandlambdas" />
+    <Button
+        android:id="@+id/btno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/others"/>
+
+
+</LinearLayout>

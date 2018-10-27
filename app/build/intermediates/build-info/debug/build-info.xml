@@ -6,7 +6,7 @@
     density="xhdpi"
     format="10"
     plugin-version="3.1.4"
-    timestamp="1540629674163"
+    timestamp="1540637549687"
     token="9011841343279150554"
     verifier="COMPATIBLE" >
 
@@ -15,13 +15,13 @@
         duration="0" />
     <task
         name="instant-run-dex"
-        duration="55" />
+        duration="62" />
     <task
         name="instant-run-transform"
-        duration="26" />
+        duration="18" />
     <task
         name="verifier"
-        duration="17" />
+        duration="5" />
 
     <artifact
         location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/reload-dex/debug/classes.dex"
@@ -29,8 +29,8 @@
 
     <build
         build-mode="FULL"
-        timestamp="1540626481135"
-        verifier="FULL_BUILD_REQUESTED" >
+        timestamp="1540637436991"
+        verifier="MANIFEST_FILE_CHANGE" >
         <artifact
             location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
@@ -38,10 +38,10 @@
             location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
             location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
@@ -72,46 +72,8 @@
             type="SPLIT_MAIN" />
     </build>
     <build
-        build-mode="COLD"
-        timestamp="1540629575215"
-        verifier="CLASS_ADDED" >
-        <artifact
-            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
         build-mode="HOT_WARM"
-        timestamp="1540629674163"
+        timestamp="1540637549687"
         verifier="COMPATIBLE" >
         <artifact
             location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/reload-dex/debug/classes.dex"

@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="navigation_view">
 
-    <item app:showAsAction="collapseActionView"  android:title="Introduction">
+    <item app:showAsAction="collapseActionView"  android:title="Learn Through Tutorials">
         <menu>
             <item
                 android:id="@+id/nav_intro1"
@@ -32,6 +32,31 @@
                 android:title="Basic Input and Output" />
         </menu>
     </item>
+
+
+    <item app:showAsAction="collapseActionView"  android:title="Learn Through Videos">
+        <menu>
+            <item
+                android:id="@+id/nav_intro7"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="Learn Through Videos" />
+        </menu>
+    </item>
+
+
+
+    <item
+    android:id="@+id/nav_intro8"
+    android:icon="@drawable/ic_menu_camera"
+    android:title="Kotlin Quizzes" />
+
+    <item
+        android:id="@+id/nav_intro9"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Connect with Learners" />
+
+
+
 
     <!--<group android:checkableBehavior="single">-->
         <!--<item-->

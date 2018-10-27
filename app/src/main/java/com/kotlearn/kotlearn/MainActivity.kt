@@ -7,6 +7,8 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.kotlearn.kotlearn.LearnThroughTutorials.*
+import com.kotlearn.kotlearn.LearnThroughVideos.LearnThroughVideoFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
@@ -20,7 +22,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val fragmentManager = supportFragmentManager
         val transaction = fragmentManager.beginTransaction()
 
-        transaction.replace(R.id.fragmentUsed, Intro2VariablesBasicTypesFragment()).commit()
+        transaction.replace(R.id.fragmentUsed, IntroHomeFragment()).commit()
 
 
         val toggle = ActionBarDrawerToggle(
@@ -37,7 +39,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
         } else {
-            super.onBackPressed()
+            val fragmentManager = supportFragmentManager
+            val transaction = fragmentManager.beginTransaction()
+
+            transaction.replace(R.id.fragmentUsed, IntroHomeFragment()).commit()
         }
     }
 
@@ -65,22 +70,25 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         when (item.itemId) {
             R.id.nav_intro1 -> {
-                transaction.replace(R.id.fragmentUsed, Intro1HelloWorldFragment()).commit()
+                transaction.replace(R.id.fragmentUsed, Intro1HelloWorldFragment()).addToBackStack("Frag1").commit()
             }
             R.id.nav_intro2 -> {
-                transaction.replace(R.id.fragmentUsed, Intro2VariablesBasicTypesFragment()).commit()
+                transaction.replace(R.id.fragmentUsed, Intro2VariablesBasicTypesFragment()).addToBackStack("Frag2").commit()
             }
             R.id.nav_intro3 -> {
-                transaction.replace(R.id.fragmentUsed, Intro3OperatorsFragment()).commit()
+                transaction.replace(R.id.fragmentUsed, Intro3OperatorsFragment()).addToBackStack("Frag3").commit()
             }
             R.id.nav_intro4 -> {
-                transaction.replace(R.id.fragmentUsed, Intro4TypeConversionFragment()).commit()
+                transaction.replace(R.id.fragmentUsed, Intro4TypeConversionFragment()).addToBackStack("Frag4").commit()
             }
             R.id.nav_intro5 -> {
-                transaction.replace(R.id.fragmentUsed, Intro5ExpressionFragment()).commit()
+                transaction.replace(R.id.fragmentUsed, Intro5ExpressionFragment()).addToBackStack("Frag5").commit()
             }
             R.id.nav_intro6 -> {
-                transaction.replace(R.id.fragmentUsed, Intro6BasicIOFragment()).commit()
+                transaction.replace(R.id.fragmentUsed, Intro6BasicIOFragment()).addToBackStack("Frag6").commit()
+            }
+            R.id.nav_intro7 -> {
+                transaction.replace(R.id.fragmentUsed, LearnThroughVideoFragment()).addToBackStack("Frag7").commit()
             }
         }
 
