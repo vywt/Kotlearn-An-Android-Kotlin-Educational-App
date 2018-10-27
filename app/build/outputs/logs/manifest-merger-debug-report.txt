@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-36:12
+ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-27:12
 MERGED from [com.android.support:design:28.0.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/0b94b4ce802960c02112038d4ce54fed/AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.kbiakov:CodeView-android:1.3.1] /Users/victor/.gradle/caches/transforms-1/files-1.1/CodeView-android-1.3.1.aar/020f1d64537de9a02ca7cdd1b9a4d561/AndroidManifest.xml:2:1-16:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/f081febf64370248056cd4ffcd35823a/AndroidManifest.xml:17:1-22:12
@@ -38,20 +38,20 @@ MERGED from [com.android.support:cursoradapter:28.0.0] /Users/victor/.gradle/cac
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/victor/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/bbe66148149efc5c4d2155c6e6e1e963/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/victor/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/e3570ba20f7c4528916b83dd62e55ee3/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /Users/victor/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/b5baf3b7f3aa1c0c395878b0412c06b6/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-27:12
 	package
 		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:3:5-36
 		INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-36:12
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-27:12
 		INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-36:12
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-27:12
 		INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:11-69
@@ -60,7 +60,7 @@ ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:5:5-6
 	android:name
 		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:7:5-34:19
+ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:7:5-25:19
 MERGED from [com.android.support:design:28.0.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/0b94b4ce802960c02112038d4ce54fed/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/0b94b4ce802960c02112038d4ce54fed/AndroidManifest.xml:22:5-20
 MERGED from [com.github.kbiakov:CodeView-android:1.3.1] /Users/victor/.gradle/caches/transforms-1/files-1.1/CodeView-android-1.3.1.aar/020f1d64537de9a02ca7cdd1b9a4d561/AndroidManifest.xml:11:5-14:19
@@ -103,38 +103,6 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:21:17-77
 	android:name
 		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:21:27-74
-activity#com.kotlearn.kotlearn.Intro2VariablesBasicTypes
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:24:9-63
-	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:24:19-60
-activity#com.kotlearn.kotlearn.Intro1HelloWorld
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:25:9-54
-	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:25:19-51
-activity#com.kotlearn.kotlearn.Intro3Operators
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:26:9-53
-	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:26:19-50
-activity#com.kotlearn.kotlearn.Intro4TypeConversion
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:27:9-58
-	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:27:19-55
-activity#com.kotlearn.kotlearn.Intro5Expression
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:28:9-54
-	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:28:19-51
-activity#com.kotlearn.kotlearn.Intro6BasicIO
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:29:9-51
-	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:29:19-48
-activity#com.kotlearn.kotlearn.Intro
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:30:9-33:68
-	android:label
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:32:13-57
-	android:theme
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:33:13-56
-	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:31:13-34
 uses-sdk
 INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml

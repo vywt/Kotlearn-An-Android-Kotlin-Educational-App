@@ -128,12 +128,12 @@
         "source": "/Users/victor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/f081febf64370248056cd4ffcd35823a/res/color-v23/abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "/Users/victor/Desktop/Kotlearn/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_longpressed_holo.9.png.flat",
-        "source": "/Users/victor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/f081febf64370248056cd4ffcd35823a/res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png"
-    },
-    {
         "merged": "/Users/victor/Desktop/Kotlearn/app/build/intermediates/res/merged/debug/animator_mtrl_btn_unelevated_state_list_anim.xml.flat",
         "source": "/Users/victor/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/0b94b4ce802960c02112038d4ce54fed/res/animator/mtrl_btn_unelevated_state_list_anim.xml"
+    },
+    {
+        "merged": "/Users/victor/Desktop/Kotlearn/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_longpressed_holo.9.png.flat",
+        "source": "/Users/victor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/f081febf64370248056cd4ffcd35823a/res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png"
     },
     {
         "merged": "/Users/victor/Desktop/Kotlearn/app/build/intermediates/res/merged/debug/color_mtrl_tabs_icon_color_selector_colored.xml.flat",
@@ -842,6 +842,10 @@
     {
         "merged": "/Users/victor/Desktop/Kotlearn/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
         "source": "/Users/victor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/f081febf64370248056cd4ffcd35823a/res/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_light.png"
+    },
+    {
+        "merged": "/Users/victor/Desktop/Kotlearn/app/build/intermediates/res/merged/debug/layout_fragment_learn_through_video.xml.flat",
+        "source": "/Users/victor/Desktop/Kotlearn/app/src/main/res/layout/fragment_learn_through_video.xml"
     },
     {
         "merged": "/Users/victor/Desktop/Kotlearn/app/build/intermediates/res/merged/debug/layout_design_navigation_item.xml.flat",

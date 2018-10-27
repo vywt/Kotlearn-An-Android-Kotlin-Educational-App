@@ -20,6 +20,15 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="tab_text_3">Tab 3</string>
 
+
+    <!--Buttons on Learn Through Video-->
+    <string name="introtokotlin">Introduction to Kotlin</string>
+    <string name="gettingstarted">Getting Started</string>
+    <string name="basics">Basics</string>
+    <string name="classesandobjects">Classes and Objects</string>
+    <string name="functionsandlambdas">Functions and Lambdas</string>
+    <string name="others">Others</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
