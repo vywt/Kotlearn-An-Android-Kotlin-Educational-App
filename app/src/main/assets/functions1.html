@@ -1,0 +1,211 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Functions</h1>
+
+        <div class="page-short-description">
+            In this article, you'll learn about functions; what functions are, its syntax and how to create a user-function in Kotlin.</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1150" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/functions" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Functions" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="introduction" name="introduction"></a>In programming, function is a group of related statements that perform a specific task.</p>
+
+                                <p>Functions are used to break a large program into smaller and modular chunks. For example, you need to create and color a circle based on input from the user. You can create two functions to solve this problem:</p>
+
+                                <ul>
+                                    <li><code>createCircle()</code> Function</li>
+                                    <li><code>colorCircle()</code> Function</li>
+                                </ul>
+
+                                <p>Dividing a complex program into smaller components makes our program more organized and manageable.</p>
+
+                                <p>Furthermore, it avoids repetition and makes code reusable.</p>
+
+                                <hr>
+                                <h2>Types of Functions</h2>
+
+                                <p>Depending on whether a function is defined by the user, or available in <a href="https://kotlinlang.org/api/latest/jvm/stdlib/" title="Kotlin standard Library">standard library</a>, there are two types of functions:</p>
+
+                                <ul>
+                                    <li>Kotlin Standard Library Function</li>
+                                    <li>User-defined functions</li>
+                                </ul>
+
+                                <hr>
+                                <h3><a id="standard-library" name="standard-library"></a>Kotlin Standard Library Function</h3>
+
+                                <p>The standard library functions are built-in functions in Kotlin that are readily available for use. For example,</p>
+
+                                <ul>
+                                    <li><code>print()</code> is a library function that prints message to the standard output stream (monitor).</li>
+                                    <li><code>sqrt()</code> returns square root of a number (<code>Double</code> value)</li>
+                                </ul>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">var</span><span class="pln"> number </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5.5</span><span class="pln">
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Result = ${Math.sqrt(number)}"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>Result = 2.345207879911715</samp></pre>
+
+                                <p>Here is a link to the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/" title="Kotlin Standard Library">Kotlin Standard Library</a> for you to explore.</p>
+
+                                <hr>
+                                <h3><a id="user-defined" name="user-defined"></a>User-defined Functions</h3>
+
+                                <p>As mentioned, you can create functions yourself. Such functions are called user-defined functions.</p>
+
+                                <hr>
+                                <h3><a id="create-user-defined" name="create-user-defined"></a>How to create a user-defined function in Kotlin?</h3>
+
+                                <p>Before you can use (call) a function, you need to define it.</p>
+
+                                <p>Here's how you can define a function in Kotlin:</p>
+
+                                <pre>fun callMe() {
+    // function body
+}
+</pre>
+
+                                <p>To define a function in Kotlin, <code>fun</code> keyword is used. Then comes the name of the function (<a href="/kotlin-programming/keywords-identifiers#identifiers" title="Kotlin identifiers">identifier</a>). Here, the name of the function is <var>callMe</var>.</p>
+
+                                <p>In the above program, the parenthesis <code>( )</code> is empty. It means, this function doesn't accept any argument. You will learn about arguments later in this article.</p>
+
+                                <p>The codes inside curly braces <code>{ }</code> is the body of the function.</p>
+
+                                <hr>
+                                <h3><a id="call-function" name="call-function"></a>How to call a function?</h3>
+
+                                <p>You have to call the function to run codes inside the body of the function. Here's how:</p>
+
+                                <pre>callme()</pre>
+
+                                <p>This statement calls the <code>callMe()</code> function declared earlier.</p>
+
+                                <p><img alt="Function call in Koltin" src="./images/functions1image1.jpg" width="100%"></p>
+
+                                <hr>
+                                <h3><a id="example-1" name="example-1"></a>Example: Simple Function Program</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun callMe</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"Printing from callMe() function."</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"This is cool (still printing from inside)."</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    callMe</span><span class="pun">()</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"Printing outside from callMe() function."</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>Printing from callMe() function.
+This is cool (still printing from inside).
+Printing outside from callMe() function.</samp></pre>
+
+                                <p>The <code>callMe()</code> function in the above code doesn't accept any argument.</p>
+
+                                <p>Also, the function doesn't return any value (return type is <code>Unit</code>).</p>
+
+                                <p></p>
+                                </div><div class="clearfix"></div><p>Let's take another function example. This function will accept arguments and also returns a value.</p>
+
+                                <hr>
+                                <h3><a id="example-2" name="example-2"></a>Example: Add Two Numbers Using Function</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun addNumbers</span><span class="pun">(</span><span class="pln">n1</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Double</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Double</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val sum </span><span class="pun">=</span><span class="pln"> n1 </span><span class="pun">+</span><span class="pln"> n2
+    val sumInteger </span><span class="pun">=</span><span class="pln"> sum</span><span class="pun">.</span><span class="pln">toInt</span><span class="pun">()</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> sumInteger
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val number1 </span><span class="pun">=</span><span class="pln"> </span><span class="lit">12.2</span><span class="pln">
+    val number2 </span><span class="pun">=</span><span class="pln"> </span><span class="lit">3.4</span><span class="pln">
+    val result</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln">
+
+    result </span><span class="pun">=</span><span class="pln"> addNumbers</span><span class="pun">(</span><span class="pln">number1</span><span class="pun">,</span><span class="pln"> number2</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"result = $result"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>result = 15</samp></pre>
+
+                                <hr>
+                                <h3><a id="argument-return-value" name="argument-return-value"></a>How functions with arguments and return value work?</h3>
+
+                                <p>Here, two arguments <var>number1</var> and <var>number2</var> of type <code>Double</code> are passed to the <code>addNumbers()</code> function during function call. These arguments are called actual arguments.</p>
+
+                                <pre>result = addNumbers(number1, number2)</pre>
+
+                                <p>The parameters <var>n1</var> and <var>n2</var> accepts the passed arguments (in the function definition). These arguments are called formal arguments (or parameters).</p>
+
+                                <p><img alt="Passing arguments to a function in Kotlin" src="./images/functions1image2.jpg" width="100%"></p>
+
+                                <p>In Kotlin, arguments are separated using commas. Also, the type of the formal argument must be explicitly typed.</p>
+
+                                <p>Note that, the data type of actual and formal arguments should match, i.e., the data type of first actual argument should match the type of first formal argument. Similarly, the type of second actual argument must match the type of second formal argument and so on.</p>
+
+                                <hr>
+                                <p>Here,</p>
+
+                                <pre>return sumInteger</pre>
+
+                                <p>is the return statement. This code terminates the <code>addNumbers()</code> function, and control of the program jumps to the <code>main()</code> function.</p>
+
+                                <p>In the program, <var>sumInteger</var> is returned from <code>addNumbers()</code> function. This value is assigned to the variable <var>result</var>.</p>
+
+                                <p><img alt="Return value from a function in Kotlin" src="./images/functions1image3.jpg" width="100%"></p>
+
+                                <p>Notice,</p>
+
+                                <ul>
+                                    <li>both <var>sumInteger</var> and <var>result</var> are of type <code>Int</code>.</li>
+                                    <li>the return type of the function is specified in the function definition.
+                                        <pre>// return type is Int
+fun addNumbers(n1: Double, n2: Double): Int {
+    ... .. ...
+}</pre>
+                                    </li>
+                                </ul>
+
+                                <p>If the function doesn't return any value, its return type is <code>Unit</code>. It is optional to specify the return type in the function definition if the return type is <code>Unit</code>.</p>
+
+                                <hr>
+                                <h3>Example: Display Name by Using Function</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    println</span><span class="pun">(</span><span class="pln">getName</span><span class="pun">(</span><span class="str">"John"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Doe"</span><span class="pun">))</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun getName</span><span class="pun">(</span><span class="pln">firstName</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> lastName</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">):</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">"$firstName $lastName"</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>John Doe</samp></pre>
+
+                                <p>Here, the <code>getName()</code> function takes two <code>String</code> arguments, and returns a <code>String</code>.</p>
+
+                                <p>You can omit the curly braces <code>{ }</code> of the function body and specify the body after <code>=</code> symbol if the function returns a single expression (like above example).</p>
+
+                                <p>It is optional to explicitly declare the return type in such case because the return type can be inferred by the compiler. In the above example, you can replace</p>
+
+                                <pre>fun getName(firstName: String, lastName: String): String = "$firstName $lastName"</pre>
+
+                                <p>with</p>
+
+                                <pre>fun getName(firstName: String, lastName: String) = "$firstName $lastName"
+</pre>

@@ -1,0 +1,167 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Visibility Modifiers</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn about all 4 visibility modifiers in Kotlin and how they work in different scenarios.</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1361" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/visibility-modifiers" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Visibility Modifiers" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="introduction" name="introduction"></a>Visibility modifiers are keywords that set the visibility (accessibility) of classes, objects, interface, constructors, functions, properties and their setters. (You cannot set visibility modifier of getters&nbsp;as they always take the same visibility as that of the property.)</p>
+
+                                <p>In <a href="/kotlin-programming/class-objects" title="Kotlin Class and Objects">Kotlin Class and Objects</a> article, you learned about visibility modifiers <code>public</code> and <code>private</code> in brief. You will learn about two more visibility modifiers <code>protected</code> and <code>internal</code> (as well as <code>public</code> and <code>private</code>) in detail.</p>
+
+                                <hr>
+                                <h2><a id="package" name="package"></a>Visibility Modifiers Inside Package</h2>
+
+                                <p>A package organizes a set of related functions, properties and classes, objects, and interfaces. <strong>Recommended reading:</strong> <em>Kotlin Packages</em></p>
+
+                                <table border="1" cellpadding="1" cellspacing="1">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Modifier</th>
+                                        <th scope="col">Description</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>public</td>
+                                        <td>declarations are visible everywhere</td>
+                                    </tr>
+                                    <tr>
+                                        <td>private</td>
+                                        <td>visible inside the file containing the declaration</td>
+                                    </tr>
+                                    <tr>
+                                        <td>internal</td>
+                                        <td>visible inside the same module (a set of Kotlin files compiled together)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>protected</td>
+                                        <td>not available for packages (used for subclasses)</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <p><strong>Note:</strong> If visibility modifier is not specified, it is <code>public</code> by default.</p>
+
+                                <p>Let's take an example:</p>
+
+                                <pre>// file name: hello.kt
+
+package test
+
+fun function1() {}   // public by default and visible everywhere
+
+private fun function2() {}   // visible inside hello.kt
+
+internal fun function3() {}   // visible inside the same module
+
+var name = "Foo"   // visible everywhere
+    get() = field   // visible inside hello.kt (same as its property)
+    private set(value) {   // visible inside hello.kt
+        field = value
+    }
+
+private class class1 {}   // visible inside hello.kt</pre>
+
+                                <hr>
+                                <h2><a id="class" name="class"></a>Visibility Modifiers Inside Classes and Interfaces</h2>
+
+                                <p>Here's how visibility modifiers works for members (functions, properties) declared inside a class:</p>
+
+                                <table border="1" cellpadding="1" cellspacing="1">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Modifier</th>
+                                        <th scope="col">Description</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>public</td>
+                                        <td>visible to any client who can see the declaring class</td>
+                                    </tr>
+                                    <tr>
+                                        <td>private</td>
+                                        <td>visible inside the class only</td>
+                                    </tr>
+                                    <tr>
+                                        <td>protected</td>
+                                        <td>visible inside the class and its subclasses</td>
+                                    </tr>
+                                    <tr>
+                                        <td>internal</td>
+                                        <td>visible to any client inside the module that can see the declaring class</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <p><strong>Note:</strong> If you override a <code>protected</code> member in the derived class without specifying its visibility, its visibility will also be <code>protected</code>.</p>
+
+                                <p></p><div class="clearfix"></div><p>Let's take an example:</p>
+
+                                <pre>open class Base() {
+    var a = 1                 // public by default
+    private var b = 2         // private to Base class
+    protected open val c = 3  // visible to the Base and the Derived class
+    internal val d = 4        // visible inside the same module
+
+    protected fun e() { }     // visible to the Base and the Derived class
+}
+
+class Derived: Base() {
+
+    // a, c, d, and e() of the Base class are visible
+    // b is not visible
+
+    override val c = 9        // c is protected
+}
+
+fun main(args: Array&lt;String&gt;) {
+    val base = Base()
+
+    // base.a and base.d are visible
+    // base.b, base.c and base.e() are not visible
+
+    val derived = Derived()
+    // derived.c is not visible
+}
+</pre>
+
+                                <hr>
+                                <h2><a id="constructor" name="constructor"></a>Changing Visibility of a Constructor</h2>
+
+                                <p>By default, the visibility of a&nbsp;constructor is <code>public</code>. However, you can change it. For that, you need to explicitly add <code>constructor</code> keyword.</p>
+
+                                <p>The constructor is <code>public</code> by default in the example below:</p>
+
+                                <pre>class Test(val a: Int) {
+    // code
+}
+</pre>
+
+                                <p>Here's how you can change its visibility.</p>
+
+                                <pre>class Test private constructor(val a: Int) {
+    // code
+}</pre>
+
+                                <p>Here the constructor is <code>private</code>.</p>
+
+                                <hr>
+                                <p><strong>Note:</strong>&nbsp;In Kotlin, local functions, variables and classes cannot have visibility modifiers.</p>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>

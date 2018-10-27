@@ -1,0 +1,116 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Nested and Inner Class</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn to work with nested and inner classes with the help of examples.</div>
+
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1421" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/inner-nested-class" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Nested and Inner Class" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h2><a id="nested" name="nested"></a>Kotlin Nested Class</h2>
+
+                                <p>Similar like Java, Kotlin allows you to define a class within another class known as nested class.</p>
+
+                                <pre>class Outer {
+    ... .. ...
+    class Nested {
+        ... .. ...
+    }
+}</pre>
+
+                                <p>Since <var>Nested</var> class is a member of its enclosing class <var>Outer</var>, you can use <code>.</code> notation to access <code>Nested</code> class and its members.</p>
+
+                                <hr>
+                                <h3><a id="example-nested" name="example-nested"></a>Example: Kotlin Nested Class</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">Outer</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val a </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Outside Nested class."</span><span class="pln">
+
+    </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Nested</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        val b </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Inside Nested class."</span><span class="pln">
+        fun callMe</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Function call from inside Nested class."</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// accessing member of Nested class</span><span class="pln">
+    println</span><span class="pun">(</span><span class="typ">Outer</span><span class="pun">.</span><span class="typ">Nested</span><span class="pun">().</span><span class="pln">b</span><span class="pun">)</span><span class="pln">
+
+    </span><span class="com">// creating object of Nested class</span><span class="pln">
+    val nested </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Outer</span><span class="pun">.</span><span class="typ">Nested</span><span class="pun">()</span><span class="pln">
+    println</span><span class="pun">(</span><span class="pln">nested</span><span class="pun">.</span><span class="pln">callMe</span><span class="pun">())</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>Inside Nested class.
+Function call from inside Nested class.</samp></pre>
+
+                                <hr>
+                                <p><strong>For Java Users</strong></p>
+
+                                <p>The nested class in Kotlin is similar to static nested class in Java.</p>
+
+                                <p>In Java, when you declare a class inside another class, it becomes an inner class by default. However in Kotlin, you need to use <var>inner</var> modifier to create an inner class which we will discuss next.</p>
+
+                                <hr>
+                                <h2><a id="inner" name="inner"></a>Kotlin Inner Class</h2>
+
+                                <p></p><div class="clearfix"></div><p>The nested classes in Kotlin do not have access to the outer class instance. For example,</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">Outer</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val foo </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Outside Nested class."</span><span class="pln">
+
+    </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Nested</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// Error! cannot access member of outer class.</span><span class="pln">
+        fun callMe</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> foo
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val outer </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Outer</span><span class="pun">()</span><span class="pln">
+    println</span><span class="pun">(</span><span class="pln">outer</span><span class="pun">.</span><span class="typ">Nested</span><span class="pun">().</span><span class="pln">callMe</span><span class="pun">())</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>The above code won't compile because we tried to access <var>foo</var> property of <var>Outer</var> class from inside <var>Nested</var> class.</p>
+
+                                <p>In order to solve this issue, you need to mark the nested class with <var>inner</var> to create an inner class. Inner classes carry a reference to an outer class, and can access outer class members.</p>
+
+                                <hr>
+                                <h3><a id="example-inner" name="example-inner"></a>Example: Kotlin Inner Class</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">Outer</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val a </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Outside Nested class."</span><span class="pln">
+
+    inner </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Inner</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        fun callMe</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> a
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val outer </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Outer</span><span class="pun">()</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"Using outer object: ${outer.Inner().callMe()}"</span><span class="pun">)</span><span class="pln">
+
+    val inner </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Outer</span><span class="pun">().</span><span class="typ">Inner</span><span class="pun">()</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"Using inner object: ${inner.callMe()}"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>Using outer object: Outside Nested class.
+Using inner object: Outside Nested class.</samp></pre>

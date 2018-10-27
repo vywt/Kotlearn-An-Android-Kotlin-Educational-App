@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Extension Function</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn to extend a class with new functionality using extension functions.</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1429" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/extension-functions" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Extension Function" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="introduction" name="introduction"></a>Suppose, you need to extend a class with new functionality. In most programming languages, you either <a href="/kotlin-programming/inheritance" title="Kotlin Inheritance">derive a new class</a> or use some kind of design pattern to do this.</p>
+
+                                <p>However, in Koltin, you can also use extension function to extend a class with new functionality. Basically, an extension function is a member function of a class that is defined outside the class.</p>
+
+                                <p>For example, you need to use a method to the <a href="/kotlin-programming/string" title="Kotlin String Class">String class</a> that returns a new string with first and last character removed; this method is not already available in <code>String</code> class. You can use extension function to accomplish this task.</p>
+
+                                <hr>
+                                <h3><a id="example" name="example"></a>Example: Remove First and Last Character of String</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun </span><span class="typ">String</span><span class="pun">.</span><span class="pln">removeFirstLastChar</span><span class="pun">():</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> </span><span class="pun">=</span><span class="pln">  </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">substring</span><span class="pun">(</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">length </span><span class="pun">-</span><span class="pln"> </span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val myString</span><span class="pun">=</span><span class="pln"> </span><span class="str">"Hello Everyone"</span><span class="pln">
+    val result </span><span class="pun">=</span><span class="pln"> myString</span><span class="pun">.</span><span class="pln">removeFirstLastChar</span><span class="pun">()</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"First character is: $result"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>First character is: ello Everyon</samp></pre>
+
+                                <p>Here, an extension function removeFirstLastChar<code>()</code> is added to the <code>String</code> class.</p>
+
+                                <p></p><div id="block-inject-1" class="block-inject block-inject-1"><div id="block-block-123" class="block block-block">
+<div class="clearfix"></div><p>The class name is the receiver type (<code>String</code> class in our example). The <code>this</code> keyword inside the extension function refers the receiver object.</p>
+
+                                <p><img alt="Kotlin extension function receiver type and obejct" src="//cdn.programiz.com/sites/tutorial2program/files/kotlin-extension-function.jpg"></p>
+
+                                <hr>
+                                <p><a id="extension-abuse" name="extension-abuse"></a>If you need to integrate Kotlin on the top of Java project, you do not need to modify the whole code to Koltin. Just use extension functions to add functionalities.</p>
+
+                                <p>That being said, it is quite easy to abuse power of extension functions. We recommend you to check these resources to learn on when to use extensions and when not to:</p>
+
+                                <ul>
+                                    <li><a href="https://stackoverflow.com/questions/40598131/are-extension-methods-and-extension-properties-are-bad-practice">Are extension methods and extension properties bad?</a></li>
+                                    <li><a href="https://www.philosophicalhacker.com/post/how-to-abuse-kotlin-extension-functions/">How to abuse Kotlin extension functions?</a></li>
+                                </ul>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>
+

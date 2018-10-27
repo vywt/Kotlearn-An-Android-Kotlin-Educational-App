@@ -1,0 +1,139 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Operator Overloading</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn about operator overloading (define how operator works for user defined types like objects) with the help of examples.</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1262" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/operator-overloading" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Operator Overloading" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="working-operators" name="working-operators"></a>When you use operator in Kotlin, it's corresponding member function is called. For example, expression <code>a+b</code> transforms to <code>a.plus(b)</code> under the hood.</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pln">
+    val b </span><span class="pun">=</span><span class="pln"> </span><span class="lit">10</span><span class="pln">
+
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">a</span><span class="pun">.</span><span class="pln">plus</span><span class="pun">(</span><span class="pln">b</span><span class="pun">))</span><span class="pln"> </span><span class="com">// print(a+b)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre>15</pre>
+
+                                <p>In fact, <code>plus()</code> function is overloaded to work with various Kotlin basic types and <code>String</code>.</p>
+
+                                <pre>// + operator for basic types
+operator fun plus(other: Byte): Int
+operator fun plus(other: Short): Int
+operator fun plus(other: Int): Int
+operator fun plus(other: Long): Long
+operator fun plus(other: Float): Float
+operator fun plus(other: Double): Double
+
+// for string concatenation
+operator fun String?.plus(other: Any?): String
+</pre>
+
+                                <hr>
+                                <p>You can also define how operator works for objects by overloading its corresponding function. For example, you need define how <code>+</code> operator works for objects by overloading <code>plus()</code> function.</p>
+
+                                <h3><a id="example-plus" name="example-plus"></a>Example: Overloading + Operator</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val p1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Point</span><span class="pun">(</span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="pun">-</span><span class="lit">8</span><span class="pun">)</span><span class="pln">
+    val p2 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Point</span><span class="pun">(</span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">9</span><span class="pun">)</span><span class="pln">
+
+    </span><span class="kwd">var</span><span class="pln"> sum </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Point</span><span class="pun">()</span><span class="pln">
+    sum </span><span class="pun">=</span><span class="pln"> p1 </span><span class="pun">+</span><span class="pln"> p2
+
+    println</span><span class="pun">(</span><span class="str">"sum = (${sum.x}, ${sum.y})"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Point</span><span class="pun">(</span><span class="pln">val x</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> val y</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">10</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="com">// overloading plus function</span><span class="pln">
+    </span><span class="kwd">operator</span><span class="pln"> fun plus</span><span class="pun">(</span><span class="pln">p</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Point</span><span class="pun">)</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Point</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">Point</span><span class="pun">(</span><span class="pln">x </span><span class="pun">+</span><span class="pln"> p</span><span class="pun">.</span><span class="pln">x</span><span class="pun">,</span><span class="pln"> y </span><span class="pun">+</span><span class="pln"> p</span><span class="pun">.</span><span class="pln">y</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>sum = (5, 1)</samp></pre>
+
+                                <p>Here, the <code>plus()</code> function is marked with <code>operator</code> keyword to tell compiler that <code>+</code> operator is being overloaded.</p>
+
+                                <p>The expression <code>p1 + p2</code> is transformed to <code>p1.plus(p2)</code> under the hood.</p>
+
+                                <hr>
+                                <h3><a id="example-dec" name="example-dec"></a>Example: --&nbsp;Operator Overloading</h3>
+
+                                <p>In this example, you will learn to overload <code>--</code> operator. The expression <code>--a</code> is transformed to <code>a.dec()</code> under the hood.</p>
+
+                                <p></p><div class="clearfix"></div><p>The <code>dec()</code> member function doesn't take any arguments.</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> point </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Point</span><span class="pun">(</span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="pun">-</span><span class="lit">8</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">--</span><span class="pln">point
+
+    println</span><span class="pun">(</span><span class="str">"point = (${point.x}, ${point.y})"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Point</span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> x</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">var</span><span class="pln"> y</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">10</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">operator</span><span class="pln"> fun dec</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Point</span><span class="pun">(--</span><span class="pln">x</span><span class="pun">,</span><span class="pln"> </span><span class="pun">--</span><span class="pln">y</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the ouput will be:</p>
+
+                                <pre><samp>point = (2, -9)</samp>
+</pre>
+
+                                <hr>
+                                <p>Remember that,</p>
+
+                                <pre>operator fun dec() = Point(--x, --y)</pre>
+
+                                <p>is equivalent to</p>
+
+                                <pre>operator fun dec(): Point {
+    return Point(--x, --y)
+}</pre>
+
+                                <hr>
+                                <h3><a id="important-points" name="important-points"></a>Few Important Points</h3>
+
+                                <p>1. When you overload operators, you should try to maintain the original spirit of the operator. For example,</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val p1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Point</span><span class="pun">(</span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="pun">-</span><span class="lit">8</span><span class="pun">)</span><span class="pln">
+    val p2 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Point</span><span class="pun">(</span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">9</span><span class="pun">)</span><span class="pln">
+
+    </span><span class="kwd">var</span><span class="pln"> sum </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Point</span><span class="pun">()</span><span class="pln">
+    sum </span><span class="pun">=</span><span class="pln"> p1 </span><span class="pun">+</span><span class="pln"> p2
+
+    println</span><span class="pun">(</span><span class="str">"sum = (${sum.x}, ${sum.y})"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Point</span><span class="pun">(</span><span class="pln">val x</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> val y</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">10</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="com">// overloading plus function</span><span class="pln">
+    </span><span class="kwd">operator</span><span class="pln"> fun plus</span><span class="pun">(</span><span class="pln">p</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Point</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Point</span><span class="pun">(</span><span class="pln">x </span><span class="pun">-</span><span class="pln"> p</span><span class="pun">.</span><span class="pln">x</span><span class="pun">,</span><span class="pln"> y </span><span class="pun">-</span><span class="pln"> p</span><span class="pun">.</span><span class="pln">y</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>Although the program above is technically correct, we have used <code>+</code> operator to subtract corresponding properties of two objects which made the program confusing.</p>
+
+                                <p>2. Unlike languages like Scala, only a specific set of <a href="https://kotlinlang.org/docs/reference/operator-overloading.html">operators can be overloaded in Kotlin</a>. Visit the page to learn about operators that can be overloaded in Kotlin&nbsp;and their&nbsp;corresponding member functions.</p>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>

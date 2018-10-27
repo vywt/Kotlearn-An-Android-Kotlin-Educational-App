@@ -87,8 +87,82 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_intro6 -> {
                 transaction.replace(R.id.fragmentUsed, Intro6BasicIOFragment()).addToBackStack("Frag6").commit()
             }
-            R.id.nav_intro7 -> {
-                transaction.replace(R.id.fragmentUsed, LearnThroughVideoFragment()).addToBackStack("Frag7").commit()
+
+            R.id.nav_flowcontrol1 -> {
+                transaction.replace(R.id.fragmentUsed, FlowControl1IfFragment()).addToBackStack("Frag7").commit()
+            }
+            R.id.nav_flowcontrol2 -> {
+                transaction.replace(R.id.fragmentUsed, FlowControl2WhenFragment()).addToBackStack("Frag8").commit()
+            }
+            R.id.nav_flowcontrol3 -> {
+                transaction.replace(R.id.fragmentUsed, FlowControl3WhileFragment()).addToBackStack("Frag9").commit()
+            }
+            R.id.nav_flowcontrol4 -> {
+                transaction.replace(R.id.fragmentUsed, FlowControl4ForFragment()).addToBackStack("Frag10").commit()
+            }
+            R.id.nav_flowcontrol5 -> {
+                transaction.replace(R.id.fragmentUsed, FlowControl5BreakFragment()).addToBackStack("Frag11").commit()
+            }
+            R.id.nav_flowcontrol6 -> {
+                transaction.replace(R.id.fragmentUsed, FlowControl6ContinueFragment()).addToBackStack("Frag12").commit()
+            }
+            R.id.nav_functions1 -> {
+                transaction.replace(R.id.fragmentUsed, Functions1FunctionFragment()).addToBackStack("Frag13").commit()
+            }
+            R.id.nav_functions2 -> {
+                transaction.replace(R.id.fragmentUsed, Functions2InfixFunctionCallFragment()).addToBackStack("Frag14").commit()
+            }
+            R.id.nav_functions3 -> {
+                transaction.replace(R.id.fragmentUsed, Functions3DefaultNamedArgumentsFragment()).addToBackStack("Frag15").commit()
+            }
+            R.id.nav_functions4 -> {
+                transaction.replace(R.id.fragmentUsed, Functions4RecursionFragment()).addToBackStack("Frag16").commit()
+            }
+            R.id.nav_oop1 -> {
+                transaction.replace(R.id.fragmentUsed, OOP1ClassObjectsFragment()).addToBackStack("Frag17").commit()
+            }
+            R.id.nav_oop2 -> {
+                transaction.replace(R.id.fragmentUsed, OOP2ConstructorsFragment()).addToBackStack("Frag18").commit()
+            }
+            R.id.nav_oop3 -> {
+                transaction.replace(R.id.fragmentUsed, OOP3GettersSettersFragment()).addToBackStack("Frag19").commit()
+            }
+            R.id.nav_oop4 -> {
+                transaction.replace(R.id.fragmentUsed, OOP4InheritanceFragment()).addToBackStack("Frag20").commit()
+            }
+            R.id.nav_oop5 -> {
+                transaction.replace(R.id.fragmentUsed, OOP5VisibilityModifiersFragment()).addToBackStack("Frag21").commit()
+            }
+            R.id.nav_oop6 -> {
+                transaction.replace(R.id.fragmentUsed, OOP6AbstractClassFragment()).addToBackStack("Frag22").commit()
+            }
+            R.id.nav_oop7 -> {
+                transaction.replace(R.id.fragmentUsed, OOP7InterfacesFragment()).addToBackStack("Frag23").commit()
+            }
+            R.id.nav_oop8 -> {
+                transaction.replace(R.id.fragmentUsed, OOP8NestedInnerClassesFragment()).addToBackStack("Frag24").commit()
+            }
+            R.id.nav_oop9 -> {
+                transaction.replace(R.id.fragmentUsed, OOP9DataClassFragment()).addToBackStack("Frag25").commit()
+            }
+            R.id.nav_oop10 -> {
+                transaction.replace(R.id.fragmentUsed, OOP10SealedClassFragment()).addToBackStack("Frag26").commit()
+            }
+            R.id.nav_oop11 -> {
+                transaction.replace(R.id.fragmentUsed, OOP11ObjectFragment()).addToBackStack("Frag27").commit()
+            }
+            R.id.nav_oop12 -> {
+                transaction.replace(R.id.fragmentUsed, OOP12CompanionObjectsFragment()).addToBackStack("Frag28").commit()
+            }
+            R.id.nav_oop13 -> {
+                transaction.replace(R.id.fragmentUsed, OOP13ExtensionFunctionFragment()).addToBackStack("Frag29").commit()
+            }
+            R.id.nav_oop14 -> {
+                transaction.replace(R.id.fragmentUsed, OOP14OperatorOverloadingFragment()).addToBackStack("Frag30").commit()
+            }
+
+            R.id.nav_video -> {
+                transaction.replace(R.id.fragmentUsed, LearnThroughVideoFragment()).addToBackStack("Frag31").commit()
             }
         }
 

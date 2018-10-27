@@ -1,0 +1,97 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Abstract Class</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn about abstract class and how to implement it in Kotlin (with the help of examples).</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1375" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/abstract-class" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Abstract Class" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="introduction" name="introduction"></a>Like Java, <code>abstract</code> keyword is used to declare abstract classes in Kotlin. An abstract class cannot be instantiated (you cannot create objects of an abstract class). However, you can inherit subclasses from can them.</p>
+
+                                <p>The members (properties and methods) of an abstract class are non-abstract unless you explictly use <code>abstract</code> keyword to make them abstract. Let's take an example:</p>
+
+                                <pre>abstract class Person {
+
+&nbsp;   var age: Int = 40
+
+    fun displaySSN(ssn: Int) {
+        println("My SSN is $ssn.")
+    }
+
+    abstract fun displayJob(description: String)
+}</pre>
+
+                                <p>Here,</p>
+
+                                <ul>
+                                    <li>an abstract class <code>Person</code> is created. You cannot create objects of the class.</li>
+                                    <li>the class has a non-abstract property <var>age</var>&nbsp;and a non-abstract method <code>displaySSN()</code>. If you need to override these members in the subclass, they&nbsp;should be marked with <code>open</code> keyword.</li>
+                                    <li>The class has an abstract method <code>displayJob()</code>. It doesn't have any implementation and must be overridden in its subclasses.</li>
+                                </ul>
+
+                                <p><strong>Note:</strong> Abstract classes are always open. You do not need to explicitly use <code>open</code> keyword to inherit subclasses from them.</p>
+
+                                <hr>
+                                <h2><a id="example" name="example"></a>Example: Kotlin Abstract Class and Method</h2>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">abstract</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="pln">name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    init </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"My name is $name."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    fun displaySSN</span><span class="pun">(</span><span class="pln">ssn</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"My SSN is $ssn."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">abstract</span><span class="pln"> fun displayJob</span><span class="pun">(</span><span class="pln">description</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Teacher</span><span class="pun">(</span><span class="pln">name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="pln">name</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">override</span><span class="pln"> fun displayJob</span><span class="pun">(</span><span class="pln">description</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="pln">description</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val jack </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Teacher</span><span class="pun">(</span><span class="str">"Jack Smith"</span><span class="pun">)</span><span class="pln">
+    jack</span><span class="pun">.</span><span class="pln">displayJob</span><span class="pun">(</span><span class="str">"I'm a mathematics teacher."</span><span class="pun">)</span><span class="pln">
+    jack</span><span class="pun">.</span><span class="pln">displaySSN</span><span class="pun">(</span><span class="lit">23123</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>My name is Jack Smith.
+I'm a mathematics teacher.
+My SSN is 23123.</samp></pre>
+
+                                <p>Here, a class <code>Teacher</code> is derived from an abstract class <code>Person</code>.</p>
+
+                                <p></p><div class="clearfix"></div><p>An object <var>jack</var> of <var>Teacher</var> class is instantiated. We have passed <code>"Jack Smith"</code> as a parameter to the primary constructor while creating it. This executes the initializer block of the <code>Person</code> class.</p>
+
+                                <p>Then, <code>displayJob()</code> method is called using <var>jack</var> object. Note, that the <code>displayJob()</code> method is declared abstract in the base class, and overridden in the derived class.</p>
+
+                                <p>Finally, <code>displaySSN()</code> method is called using <var>jack</var> object. The method is non-abstract and declared in <var>Person</var> class (and not declared in <code>Teacher</code> class).</p>
+
+                                <hr>
+                                <p><strong>Recommended Reading:</strong>&nbsp;<a href="/kotlin-programming/interfaces" title="Interfaces in Kotlin">Kotlin Interfaces</a></p>
+
+                                <p>Kotlin interfaces are similar to abstract classes. However, interfaces&nbsp;cannot store state whereas abstract classes can.</p>
+
+                                <p>Meaning, interface may have property but it needs to be abstract or has to provide accessor implementations. Whereas, it's not mandatory for property of an abstract class to be abstract.</p>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>

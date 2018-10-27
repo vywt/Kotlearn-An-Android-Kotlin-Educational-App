@@ -30,6 +30,103 @@
                 android:id="@+id/nav_intro6"
                 android:icon="@drawable/ic_menu_manage"
                 android:title="Basic Input and Output" />
+            <item
+                android:id="@+id/nav_flowcontrol1"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="If Expression" />
+            <item
+                android:id="@+id/nav_flowcontrol2"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="When Expression" />
+            <item
+                android:id="@+id/nav_flowcontrol3"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="While loop" />
+            <item
+                android:id="@+id/nav_flowcontrol4"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="For Loop" />
+            <item
+                android:id="@+id/nav_flowcontrol5"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Break" />
+            <item
+                android:id="@+id/nav_flowcontrol6"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Continue" />
+            <item
+                android:id="@+id/nav_functions1"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Function" />
+            <item
+                android:id="@+id/nav_functions2"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Infix Function Call Fragment" />
+            <item
+                android:id="@+id/nav_functions3"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Default and Named Arguments" />
+            <item
+                android:id="@+id/nav_functions4"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Recursion and Tail Recursion" />
+            <item
+                android:id="@+id/nav_oop1"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Class and Objects" />
+            <item
+                android:id="@+id/nav_oop2"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Constructors" />
+            <item
+                android:id="@+id/nav_oop3"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Getters and Setters" />
+            <item
+                android:id="@+id/nav_oop4"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Inheritance" />
+            <item
+                android:id="@+id/nav_oop5"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Visibility Modifiers" />
+            <item
+                android:id="@+id/nav_oop6"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Abstract Class" />
+            <item
+                android:id="@+id/nav_oop7"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Interfaces" />
+            <item
+                android:id="@+id/nav_oop8"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Nested and Inner Classes" />
+            <item
+                android:id="@+id/nav_oop9"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Data Class" />
+            <item
+                android:id="@+id/nav_oop10"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Sealed Class" />
+            <item
+                android:id="@+id/nav_oop11"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Object" />
+            <item
+                android:id="@+id/nav_oop12"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Companion Objects" />
+            <item
+                android:id="@+id/nav_oop13"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Extension Function" />
+            <item
+                android:id="@+id/nav_oop14"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kotlin Operator Overloading" />
+
         </menu>
     </item>
 
@@ -37,7 +134,7 @@
     <item app:showAsAction="collapseActionView"  android:title="Learn Through Videos">
         <menu>
             <item
-                android:id="@+id/nav_intro7"
+                android:id="@+id/nav_video"
                 android:icon="@drawable/ic_menu_camera"
                 android:title="Learn Through Videos" />
         </menu>

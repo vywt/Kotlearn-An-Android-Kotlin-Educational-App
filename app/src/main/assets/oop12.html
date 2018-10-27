@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Companion Objects</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn to create and use companion objects in your Kotlin program with the help of examples.</div>
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1428" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/companion-objects" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Companion Objects" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="introduction" name="introduction"></a>Before taking about companion objects, let's take an example to access members of a class.</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    fun callMe</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"I'm called."</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val p1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">()</span><span class="pln">
+
+    </span><span class="com">// calling callMe() method using object p1</span><span class="pln">
+    p1</span><span class="pun">.</span><span class="pln">callMe</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+                                <p>Here, we created an object&nbsp;<var>p1</var>&nbsp;of the&nbsp;<var>Person</var> class to call <code>callMe()</code> method. That's how things normally work.</p>
+
+                                <p>However, in Kotlin, you can also call&nbsp;<code>callMe()</code> method&nbsp;by using the class name, i.e, <var>Person</var>&nbsp;in this case. For that, you need to create a companion object by marking <a href="https://www.programiz.com/kotlin-programming/object-singleton#object-declarations" title="Kotlin object declaration">object declaration</a> with <code>companion</code> keyword.</p>
+
+                                <hr>
+                                <h3><a id="example" name="example"></a>Example: Companion objects</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    companion </span><span class="kwd">object</span><span class="pln"> </span><span class="typ">Test</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        fun callMe</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"I'm called."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="typ">Person</span><span class="pun">.</span><span class="pln">callMe</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>I'm called.</samp></pre>
+
+                                <p></p><div class="clearfix"></div><p>In the program, <var>Test</var> object declaration is marked with keyword <var>companion</var> to create a companion object. Hence, it is possible to call <code>callMe()</code> method by using the name of the class as:</p>
+
+                                <pre>Person.callMe()</pre>
+
+                                <hr>
+                                <p>The name of the companion object is optional and can be omitted.</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="com">// name of the companion object is omitted</span><span class="pln">
+    companion </span><span class="kwd">object</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        fun callMe</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"I'm called."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="typ">Person</span><span class="pun">.</span><span class="pln">callMe</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <hr>
+                                <p>If you are familiar with Java, you may relate companion objects with static methods (even though how they work internally is totally different).</p>
+
+                                <p>The companion objects can access private members of the class. Hence, they can be used to implement the <a href="https://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods" title="Kotlin Factory Pattern">factory method patterns</a>.</p>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>

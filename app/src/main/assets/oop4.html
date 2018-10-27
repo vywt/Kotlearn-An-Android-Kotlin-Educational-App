@@ -1,0 +1,307 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Inheritance</h1>
+
+        <div class="page-short-description">
+            In this article, you'll learn about inheritance. More specifically, what is inheritance and how to implement it in Kotlin (with the help of examples).</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1341" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/inheritance" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Inheritance" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="inheritance-definition" name="inheritance-definition"></a>Inheritance is one of the key features of object-oriented programming. It allows user to create a new class (derived class) from an existing class (base class).</p>
+
+                                <p>The derived class inherits all the features from the base class and can have additional features of its own.</p>
+
+                                <p>Before going into details about Kotlin inheritance, we recommend you to check these two articles:</p>
+
+                                <ul>
+                                    <li><a href="/kotlin-programming/class-objects" title="Kotlin OOP">Kotlin Class and Objects</a></li>
+                                    <li><a href="/kotlin-programming/constructors#primary" title=" Kotlin Constructors and Initializers">Kotlin Primary Constructor</a></li>
+                                </ul>
+
+                                <hr>
+                                <h2><a id="why-inheritance" name="why-inheritance"></a>Why inheritance?</h2>
+
+                                <p>Suppose, in your application, you want three characters - a <strong>math&nbsp;teacher</strong>, a <strong>footballer</strong> and a <strong>businessman</strong>.</p>
+
+                                <p>Since, all of the characters are persons, they can walk and talk. However, they also have some special skills. A math&nbsp;teacher can <strong>teach math</strong>, a footballer can <strong>play football</strong> and a businessman can <strong>run a business</strong>.</p>
+
+                                <p>You can individually create three classes who can walk, talk and perform their special skill.</p>
+
+                                <p><img alt="Example of classes sharing same features without the use of inheritance." src="./images/oop4image1.jpg" width="100%"></p>
+
+                                <p>In each of the classes, you would be copying the same code for walk and talk for each character.</p>
+
+                                <p>If you want to add a new feature - eat, you need to implement the same code for each character. This can easily become error prone (when copying) and duplicate codes.</p>
+
+                                <p>It would be a lot easier if we had a <code>Person</code> class with basic features like talk, walk, eat, sleep, and add special skills to those features as per our characters. This is done using inheritance.</p>
+
+                                <p><img alt="Example of inheritance in OOP" src="./images/oop4image2.jpg" width="100%"></p>
+
+                                <p>Using inheritance, now you don't implement the same code for <code>walk()</code>, <code>talk()</code> and <code>eat()</code> for each class. You just need to <strong>inherit</strong> them.</p>
+
+                                <p>So, for <code>MathTeacher</code> (derived class), you inherit all features of a <code>Person</code> (base class) and add a new feature <code>teachMath()</code>. Likewise, for the <code>Footballer</code> class, you inherit all the features of the <code>Person</code> class and add a new feature <code>playFootball()</code> and so on.</p>
+
+                                <p>This makes your code cleaner, understandable and extendable.</p>
+
+                                <p><strong>It is important to remember:</strong> When working with inheritance, each derived class should satisfy the condition whether it <strong>"is a"</strong> base class or not. In the example above, <code>MathTeacher</code> <strong>is a</strong> <code>Person</code>, <code>Footballer</code> <strong>is a</strong> <code>Person</code>. You cannot have something like, <code>Businessman</code> <strong>is a</strong> <code>Business</code>.</p>
+
+                                <hr>
+                                <h2><a id="kotlin-inheritance" name="kotlin-inheritance"></a>Kotlin inheritance</h2>
+
+                                <p>Let's try to implement the above discussion in code:</p>
+
+                                <pre>open class Person(age: Int) {
+    // code for eating, talking, walking
+}
+
+class MathTeacher(age: Int): Person(age) {
+    // other features of math teacher
+}
+
+class Footballer(age: Int): Person(age) {
+    // other features of footballer
+}
+
+class Businessman(age: Int): Person(age) {
+    // other features of businessman
+}</pre>
+
+                                <p>Here, <code>Person</code> is a base class, and classes <code>MathTeacher</code>, <code>Footballer</code>, and <code>Businessman</code> are derived from the Person class.</p>
+
+                                <p>Notice, the keyword <code>open</code> before the base class, <code>Person</code>. It's important.</p>
+
+                                <p></p><div class="clearfix"></div><p>By default, classes in Kotlin are final. If you are familiar with Java, you know that a final class cannot be subclassed. By using the open annotation on a class, compiler allows you to derive new classes from it.</p>
+
+                                <hr>
+                                <h2><a id="example" name="example"></a>Example: Kotlin Inheritance</h2>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">open </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="pln">age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">,</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    init </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"My name is $name."</span><span class="pun">)</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"My age is $age"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">MathTeacher</span><span class="pun">(</span><span class="pln">age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">,</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="pln">age</span><span class="pun">,</span><span class="pln"> name</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    fun teachMaths</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"I teach in primary school."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Footballer</span><span class="pun">(</span><span class="pln">age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">,</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="pln">age</span><span class="pun">,</span><span class="pln"> name</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    fun playFootball</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"I play for LA Galaxy."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val t1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">MathTeacher</span><span class="pun">(</span><span class="lit">25</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Jack"</span><span class="pun">)</span><span class="pln">
+    t1</span><span class="pun">.</span><span class="pln">teachMaths</span><span class="pun">()</span><span class="pln">
+
+    println</span><span class="pun">()</span><span class="pln">
+
+    val f1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Footballer</span><span class="pun">(</span><span class="lit">29</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Christiano"</span><span class="pun">)</span><span class="pln">
+    f1</span><span class="pun">.</span><span class="pln">playFootball</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>My name is Jack.
+My age is 25
+I teach in primary school.
+
+My name is Cristiano.
+My age is 29
+I play for LA Galaxy.</samp></pre>
+
+                                <p>Here, two classes <code>MathTeacher</code> and <code>Footballer</code> are derived from the <code>Person</code> class.</p>
+
+                                <p>The primary constructor of the <code>Person</code> class declared two properties: <var>age</var> and <var>name</var>, and it has an initializer block. The initilizer block (and member functions) of the base class <code>Person</code> can be accessed by the objects of derived classes (<code>MathTeacher</code> and <code>Footballer</code>).</p>
+
+                                <p>Derived classes <code>MathTeacher</code> and <code>Footballer</code> have their own member functions <code>teachMaths()</code> and <code>playFootball()</code> respectively. These functions are accessible only from the objects of their respective class.</p>
+
+                                <hr>
+                                <p>When the object <var>t1</var> of <code>MathTeacher</code> class is created,</p>
+
+                                <pre>val t1 = MathTeacher(25, "Jack")</pre>
+
+                                <p>The parameters are passed to the primary constructor. In Kotlin, <code>init</code> block is called when the object is created. Since, <code>MathTeacher</code> is derived from <code>Person</code> class, it looks for initializer block in the base class (Person) and executes it. If the <code>MathTeacher</code> had init block, the compiler would have also executed the init block of the derived class.</p>
+
+                                <p>Next, the <code>teachMaths()</code> function for object <code>t1</code> is called using <code>t1.teachMaths()</code> statement.</p>
+
+                                <p>The program works similarly when object <code>f1</code> of <code>Footballer</code> class is created. It executes the init block of the base class. Then, the <code>playFootball()</code> method of <code>Footballer</code> class is called using statement <code>f1.playFootball()</code>.</p>
+
+                                <hr>
+                                <h2><a id="important-notes" name="important-notes"></a>Important Notes: Kotlin Inheritance</h2>
+
+                                <ul>
+                                    <li>If the class has a primary constructor, the base must be initialized using the parameters of the primary constructor. In the above program, both derived classes have two parameters <code>age</code> and <code>name</code>, and both these parameters are initialized in primary constructor in the base class.<br>
+                                        <br>
+                                        Here's another example:
+                                        <pre class="prettyprint prettyprinted" style=""><code><span class="pln">open </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="pln">age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">,</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// some code</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Footballer</span><span class="pun">(</span><span class="pln">age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">,</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> club</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="pln">age</span><span class="pun">,</span><span class="pln"> name</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    init </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"Football player $name of age $age and plays for $club."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    fun playFootball</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"I am playing football."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val f1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Footballer</span><span class="pun">(</span><span class="lit">29</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Cristiano"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"LA Galaxy"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span></code>
+</pre>
+                                        Here the primary constructor of the derived class has 3 parameters, and the base class has 2 parameters. Note that, both parameters of the base class are initialized.<br>
+                                        &nbsp;</li>
+                                    <li>In case of no primary constructor, each base class has to initialize the base (using super keyword), or delegate to another constructor which does that. For example,
+                                        <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val p1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">AuthLog</span><span class="pun">(</span><span class="str">"Bad Password"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+open </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Log</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> data</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">""</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> numberOfData </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pln">
+    constructor</span><span class="pun">(</span><span class="pln">_data</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="pun">}</span><span class="pln">
+    constructor</span><span class="pun">(</span><span class="pln">_data</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> _numberOfData</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        data </span><span class="pun">=</span><span class="pln"> _data
+        numberOfData </span><span class="pun">=</span><span class="pln"> _numberOfData
+        println</span><span class="pun">(</span><span class="str">"$data: $numberOfData times"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">AuthLog</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Log</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    constructor</span><span class="pun">(</span><span class="pln">_data</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">):</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">(</span><span class="str">"From AuthLog -&gt; + $_data"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">10</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    constructor</span><span class="pun">(</span><span class="pln">_data</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> _numberOfData</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">):</span><span class="pln"> </span><span class="kwd">super</span><span class="pun">(</span><span class="pln">_data</span><span class="pun">,</span><span class="pln"> _numberOfData</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+                                        To learn more on how this program works, visit <a href="/kotlin-programming/constructors#secondary" title="Kotlin Secondary Constructor">Kotlin Secondary Constructor</a>.</li>
+                                </ul>
+
+                                <hr>
+                                <h2><a id="overriding-members" name="overriding-members"></a>Overriding Member Functions and Properties</h2>
+
+                                <p>If the base class and the derived class contains a member function (or property) with the same name, you can need to override the member function of the derived class using <code>override</code> keyword, and use <code>open</code> keyword for the member function of the base class.</p>
+
+                                <hr>
+                                <h2>Example: Overriding Member Function</h2>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="com">// Empty primary constructor</span><span class="pln">
+open </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    open fun displayAge</span><span class="pun">(</span><span class="pln">age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"My age is $age."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Girl</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">override</span><span class="pln"> fun displayAge</span><span class="pun">(</span><span class="pln">age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"My fake age is ${age - 5}."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val girl </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Girl</span><span class="pun">()</span><span class="pln">
+    girl</span><span class="pun">.</span><span class="pln">displayAge</span><span class="pun">(</span><span class="lit">31</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>My fake age is 26.</samp></pre>
+
+                                <p>Here, <code>girl.displayAge(31)</code> calls the <code>displayAge()</code> method of the derived class <code>Girl</code>.</p>
+
+                                <hr>
+                                <p>You can override property of the base class in similar way.</p>
+
+                                <p>Visit how <a href="/kotlin-programming/getters-setters" title="Kotlin getters and setters">Kotlin getters and setters</a> work in Kotlin before you check the example below.</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="com">// Empty primary constructor</span><span class="pln">
+open </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    open </span><span class="kwd">var</span><span class="pln"> age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pln">
+        </span><span class="kwd">get</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> field
+
+        </span><span class="kwd">set</span><span class="pun">(</span><span class="pln">value</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            field </span><span class="pun">=</span><span class="pln"> value
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Girl</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">override</span><span class="pln"> </span><span class="kwd">var</span><span class="pln"> age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pln">
+        </span><span class="kwd">get</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> field
+
+        </span><span class="kwd">set</span><span class="pun">(</span><span class="pln">value</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            field </span><span class="pun">=</span><span class="pln"> value </span><span class="pun">-</span><span class="pln"> </span><span class="lit">5</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val girl </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Girl</span><span class="pun">()</span><span class="pln">
+    girl</span><span class="pun">.</span><span class="pln">age </span><span class="pun">=</span><span class="pln"> </span><span class="lit">31</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"My fake age is ${girl.age}."</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>My fake age is 26.</samp></pre>
+
+                                <p>As you can see, we have used <code>override</code> and <code>open</code> keywords for <var>age</var> property in derived class and base class respectively.</p>
+
+                                <hr>
+                                <h3><a id="calling-base" name="calling-base"></a>Calling Members of Base Class from Derived Class</h3>
+
+                                <p>You can call functions (and access properties)&nbsp;of the base class from a derived class using <code>super</code> keyword. Here's how:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">open </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    open fun displayAge</span><span class="pun">(</span><span class="pln">age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"My actual age is $age."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Girl</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">override</span><span class="pln"> fun displayAge</span><span class="pun">(</span><span class="pln">age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+        </span><span class="com">// calling function of base class</span><span class="pln">
+        </span><span class="kwd">super</span><span class="pun">.</span><span class="pln">displayAge</span><span class="pun">(</span><span class="pln">age</span><span class="pun">)</span><span class="pln">
+
+        println</span><span class="pun">(</span><span class="str">"My fake age is ${age - 5}."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val girl </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Girl</span><span class="pun">()</span><span class="pln">
+    girl</span><span class="pun">.</span><span class="pln">displayAge</span><span class="pun">(</span><span class="lit">31</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>My age is 31.
+My fake age is 26.</samp></pre>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>

@@ -1,0 +1,100 @@
+<link rel="stylesheet" href="styles.css">
+
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Infix Function Call</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn to use infix notation to call a function in Kotlin (with the help of examples).</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1158" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/infix-notation" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Infix Function Call" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="introduction" name="introduction"></a>Before you learn how to create a function having infix notation, let's explore two commonly used infix functions.</p>
+
+                                <p>When you use <code>||</code> and <code>&amp;&amp;</code> operations, the compiler look up for <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/or.html" title="Kotlin or function">or</a> and <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/and.html" title="Kotlin and function">and</a> functions respectively, and calls them under the hood.</p>
+
+                                <p>These two functions support infix notation.</p>
+
+                                <hr>
+                                <h3><a id="or-and-function" name="or-and-function"></a>Example: Kotlin or &amp; and function</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val a </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+    val b </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> result</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Boolean</span><span class="pln">
+
+    result </span><span class="pun">=</span><span class="pln"> a </span><span class="kwd">or</span><span class="pln"> b </span><span class="com">// a.or(b)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"result = $result"</span><span class="pun">)</span><span class="pln">
+
+    result </span><span class="pun">=</span><span class="pln"> a </span><span class="kwd">and</span><span class="pln"> b </span><span class="com">// a.and(b)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"result = $result"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>result = true
+result = false</samp></pre>
+
+                                <p>In the above program, <code>a or b</code> instead of <code>a.or(b)</code>, and <code>a and b</code> instead of <code>a.and(b)</code> is used. It was possible because these two functions support infix notation.</p>
+
+                                <hr>
+                                <h3><a id="infix-notation" name="infix-notation"></a>How to create a function with infix notation?</h3>
+
+                                <p></p>
+                                <div class="clearfix"></div><p>You can make a function call in Kotlin using infix notation if the function</p>
+
+                                <ul>
+                                    <li>is a <em>member function</em> (or an <em>extension function</em>)<em>.</em></li>
+                                    <li>has only one single parameter.</li>
+                                    <li>is marked with <code>infix</code> keyword.</li>
+                                </ul>
+
+                                <hr>
+                                <h3><a id="user-defined-infix-function" name="user-defined-infix-function"></a>Example: User-defined Function With Infix Notation</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">Structure</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    infix fun createPyramid</span><span class="pun">(</span><span class="pln">rows</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">var</span><span class="pln"> k </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pln">
+        </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">1.</span><span class="pun">.</span><span class="pln">rows</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            k </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pln">
+            </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">space </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">1.</span><span class="pun">.</span><span class="pln">rows</span><span class="pun">-</span><span class="pln">i</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"  "</span><span class="pun">)</span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+            </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="pln">k </span><span class="pun">!=</span><span class="pln"> </span><span class="lit">2</span><span class="pun">*</span><span class="pln">i</span><span class="pun">-</span><span class="lit">1</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"* "</span><span class="pun">)</span><span class="pln">
+                </span><span class="pun">++</span><span class="pln">k
+            </span><span class="pun">}</span><span class="pln">
+            println</span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val p </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Structure</span><span class="pun">()</span><span class="pln">
+    p createPyramid </span><span class="lit">4</span><span class="pln">       </span><span class="com">// p.createPyramid(4)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">      </span><span class="pun">*</span><span class="pln">
+    </span><span class="pun">*</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">*</span><span class="pln">
+  </span><span class="pun">*</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">*</span><span class="pln">
+</span><span class="pun">*</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span></code></pre>
+
+                                <p>Here, <code>createPyramid()</code> is an infix function that creates a pyramid structure. It is a member function of class <code>Structure</code>, takes only one parameter of type <code>Int</code>, and starts with keyword <code>infix</code>.</p>
+
+                                <p>The number of rows of the pyramind depends on the argument passed to the function.</p>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>

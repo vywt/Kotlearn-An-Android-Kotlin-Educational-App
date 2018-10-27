@@ -1,0 +1,183 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Data Class</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn to create data classes in Kotlin. You will also learn about requirements that data class must fulfill, and their standard functionalities.</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1399" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/data-class" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Data Class" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="introduction" name="introduction"></a>There may arise a situation where you need to create a class solely to hold data. In such cases, you can mark the class as <code>data</code> to create a data class. For example,</p>
+
+                                <pre>data class Person(val name: String, var age: Int)</pre>
+
+                                <p>For this class, the compiler automatically generates:</p>
+
+                                <ul>
+                                    <li><code>copy()</code> function, <code>equals()</code> and <code>hashCode()</code> pair, and <code>toString()</code> form of the primary constructor</li>
+                                    <li><code>componentN()</code> functions</li>
+                                </ul>
+
+                                <p>Before talking about these features in detail, let's talk about requirements that a data class must fulfill.</p>
+
+                                <hr>
+                                <h2><a id="requirements" name="requirements"></a>Kotlin Data Class Requirements</h2>
+
+                                <p>Here are the requirements:</p>
+
+                                <ul>
+                                    <li>The primary constructor must have at least one parameter.</li>
+                                    <li>The parameters of the primary constructor must be marked as either <code>val</code> (read-only) or <code>var</code> (read-write).</li>
+                                    <li>The class cannot be open, abstract, inner or sealed.</li>
+                                    <li>The class may extend other classes or implement interfaces. If you are using Kotlin version before 1.1, the class can only implement interfaces.</li>
+                                </ul>
+
+                                <hr>
+                                <h2><a id="example" name="example"></a>Example: Kotlin Data Class</h2>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">data </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">User</span><span class="pun">(</span><span class="pln">val name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> val age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val jack </span><span class="pun">=</span><span class="pln"> </span><span class="typ">User</span><span class="pun">(</span><span class="str">"jack"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">29</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"name = ${jack.name}"</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"age = ${jack.age}"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>name = jack
+age = 29</samp></pre>
+
+                                <hr>
+                                <p><a id="default-functionalities" name="default-functionalities"></a>When you declare a data class, the compiler automatically generates several functions such as <code>toString()</code>, <code>equals()</code>, <code>hashcode()</code> etc behind the scenes. This helps to keep you code concise. Had you used Java, you would need to write a lot of boilerplate code.</p>
+
+                                <p>Let's use these functions:</p>
+
+                                <hr>
+                                <h3><a id="copying" name="copying"></a>Copying</h3>
+
+                                <p>For a data class, you can create a copy of an object with some of its properties different using <code>copy()</code> function. Here's how it works:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">data </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">User</span><span class="pun">(</span><span class="pln">val name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> val age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val u1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">User</span><span class="pun">(</span><span class="str">"John"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">29</span><span class="pun">)</span><span class="pln">
+
+    </span><span class="com">// using copy function to create an object</span><span class="pln">
+    val u2 </span><span class="pun">=</span><span class="pln"> u1</span><span class="pun">.</span><span class="pln">copy</span><span class="pun">(</span><span class="pln">name </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Randy"</span><span class="pun">)</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"u1: name = ${u1.name}, name = ${u1.age}"</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"u2: name = ${u2.name}, name = ${u2.age}"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>u1: name = John, name = 29
+u2: name = Randy, name = 29</samp></pre>
+
+                                <hr>
+                                <h3><a id="tostring" name="tostring"></a>toString() method</h3>
+
+                                <p></p><div class="clearfix"></div><p>The <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/to-string.html" title="Kotlin toString()">toString()</a> function returns a string representation of the object.</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">data </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">User</span><span class="pun">(</span><span class="pln">val name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> val age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val u1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">User</span><span class="pun">(</span><span class="str">"John"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">29</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="pln">u1</span><span class="pun">.</span><span class="pln">toString</span><span class="pun">())</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre>User(name=John, age=29)</pre>
+
+                                <hr>
+                                <h3><a id="hashcode" name="hashcode"></a>hashCode() and equals()</h3>
+
+                                <p>The <code>hasCode()</code>&nbsp;method returns hash code for the object. If two objects are equal,&nbsp;<code>hashCode()</code>&nbsp;produces the same integer result. <strong>Recommended Reading:</strong> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/hash-code.html" title="Kotlin hashCode()">hashCode()</a></p>
+
+                                <p>The <code>equals()</code> returns <code>true</code> if two objects are equal (has same <code>hashCode()</code>). If objects are not equal, <code>equals()</code> returns <code>false</code>. <strong>Recommended Reading:</strong> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/equals.html" title="Kotlin equals()">equals()</a></p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">data </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">User</span><span class="pun">(</span><span class="pln">val name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> val age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val u1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">User</span><span class="pun">(</span><span class="str">"John"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">29</span><span class="pun">)</span><span class="pln">
+    val u2 </span><span class="pun">=</span><span class="pln"> u1</span><span class="pun">.</span><span class="pln">copy</span><span class="pun">()</span><span class="pln">
+    val u3 </span><span class="pun">=</span><span class="pln"> u1</span><span class="pun">.</span><span class="pln">copy</span><span class="pun">(</span><span class="pln">name </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Amanda"</span><span class="pun">)</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"u1 hashcode = ${u1.hashCode()}"</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"u2 hashcode = ${u2.hashCode()}"</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"u3 hashcode = ${u3.hashCode()}"</span><span class="pun">)</span><span class="pln">
+
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">u1</span><span class="pun">.</span><span class="pln">equals</span><span class="pun">(</span><span class="pln">u2</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"u1 is equal to u2."</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">else</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"u1 is not equal to u2."</span><span class="pun">)</span><span class="pln">
+
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">u1</span><span class="pun">.</span><span class="pln">equals</span><span class="pun">(</span><span class="pln">u3</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"u1 is equal to u3."</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">else</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"u1 is not equal to u3."</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>u1 hashcode = 71750738
+u2 hashcode = 71750738
+u3 hashcode = 771732263
+u1 is equal to u2.
+u1 is not equal to u3.</samp></pre>
+
+                                <hr>
+                                <h3 id="data-classes-and-destructuring-declarations"><a id="destructuring-declarations" name="destructuring-declarations"></a>Destructuring Declarations</h3>
+
+                                <p>You can destructure an object into a number of variables using <a href="https://kotlinlang.org/docs/reference/multi-declarations.html" title="Kotlin Destructing Declaration">destructing declaration</a>. For example:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><span class="pln">data </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">User</span><span class="pun">(</span><span class="pln">val name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> val age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">,</span><span class="pln"> val gender</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">)</span><span class="pln">
+
+</span><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val u1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">User</span><span class="pun">(</span><span class="str">"John"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">29</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Male"</span><span class="pun">)</span><span class="pln">
+
+    val </span><span class="pun">(</span><span class="pln">name</span><span class="pun">,</span><span class="pln"> age</span><span class="pun">,</span><span class="pln"> gender</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> u1
+    println</span><span class="pun">(</span><span class="str">"name = $name"</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"age = $age"</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"gender = $gender"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>name = John
+age = 29
+gender = Male</samp></pre>
+
+                                <p>This was possible because the compiler generates <code>componentN()</code> functions all properties for a data class. For example:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">data </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">User</span><span class="pun">(</span><span class="pln">val name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> val age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">,</span><span class="pln"> val gender</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">)</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val u1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">User</span><span class="pun">(</span><span class="str">"John"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">29</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Male"</span><span class="pun">)</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="pln">u1</span><span class="pun">.</span><span class="pln">component1</span><span class="pun">())</span><span class="pln">     </span><span class="com">// John</span><span class="pln">
+    println</span><span class="pun">(</span><span class="pln">u1</span><span class="pun">.</span><span class="pln">component2</span><span class="pun">())</span><span class="pln">     </span><span class="com">// 29  </span><span class="pln">
+    println</span><span class="pun">(</span><span class="pln">u1</span><span class="pun">.</span><span class="pln">component3</span><span class="pun">())</span><span class="pln">     </span><span class="com">// "Male"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>John
+29
+Male</samp></pre>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>

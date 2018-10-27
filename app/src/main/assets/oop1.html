@@ -1,0 +1,262 @@
+<link rel="stylesheet" href="styles.css">
+
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Class and Objects</h1>
+
+        <div class="page-short-description">
+            In this article, you'll be introduced to Object-oriented programming in Kotlin. You'll learn what a class is, how to create objects and use it in your program.</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1174" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/class-objects" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Class and Objects" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Kotlin supports both functional and object-oriented programming.</p>
+
+                                <p>Kotlin supports features such as <em>higher-order functions</em>, <em>function types</em> and <em>lambdas</em> which makes it a great choice for working in functional programming style. You will learn about these concept in later chapters. This article will focus on object-oriented style of programming in Kotlin.</p>
+
+                                <hr>
+                                <h2><a id="oop" name="oop"></a>Object-oriented Programming (OOP)</h2>
+
+                                <p>In object-oriented style of programming, you can divide a complex problem into smaller sets by creating objects.</p>
+
+                                <p>These objects share two characteristics:</p>
+
+                                <ul>
+                                    <li>state</li>
+                                    <li>behavior</li>
+                                </ul>
+
+                                <p>Let's take few examples:</p>
+
+                                <ol>
+                                    <li><var>Lamp</var> is an object
+
+                                        <ul>
+                                            <li>It can be in <var>on</var> or <var>off</var> state.</li>
+                                            <li>You can <code>turn on</code> and <code>turn off</code> lamp (behavior).</li>
+                                        </ul>
+                                    </li>
+                                    <li><var>Bicycle</var> is an object
+                                        <ul>
+                                            <li>It has <var>current gear</var>, <var>two wheels</var>, <var>number of gear</var> etc. states.</li>
+                                            <li>It has <var>braking</var>, <var>accelerating</var>, <var>changing gears</var> etc. behavior.</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+
+                                <p>You will learn about detail features of an object-oriented programming like: <em>data encapsulation</em>, <em>inheritance</em> and <em>polymorphism</em> as we go on. This article will focus on the basics to keep things simple.</p>
+
+                                <p><strong>Recommended reading:</strong> <a href="https://docs.oracle.com/javase/tutorial/java/concepts/object.html">What is an object?</a></p>
+
+                                <hr>
+                                <h2><a id="class" name="class"></a>Kotlin Class</h2>
+
+                                <p>Before you create objects in Kotlin, you need to define a class.</p>
+
+                                <p>A class is a blueprint for the object.</p>
+
+                                <p>We can think of class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows etc. Based on these descriptions we build the house. House is the object.</p>
+
+                                <p>Since, many houses can be made from the same description, we can create many objects from a class.</p>
+
+                                <hr>
+                                <h3><a id="define-class" name="define-class"></a>How to define a class in Kotlin?</h3>
+
+                                <p>To define a class in Kotlin, <code>class</code> keyword is used:</p>
+
+                                <pre>class ClassName {
+    // property
+    // member function
+    ... .. ...
+}
+</pre>
+
+                                <p>Here's an example:</p>
+
+                                <pre>class Lamp {
+
+    // property (data member)
+    private var isOn: Boolean = false
+
+    // member function
+    fun turnOn() {
+        isOn = true
+    }
+
+    // member function
+    fun turnOff() {
+        isOn = false
+    }
+}</pre>
+
+                                <p>Here, we defined a class named <var>Lamp</var>.</p>
+
+                                <p>The class has one property <var>isOn</var> (defined in same way as variable), and two member functions <code>turnOn()</code> and <code>turnOff()</code>.</p>
+
+                                <p><strong>Recommended Reading:</strong> <a href="https://kotlinlang.org/docs/reference/functions.html" title="Kotlin functions">Kotlin functions</a></p>
+
+                                <p>In Kotlin, either the property must be initialized or must be declared <code>abstract</code> (<strong>Visit:</strong> <em>Kotlin Abstract Class</em> to learn more). In the above example, <var>isOn</var> property is initialized to <code>false</code>.</p>
+
+                                <hr>
+                                <p><a id="access-modifiers" name="access-modifiers"></a>Classes, objects, properties, member function etc. can have visibility modifiers. For example, the <var>isOn</var> property is private. This means, the <var>isOn</var> property can be changed from only inside the <var>Lamp</var> class.</p>
+
+                                <p></p><div class="clearfix"></div><p>Other visibility modifiers are:</p>
+
+                                <ul>
+                                    <li><code>private</code> - visible (can be accessed) from inside the class only.</li>
+                                    <li><code>public</code> - visible everywhere.</li>
+                                    <li><code>protected</code> - visible to the class and its subclass.</li>
+                                    <li><code>internal</code> - any client inside the module can access them.</li>
+                                </ul>
+
+                                <p>You will learn about <code>protected</code> and <code>internal</code> modifiers later in <a href="/kotlin-programming/visibility-modifiers" title="Kotlin visibility modifiers">Kotlin visibility modifiers</a> article.</p>
+
+                                <p>If you do not specify the visibility modifier, it will be <code>public</code> by default.</p>
+
+                                <p>In the above program, <code>turnOn()</code> and <code>turnOff()</code> member functions are <code>public</code> whereas, <var>isOn</var> property is private.</p>
+
+                                <hr>
+                                <h3><a id="objects" name="objects"></a>Kotlin Objects</h3>
+
+                                <p>When class is defined, only the specification for the object is defined; no memory or storage is allocated.</p>
+
+                                <p>To access members defined within the class, you need to create objects. Let's create objects of <var>Lamp</var> class.</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">Lamp</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="com">// property (data member)</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">var</span><span class="pln"> isOn</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Boolean</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+
+    </span><span class="com">// member function</span><span class="pln">
+    fun turnOn</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        isOn </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="com">// member function</span><span class="pln">
+    fun turnOff</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        isOn </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val l1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Lamp</span><span class="pun">()</span><span class="pln"> </span><span class="com">// create l1 object of Lamp class</span><span class="pln">
+    val l2 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Lamp</span><span class="pun">()</span><span class="pln"> </span><span class="com">// create l2 object of Lamp class</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>This program creates two objects <var>l1</var> and <var>l2</var> of class <var>Lamp</var>. The <var>isOn</var> property for both lamps <var>l1</var> and <var>l2</var> will be <code>false</code>.</p>
+
+                                <hr>
+                                <h3><a id="access-members" name="access-members"></a>How to access members?</h3>
+
+                                <p>You can access properties and member functions of a class by using <code>.</code> notation. For example,</p>
+
+                                <pre>l1.turnOn()</pre>
+
+                                <p>This statement calls <var>turnOn()</var> function for <var>l1</var> object.</p>
+
+                                <p>Let's take another example:</p>
+
+                                <pre>l2.isOn = true</pre>
+
+                                <p>Here, we tried to assign <code>true</code> to <var>isOn</var> property of <var>l2</var> object. Note that, <var>isOn</var> property is <code>private</code>,&nbsp;and if you try to access&nbsp;<var>isOn</var> from outside the class, an exception is thrown.</p>
+
+                                <hr>
+                                <h3><a id="example" name="example"></a>Example: Kotlin Class and Object</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">Lamp</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="com">// property (data member)</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">var</span><span class="pln"> isOn</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Boolean</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+
+    </span><span class="com">// member function</span><span class="pln">
+    fun turnOn</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        isOn </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="com">// member function</span><span class="pln">
+    fun turnOff</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        isOn </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    fun displayLightStatus</span><span class="pun">(</span><span class="pln">lamp</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">isOn </span><span class="pun">==</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+            println</span><span class="pun">(</span><span class="str">"$lamp lamp is on."</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">else</span><span class="pln">
+            println</span><span class="pun">(</span><span class="str">"$lamp lamp is off."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val l1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Lamp</span><span class="pun">()</span><span class="pln"> </span><span class="com">// create l1 object of Lamp class</span><span class="pln">
+    val l2 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Lamp</span><span class="pun">()</span><span class="pln"> </span><span class="com">// create l2 object of Lamp class</span><span class="pln">
+
+    l1</span><span class="pun">.</span><span class="pln">turnOn</span><span class="pun">()</span><span class="pln">
+    l2</span><span class="pun">.</span><span class="pln">turnOff</span><span class="pun">()</span><span class="pln">
+
+    l1</span><span class="pun">.</span><span class="pln">displayLightStatus</span><span class="pun">(</span><span class="str">"l1"</span><span class="pun">)</span><span class="pln">
+    l2</span><span class="pun">.</span><span class="pln">displayLightStatus</span><span class="pun">(</span><span class="str">"l2"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>l1 Lamp is on.
+l2 Lamp is off.</samp></pre>
+
+                                <p>In the above program,</p>
+
+                                <ul>
+                                    <li><code>Lamp</code> class is created.</li>
+                                    <li>The class has a property <var>isOn</var> and three member functions <code>turnOn()</code>, <code>turnOff()</code> and <code>displayLightStatus()</code>.</li>
+                                    <li>Two objects <var>l1</var> and <var>l2</var> of <var>Lamp</var> class are created in the <code>main()</code> function.</li>
+                                    <li>Here, <code>turnOn()</code> function is called using <var>l1</var> object: <code>l1.turnOn()</code>. This method sets <var>isOn</var> instance variable of <var>l1</var> object to <code>true</code>.</li>
+                                    <li>And, <code>turnOff()</code> function is called using <var>l2</var> object: <code>l1.turnOff()</code>. This method sets <var>isOff</var> instance variable of <var>l2</var> object to <code>false</code>.</li>
+                                    <li>Then, <code>displayLightStatus()</code> function is called for <var>l1</var> and <var>l2</var> objects which prints appropriate message depending on whether <var>isOn</var> property is <var>true</var> or <code>false</code>.</li>
+                                </ul>
+
+                                <p>Notice that, the <var>isOn</var> property is initialized to <code>false</code> inside the class. When an object of the class is created, <var>isOn</var> property for the object is initialized to <code>false</code> automatically. So, it's not necessary for <var>l2</var> object to call <code>turnOff()</code> to set <var>isOn</var> property to <code>false</code>.</p>
+
+                                <p>For example:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">Lamp</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="com">// property (data member)</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">var</span><span class="pln"> isOn</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Boolean</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+
+    </span><span class="com">// member function</span><span class="pln">
+    fun turnOn</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        isOn </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="com">// member function</span><span class="pln">
+    fun turnOff</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        isOn </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    fun displayLightStatus</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">isOn </span><span class="pun">==</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+            println</span><span class="pun">(</span><span class="str">"lamp is on."</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">else</span><span class="pln">
+            println</span><span class="pun">(</span><span class="str">"lamp is off."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val lamp </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Lamp</span><span class="pun">()</span><span class="pln">
+    lamp</span><span class="pun">.</span><span class="pln">displayLightStatus</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>lamp is off.</samp></pre>

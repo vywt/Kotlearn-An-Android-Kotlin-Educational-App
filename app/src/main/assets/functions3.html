@@ -1,0 +1,140 @@
+<link rel="stylesheet" href="styles.css">
+
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Default and Named Arguments</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn about default and named arguments with the help of examples.</div>
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1161" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/default-named-arguments" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Default and Named Arguments" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h2><a id="default-argument" name="default-argument"></a>Kotlin Default Argument</h2>
+
+                                <p>In Kotlin, you can provide default values to parameters in function definition.</p>
+
+                                <p>If the function is called with arguments passed, those arguments are used as parameters. However, if the function is called without passing argument(s), default argument are used.</p>
+
+                                <hr>
+                                <h3><a id="working-default-argument" name="working-default-argument"></a>How default arguments works?</h3>
+
+                                <p><strong><a id="all-argument" name="all-argument"></a>Case I: All arguments passed</strong></p>
+
+                                <hr>
+                                <p><img alt="Both arguments passed to the function" src="./images/functions3image1.jpg" width="100%"></p>
+
+                                <p>The function <code>foo()</code> takes two arguments. The arguments are provided with default values. However, <code>foo()</code> is called by passing both arguments in the above program. Hence, the default arguments are not used.</p>
+
+                                <p>The value of <var>letter</var> and <var>number</var> will be <code>'x'</code> and <var>2</var> respectively inside the <code>foo()</code> function.</p>
+
+                                <p><strong><a id="first-argument-passed" name="first-argument-passed"></a>Case II: All arguments are not passed</strong></p>
+
+                                <hr>
+                                <p><img alt="All arguments are not passed to the function" src="./images/functions3image2.jpg" width="100%"></p>
+
+                                <p>Here, only one (first) argument is passed to the <code>foo()</code> function. Hence, the first argument uses the value passed to the function. However, second argument <var>number</var> will take the default value since the second argument is not passed during function call.</p>
+
+                                <p>The value of <var>letter</var> and <var>number</var> will be <code>'y'</code> and <var>15</var> respectively inside the <code>foo()</code> function.</p>
+
+                                <p><strong><a id="argument-not-passed" name="argument-not-passed"></a>Case III: No argument is passed</strong></p>
+
+                                <hr>
+                                <p></p>
+                             <div class="clearfix"></div><p><img alt="No arguments passed to the function" src="./images/functions3image3.jpg" width="100%"></p>
+
+                                <p>Here, the <code>foo()</code> function is called without passing any argument. Hence, both arguments uses its default values.</p>
+
+                                <p>The value of <var>letter</var> and <var>number</var> will be <code>'a'</code> and <var>15</var> respectively inside the <code>foo()</code> function.</p>
+
+                                <hr>
+                                <h3><a id="example-default-argument" name="example-default-argument"></a>Example: Kotlin Default Argument</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun displayBorder</span><span class="pun">(</span><span class="pln">character</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Char</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">'='</span><span class="pun">,</span><span class="pln"> length</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">15</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">1.</span><span class="pun">.</span><span class="pln">length</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">character</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"Output when no argument is passed:"</span><span class="pun">)</span><span class="pln">
+    displayBorder</span><span class="pun">()</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"\n\n'*' is used as a first argument."</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"Output when first argument is passed:"</span><span class="pun">)</span><span class="pln">
+    displayBorder</span><span class="pun">(</span><span class="str">'*'</span><span class="pun">)</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"\n\n'*' is used as a first argument."</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"5 is used as a second argument."</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"Output when both arguments are passed:"</span><span class="pun">)</span><span class="pln">
+    displayBorder</span><span class="pun">(</span><span class="str">'*'</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">)</span><span class="pln">
+
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>Output when no argument is passed:
+===============
+
+'*' is used as a first argument.
+Output when first argument is passed:
+***************
+
+'*' is used as a first argument.
+5 is used as a second argument.
+Output when both arguments are passed:
+*****</samp></pre>
+
+                                <hr>
+                                <h2><a id="named-argument" name="named-argument"></a>Kotlin named argument</h2>
+
+                                <p>Before talking about named argument, let us consider a little modification of the above code:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun displayBorder</span><span class="pun">(</span><span class="pln">character</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Char</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">'='</span><span class="pun">,</span><span class="pln"> length</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">15</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">1.</span><span class="pun">.</span><span class="pln">length</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">character</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    displayBorder</span><span class="pun">(</span><span class="lit">5</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>Here, we are trying to pass second argument to the <code>displayBorder()</code> function, and use default argument for first argument. However, this code will give use an error. It's because the compiler thinks we are trying to provide 5 (<code>Int</code> value) to character (<code>Char</code> type).</p>
+
+                                <p>To solve this situation, named arguments can be used. Here' how:</p>
+
+                                <hr>
+                                <h3><a id="example-named-argument" name="example-named-argument"></a>Example: Kotlin named argument</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun displayBorder</span><span class="pun">(</span><span class="pln">character</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Char</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">'='</span><span class="pun">,</span><span class="pln"> length</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">15</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="kwd">in</span><span class="pln"> </span><span class="lit">1.</span><span class="pun">.</span><span class="pln">length</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">character</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    displayBorder</span><span class="pun">(</span><span class="pln">length </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>=====</samp></pre>
+
+                                <p>In the above program, we are using named argument (<code>length = 5</code>) specifying that the <var>length</var> parameter in the function definition should take this value (doesn't matter the position of the argument).</p>
+
+                                <p><img alt="Named Arguments in Kotlin" src="./images/functions3image4.jpg" width="100%"></p>
+
+                                <p>The first argument <var>character</var> uses the default value <code>'='</code> in the program.</p>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>

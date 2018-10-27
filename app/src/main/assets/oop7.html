@@ -1,0 +1,256 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Interfaces</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn about interfaces and how to implement it in Kotlin with the help of examples.</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1380" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/interfaces" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Interfaces" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="introduction" name="introduction"></a>Kotlin interfaces are similar to interfaces in Java 8. They can contain definitions of abstract methods as well as implementations of non-abstract methods. However, they cannot contain any state.</p>
+
+                                <p>Meaning, interface may have property but it needs to be abstract or has to provide accessor implementations.</p>
+
+                                <hr>
+                                <p><strong>Recommended Reading:</strong> <a href="/kotlin-programming/abstract-class" title="Kotlin Abstract Class">Kotlin Abstract Class</a></p>
+
+                                <p>Abstract classes in Kotlin are similar to interface with one important difference. It's not mandatory for properties of an abstract class to be abstract or provide accessor implementations.</p>
+
+                                <hr>
+                                <h2><a id="define" name="define"></a>How to define an interface?</h2>
+
+                                <p>Keyword <code>interface</code> is used to define interfaces in Kotlin. For example,</p>
+
+                                <pre>interface MyInterface {
+
+    var test: String   // abstract property
+
+    fun foo()          // abstract method
+    fun hello() = "Hello there" // method with default implementation
+}</pre>
+
+                                <p>Here,</p>
+
+                                <ul>
+                                    <li>an interface <var>MyInterface</var> is created.</li>
+                                    <li>the interface has an abstract property <var>test</var> and an abstract method <code>foo()</code>.</li>
+                                    <li>the interface also has a non-abstract method <code>hello()</code>.</li>
+                                </ul>
+
+                                <hr>
+                                <h2><a id="implement" name="implement"></a>How to implement interface?</h2>
+
+                                <p>Here's how a class or object can implement the interface:</p>
+
+                                <pre>interface MyInterface {
+
+    val test: Int   // abstract property
+
+    fun foo() : String   // abstract method (returns String)
+    fun hello() {   // method with default implementation
+        // body (optional)
+    }
+}
+
+class InterfaceImp : MyInterface {
+
+    override val test: Int = 25
+    override fun foo() = "Lol"
+
+    // other code
+}
+</pre>
+
+                                <p>Here, a class <var>InterfaceImp</var> implements the <var>MyInterface</var> interface.</p>
+
+                                <p>The class overrides abstract members (<var>test</var> property and <code>foo()</code> method) of the interface.</p>
+
+                                <hr>
+                                <h2><a id="example" name="example"></a>Example: How interface works?</h2>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">interface</span><span class="pln"> </span><span class="typ">MyInterface</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val test</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln">
+
+    fun foo</span><span class="pun">()</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pln">
+
+    fun hello</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"Hello there, pal!"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">InterfaceImp</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MyInterface</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">override</span><span class="pln"> val test</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">25</span><span class="pln">
+    </span><span class="kwd">override</span><span class="pln"> fun foo</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Lol"</span><span class="pln">
+
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val obj </span><span class="pun">=</span><span class="pln"> </span><span class="typ">InterfaceImp</span><span class="pun">()</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"test = ${obj.test}"</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Calling hello(): "</span><span class="pun">)</span><span class="pln">
+
+    obj</span><span class="pun">.</span><span class="pln">hello</span><span class="pun">()</span><span class="pln">
+
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Calling and printing foo(): "</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="pln">obj</span><span class="pun">.</span><span class="pln">foo</span><span class="pun">())</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>test = 25
+Calling hello(): Hello there, pal!
+Calling and printing foo(): Lol</samp></pre>
+
+                                <hr>
+                                <p><a id="accessor-implementation" name="accessor-implementation"></a>As mentioned above, an interface may also have a property that provide accessor implementation. For example,</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">interface</span><span class="pln"> </span><span class="typ">MyInterface</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="com">// property with implementation</span><span class="pln">
+    val prop</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln">
+        </span><span class="kwd">get</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">23</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">InterfaceImp</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MyInterface</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// class body</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val obj </span><span class="pun">=</span><span class="pln"> </span><span class="typ">InterfaceImp</span><span class="pun">()</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="pln">obj</span><span class="pun">.</span><span class="pln">prop</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p></p><div class="clearfix"></div><p>When you run the program, the output will be:</p>
+
+                                <pre><samp>23</samp></pre>
+
+                                <p>Here, <var>prop</var> is not abstract. However, it's valid inside the interface because it provides implementation for accessor.</p>
+
+                                <p>However, you cannot do something like <code>val prop: Int = 23</code> inside the interface.</p>
+
+                                <hr>
+                                <h2><a id="multiple-interfaces" name="multiple-interfaces"></a>Implementing Two or More Interfaces in a Class</h2>
+
+                                <p>Kotlin does not allow true <a href="https://en.wikipedia.org/wiki/Multiple_inheritance" title="Multiple Inheritance">multiple inheritance</a>. However, it's possible to implement two or more interfaces in a single class. For example,</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">interface</span><span class="pln"> A </span><span class="pun">{</span><span class="pln">
+
+    fun callMe</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"From interface A"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">interface</span><span class="pln"> B  </span><span class="pun">{</span><span class="pln">
+    fun callMeToo</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"From interface B"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="com">// implements two interfaces A and B</span><span class="pln">
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Child</span><span class="pun">:</span><span class="pln"> A</span><span class="pun">,</span><span class="pln"> B
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val obj </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Child</span><span class="pun">()</span><span class="pln">
+
+    obj</span><span class="pun">.</span><span class="pln">callMe</span><span class="pun">()</span><span class="pln">
+    obj</span><span class="pun">.</span><span class="pln">callMeToo</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>From interface A
+From interface B</samp>
+</pre>
+
+                                <hr>
+                                <h2 id="resolving-overriding-conflicts"><a id="resolving-conflicts" name="resolving-conflicts"></a>Resolving overriding conflicts (Multiple Interface)</h2>
+
+                                <p>Suppose, two interfaces(<var>A</var> and <var>B</var>) have a non-abstract method with the same name (let's say <code>callMe()</code> method). You implemented these two interfaces in a class (let's say <var>C</var>). Now, if you call the <code>callMe()</code> method using the object of class <var>C</var>, compiler will throw error. For example,</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">interface</span><span class="pln"> A </span><span class="pun">{</span><span class="pln">
+
+    fun callMe</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"From interface A"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">interface</span><span class="pln"> B  </span><span class="pun">{</span><span class="pln">
+    fun callMe</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"From interface B"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Child</span><span class="pun">:</span><span class="pln"> A</span><span class="pun">,</span><span class="pln"> B
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val obj </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Child</span><span class="pun">()</span><span class="pln">
+
+    obj</span><span class="pun">.</span><span class="pln">callMe</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>Here's the error:</p>
+
+                                <pre>Error:(14, 1) Kotlin: Class 'C' must override public open fun callMe(): Unit defined in A because it inherits multiple interface methods of it</pre>
+
+                                <hr>
+                                <p>To solve this issue, you need to provide your own implementation. Here's how:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">interface</span><span class="pln"> A </span><span class="pun">{</span><span class="pln">
+
+    fun callMe</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"From interface A"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">interface</span><span class="pln"> B  </span><span class="pun">{</span><span class="pln">
+    fun callMe</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"From interface B"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> C</span><span class="pun">:</span><span class="pln"> A</span><span class="pun">,</span><span class="pln"> B </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">override</span><span class="pln"> fun callMe</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">super</span><span class="pun">&lt;</span><span class="pln">A</span><span class="pun">&gt;.</span><span class="pln">callMe</span><span class="pun">()</span><span class="pln">
+        </span><span class="kwd">super</span><span class="pun">&lt;</span><span class="pln">B</span><span class="pun">&gt;.</span><span class="pln">callMe</span><span class="pun">()</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val obj </span><span class="pun">=</span><span class="pln"> C</span><span class="pun">()</span><span class="pln">
+
+    obj</span><span class="pun">.</span><span class="pln">callMe</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>Now when you run the program, the output will be:</p>
+
+                                <pre><samp>From interface A
+From interface B</samp></pre>
+
+                                <p>Here, explicit implementation of <code>callMe()</code> method is provided in class <var>C</var>.</p>
+
+                                <pre>class C: A, B {
+    override fun callMe() {
+        super&lt;A&gt;.callMe()
+        super&lt;B&gt;.callMe()
+    }
+}</pre>
+
+                                <p>The statement <code>super&lt;A&gt;.callMe()</code> calls the <code>callMe()</code> method of class <var>A</var>. Similarly, <code>super&lt;B&gt;.callMe()</code> calls the <code>callMe()</code> method of class <code>B</code>.</p>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>

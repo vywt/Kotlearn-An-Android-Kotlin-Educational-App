@@ -1,0 +1,130 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Getters and Setters</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn to use getters and setters in Kotlin with the help of an example.</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1247" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/getters-setters" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Getters and Setters" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="introduction" name="introduction"></a>Before you learn about getters and setter, be sure to check <a href="/kotlin-programming/class-objects">Kotlin class and objects</a>.</p>
+
+                                <p>In programming, getters are used for getting value of the&nbsp;property. Similarly, setters are used for setting value of the property.</p>
+
+                                <p>In Kotlin, getters and setters are optional and are auto-generated if you do not create them in your program.</p>
+
+                                <hr>
+                                <h2><a id="working" name="working"></a>How getters and setters work?</h2>
+
+                                <p>The following code in Kotlin</p>
+
+                                <pre>class Person {
+    var name: String = "defaultValue"
+}</pre>
+
+                                <p>is equivalent to</p>
+
+                                <pre>class Person {
+    var name: String = "defaultValue"
+
+    // getter
+    get() = field
+
+    // setter
+    set(value) {
+        field = value
+    }
+}</pre>
+
+                                <p>When you instantiate&nbsp;object of the&nbsp;<code>Person</code> class and initialize the <var>name</var> property, it is passed to the setters parameter <var>value</var> and sets <var>field</var> to <var>value</var>.</p>
+
+                                <pre>val p = Person()
+p.name = "jack"</pre>
+
+                                <p>Now, when you access <var>name</var> property of the object, you will get <var>field</var> because of the code <code>get() = field</code>.</p>
+
+                                <pre>println("${p.name}")</pre>
+
+                                <p></p><div class="clearfix"></div><p>Here's an working example:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val p </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">()</span><span class="pln">
+    p</span><span class="pun">.</span><span class="pln">name </span><span class="pun">=</span><span class="pln"> </span><span class="str">"jack"</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"${p.name}"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">"defaultValue"</span><span class="pln">
+
+    </span><span class="kwd">get</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> field
+
+    </span><span class="kwd">set</span><span class="pun">(</span><span class="pln">value</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        field </span><span class="pun">=</span><span class="pln"> value
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre>jack
+</pre>
+
+                                <p>This is how getters and setters work by default. However, you can change value of the property (modify value) using getters and setters.</p>
+
+                                <hr>
+                                <h3><a id="example" name="example"></a>Example: Changing value of the property</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val maria </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Girl</span><span class="pun">()</span><span class="pln">
+    maria</span><span class="pun">.</span><span class="pln">actualAge </span><span class="pun">=</span><span class="pln"> </span><span class="lit">15</span><span class="pln">
+    maria</span><span class="pun">.</span><span class="pln">age </span><span class="pun">=</span><span class="pln"> </span><span class="lit">15</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"Maria: actual age = ${maria.actualAge}"</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"Maria: pretended age = ${maria.age}"</span><span class="pun">)</span><span class="pln">
+
+    val angela </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Girl</span><span class="pun">()</span><span class="pln">
+    angela</span><span class="pun">.</span><span class="pln">actualAge </span><span class="pun">=</span><span class="pln"> </span><span class="lit">35</span><span class="pln">
+    angela</span><span class="pun">.</span><span class="pln">age </span><span class="pun">=</span><span class="pln"> </span><span class="lit">35</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"Angela: actual age = ${angela.actualAge}"</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"Angela: pretended age = ${angela.age}"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Girl</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pln">
+    </span><span class="kwd">get</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> field
+    </span><span class="kwd">set</span><span class="pun">(</span><span class="pln">value</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        field </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">value </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">18</span><span class="pun">)</span><span class="pln">
+            </span><span class="lit">18</span><span class="pln">
+        </span><span class="kwd">else</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">value </span><span class="pun">&gt;=</span><span class="pln"> </span><span class="lit">18</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> value </span><span class="pun">&lt;=</span><span class="pln"> </span><span class="lit">30</span><span class="pun">)</span><span class="pln">
+            value
+        </span><span class="kwd">else</span><span class="pln">
+            value</span><span class="pun">-</span><span class="lit">3</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">var</span><span class="pln"> actualAge</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>Maria: actual age = 15
+Maria: pretended age = 18
+Angela: actual age = 35
+Angela: pretended age = 32</samp></pre>
+
+                                <p>Here, the <var>actualAge</var> property works as expected.</p>
+
+                                <p>However, there is additional logic is setters to modify value of the <var>age</var> property.</p>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>

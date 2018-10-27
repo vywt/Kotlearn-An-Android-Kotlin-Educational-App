@@ -1,0 +1,297 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Constructors</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn about constructors in Kotlin (both primary and secondary constructors) as well as initializer blocks with the help of examples.</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1231" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/constructors" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Constructors" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>A constructor is a concise way to initialize class properties.</p>
+
+                                <p>It is&nbsp;a&nbsp;special member function that is called when an object is instantiated (created). However, how they work in Kotlin is slightly different.</p>
+
+                                <p>In Kotlin, there are two constructors:</p>
+
+                                <ul>
+                                    <li><strong>Primary constructor</strong> - concise way to initialize a class</li>
+                                    <li><strong>Secondary constructor</strong> - allows you to put additional initialization logic</li>
+                                </ul>
+
+                                <hr>
+                                <h2><a id="primary" name="primary"></a>Primary Constructor</h2>
+
+                                <p>The primary constructor is part of the class header. Here's an example:</p>
+
+                                <pre>class Person(val firstName: String, var age: Int) {
+    // class body
+}</pre>
+
+                                <p>The block of code surrounded by parentheses is the primary constructor: <code>(val firstName: String, var age: Int)</code>.</p>
+
+                                <p>The constructor declared two properties: <code>firstName</code> (read-only property as it's declared using keyword <code>val</code>) and <code>age</code> (read-write property as it is declared with keyword <code>var</code>).</p>
+
+                                <hr>
+                                <h3><a id="example-primary" name="example-primary"></a>Example: Primary Constructor</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val person1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="str">"Joe"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">25</span><span class="pun">)</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"First Name = ${person1.firstName}"</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"Age = ${person1.age}"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="pln">val firstName</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">var</span><span class="pln"> age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>First Name = Joe
+Age = 25</samp></pre>
+
+                                <p>When the object of <code>Person</code> class is created, <code>"Joe"</code> and <code>25</code> values are passed as if <code>Person</code> is a function.</p>
+
+                                <p>This initializes <code>firstName</code> and <code>age</code> properties of <var>person1</var> object to <code>"Joe"</code> and <code>25</code> respectively.</p>
+
+                                <hr>
+                                <p>There are other ways of using primary constructors.</p>
+
+                                <hr>
+                                <h3><a id="init" name="init"></a>Primary Constructor and Initializer Blocks</h3>
+
+                                <p>The primary constructor has a constrained syntax, and cannot contain any code.</p>
+
+                                <p>To put the initilization code (not only code to initialize properties), initializer block is&nbsp;used. It is prefixed with&nbsp;<code>init</code> keyword. Let's modify the above example with initializer block:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val person1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="str">"joe"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">25</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="pln">fName</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> personAge</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val firstName</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln">
+
+    </span><span class="com">// initializer block</span><span class="pln">
+    init </span><span class="pun">{</span><span class="pln">
+        firstName </span><span class="pun">=</span><span class="pln"> fName</span><span class="pun">.</span><span class="pln">capitalize</span><span class="pun">()</span><span class="pln">
+        age </span><span class="pun">=</span><span class="pln"> personAge
+
+        println</span><span class="pun">(</span><span class="str">"First Name = $firstName"</span><span class="pun">)</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"Age = $age"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="typ">First</span><span class="pln"> </span><span class="typ">Name</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Joe</span><span class="pln">
+</span><span class="typ">Age</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">25</span></code></pre>
+
+                                <p>Here, parameters <var>fName</var> and <var>personAge</var> inside the parenthesis accepts values <code>"Joe"</code> and <code>25</code> respectively when <var>person1</var> object is created. However, <var>fName</var> and <var>personAge</var> are used without using <code>var</code> or <code>val</code>, and are not properties of the <code>Person</code> class.</p>
+
+                                <p>The <code>Person</code> class has two properties <var>firstName</var>, and <var>age</var> are declared.</p>
+
+                                <p>When <code>person1</code> object is created, code inside initializer block is executed. The initializer block not only initializes its properties but also prints them.</p>
+
+                                <hr>
+                                <p></p><div id="block-inject-1" class="block-inject block-inject-1"><div id="block-block-123" class="block block-block">
+
+
+                                    <div class="content">
+                                        <!-- /8095840/.2_A.34657.4_Programiz.com_tier1 -->
+                                        <div id="div-gpt-ad-1527670353707-0">
+                                            <script>
+if (window.innerWidth < 900) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+                                        </div>
+
+                                        <!-- /8095840/.2_A.34660.4_Programiz.com_tier1 -->
+                                        <div id="div-gpt-ad-1527670429257-0">
+                                            <script>
+if (window.innerWidth >= 900) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+                                        </div>  </div>
+                                </div>
+                                </div><div class="clearfix"></div><p>Here is another way to perform the same task:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val person1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="str">"joe"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">25</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="pln">fName</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> personAge</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val firstName </span><span class="pun">=</span><span class="pln"> fName</span><span class="pun">.</span><span class="pln">capitalize</span><span class="pun">()</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> age </span><span class="pun">=</span><span class="pln"> personAge
+
+    </span><span class="com">// initializer block</span><span class="pln">
+    init </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"First Name = $firstName"</span><span class="pun">)</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"Age = $age"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <hr>
+                                <p>To distinguish the constructor parameter and property, different names are used (<var>fName</var> and <var>firstName</var>, and <var>personAge</var> and <var>age</var>). It's more common to use <var>_firstName</var> and <var>_age</var> instead of completely different name for constructor parameters. For example:</p>
+
+                                <pre>class Person(_firstName: String, _age: Int) {
+    val firstName = _firstName.capitalize()
+    var age = _age
+
+    // initializer block
+    init {
+        ... .. ...
+    }
+}
+</pre>
+
+                                <hr>
+                                <h3><a id="default-primary" name="default-primary"></a>Default Value in Primary Constructor</h3>
+
+                                <p>You can provide default value to constructor parameters (similar to providing <a href="https://www.programiz.com/kotlin-programming/default-named-arguments">default arguments to functions</a>). For example:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"person1 is instantiated"</span><span class="pun">)</span><span class="pln">
+    val person1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="str">"joe"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">25</span><span class="pun">)</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"person2 is instantiated"</span><span class="pun">)</span><span class="pln">
+    val person2 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="str">"Jack"</span><span class="pun">)</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"person3 is instantiated"</span><span class="pun">)</span><span class="pln">
+    val person3 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="pln">_firstName</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">"UNKNOWN"</span><span class="pun">,</span><span class="pln"> _age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val firstName </span><span class="pun">=</span><span class="pln"> _firstName</span><span class="pun">.</span><span class="pln">capitalize</span><span class="pun">()</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> age </span><span class="pun">=</span><span class="pln"> _age
+
+    </span><span class="com">// initializer block</span><span class="pln">
+    init </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"First Name = $firstName"</span><span class="pun">)</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"Age = $age\n"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>First Name = Joe
+Age = 25
+
+person2 is instantiated
+First Name = Jack
+Age = 0
+
+person3 is instantiated
+First Name = UNKNOWN
+Age = 0</samp></pre>
+
+                                <hr>
+                                <h2><a id="secondary" name="secondary"></a>Kotlin Secondary Constructor</h2>
+
+                                <p>In Kotlin, a class can also contain one or more secondary constructors. They are created using <code>constructor</code> keyword.</p>
+
+                                <p>Secondary constructors are not that common in Kotlin. The most common use of secondary constructor comes up when you need to extend a class that provides multiple constructors that initialize the class in different ways. Be sure to check <a href="/kotlin-programming/inheritance" title="Kotlin Inheritance">Kotlin Inheritance</a> before you learn it.</p>
+
+                                <p>Here's how you can create a secondary constructor in Kotlin:</p>
+
+                                <pre>class Log {
+    constructor(data: String) {
+        // some code
+    }
+    constructor(data: String, numberOfData: Int) {
+        // some code
+    }
+}</pre>
+
+                                <p>Here, the <code>Log</code> class has two secondary constructors, but no primary constructor.</p>
+
+                                <p>You can extend the class as:</p>
+
+                                <pre>class Log {
+    constructor(data: String) {
+        // code
+    }
+    constructor(data: String, numberOfData: Int) {
+        // code
+    }
+}
+
+class AuthLog: Log {
+    constructor(data: String): super(data) {
+        // code
+    }
+    constructor(data: String, numberOfData: Int): super(data, numberOfData) {
+        // code
+    }
+}</pre>
+
+                                <p>Here, constructors of the derived class <code>AuthLog</code> calls the corresponding constructor of the base class <code>Log</code>. For that, <code>super()</code> is used.</p>
+
+                                <p><img alt="Calling constructor of base class from derived class." src="./images/oop2image1.jpg" width="100%"></p>
+
+                                <p>In Kotlin, you can also call a constructor from another constructor of the same class (like in Java) using <code>this()</code>.</p>
+
+                                <pre>class AuthLog: Log {
+    constructor(data: String): this(data, 10) {
+        // code
+    }
+    constructor(data: String, numberOfData: Int): super(data, numberOfData) {
+        // code
+    }
+}
+</pre>
+
+                                <p><img alt="Calling constructor from the same class." src="./images/oop2image2.jpg" width="100%"></p>
+
+                                <hr>
+                                <h3><a id="example-secondary" name="example-secondary"></a>Example: Kotlin Secondary Constructor</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val p1 </span><span class="pun">=</span><span class="pln"> </span><span class="typ">AuthLog</span><span class="pun">(</span><span class="str">"Bad Password"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+open </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Log</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> data</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">""</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> numberOfData </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pln">
+    constructor</span><span class="pun">(</span><span class="pln">_data</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="pun">}</span><span class="pln">
+    constructor</span><span class="pun">(</span><span class="pln">_data</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> _numberOfData</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        data </span><span class="pun">=</span><span class="pln"> _data
+        numberOfData </span><span class="pun">=</span><span class="pln"> _numberOfData
+        println</span><span class="pun">(</span><span class="str">"$data: $numberOfData times"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">AuthLog</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Log</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    constructor</span><span class="pun">(</span><span class="pln">_data</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">):</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">(</span><span class="str">"From AuthLog -&gt; "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> _data</span><span class="pun">,</span><span class="pln"> </span><span class="lit">10</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    constructor</span><span class="pun">(</span><span class="pln">_data</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> _numberOfData</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">):</span><span class="pln"> </span><span class="kwd">super</span><span class="pun">(</span><span class="pln">_data</span><span class="pun">,</span><span class="pln"> _numberOfData</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>From AuthLog -&gt; Bad Password: 10 times</samp></pre>
+
+                                <p><strong>Note:</strong> The secondary constructor must initialize the base class or delegate to another constructor (like in above example) if the class has no primary constructor.</p>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>

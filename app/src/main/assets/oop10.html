@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Sealed Classes</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn about Sealed class, how they are created, and when to use them with the help of examples.</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1418" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/sealed-class" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Sealed Classes" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="definition" name="definition"></a>Sealed classes are used when a value can have only one of the types from a limited set (restricted hierarchies).</p>
+
+                                <hr>
+                                <p><a id="why-sealed" name="why-sealed"></a>Before going into details about sealed classes, let's explore what problem they solve. Let's take an example (taken from official Kotlin website - <a href="https://kotlinlang.org/docs/reference/sealed-classes.html">Sealed classes</a> article):</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">Expr</span><span class="pln">
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Const</span><span class="pun">(</span><span class="pln">val value</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Expr</span><span class="pln">
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Sum</span><span class="pun">(</span><span class="pln">val left</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Expr</span><span class="pun">,</span><span class="pln"> val right</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Expr</span><span class="pun">)</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Expr</span><span class="pln">
+
+fun </span><span class="kwd">eval</span><span class="pun">(</span><span class="pln">e</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Expr</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln">
+        </span><span class="kwd">when</span><span class="pln"> </span><span class="pun">(</span><span class="pln">e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="kwd">is</span><span class="pln"> </span><span class="typ">Const</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> e</span><span class="pun">.</span><span class="pln">value
+            </span><span class="kwd">is</span><span class="pln"> </span><span class="typ">Sum</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="kwd">eval</span><span class="pun">(</span><span class="pln">e</span><span class="pun">.</span><span class="pln">right</span><span class="pun">)</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="kwd">eval</span><span class="pun">(</span><span class="pln">e</span><span class="pun">.</span><span class="pln">left</span><span class="pun">)</span><span class="pln">
+            </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln">
+                </span><span class="kwd">throw</span><span class="pln"> </span><span class="typ">IllegalArgumentException</span><span class="pun">(</span><span class="str">"Unknown expression"</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">}</span></code></pre>
+
+                                <p>In the above program, the base class <var>Expr</var> has two derived classes <var>Const</var> (represents a number) and <var>Sum</var> (represents sum of two expressions). Here, it's mandatory to use <code>else</code> branch for default condition in&nbsp;<a href="/kotlin-programming/when-expression" title="Kotlin when expression">when expression</a>.</p>
+
+                                <p>Now, if you derive a new subclass from <code>Expr</code> class, the compiler won't detect anything as <code>else</code> branch handles it which can lead to bugs. It would have been better if the compiler issued an error when we added a new subclass.</p>
+
+                                <p>To solve this problem, you can use sealed class. As mentioned, sealed class restricts the possibility of creating subclasses. And, when you handle all subclasses of a sealed class in an <code>when</code> expression, it's not necessary to use <code>else</code> branch.</p>
+
+                                <hr>
+                                <p></p><div class="clearfix"></div><p>To create a sealed class, sealed modifier is used. For example,</p>
+
+                                <pre>sealed class Expr</pre>
+
+                                <hr>
+                                <h3><a id="example" name="example"></a>Example: Sealed Class</h3>
+
+                                <p>Here's how you can solve the above problem using sealed class:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">sealed</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Expr</span><span class="pln">
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Const</span><span class="pun">(</span><span class="pln">val value</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Expr</span><span class="pun">()</span><span class="pln">
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Sum</span><span class="pun">(</span><span class="pln">val left</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Expr</span><span class="pun">,</span><span class="pln"> val right</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Expr</span><span class="pun">)</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Expr</span><span class="pun">()</span><span class="pln">
+</span><span class="kwd">object</span><span class="pln"> </span><span class="typ">NotANumber</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Expr</span><span class="pun">()</span><span class="pln">
+
+
+fun </span><span class="kwd">eval</span><span class="pun">(</span><span class="pln">e</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Expr</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln">
+        </span><span class="kwd">when</span><span class="pln"> </span><span class="pun">(</span><span class="pln">e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="kwd">is</span><span class="pln"> </span><span class="typ">Const</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> e</span><span class="pun">.</span><span class="pln">value
+            </span><span class="kwd">is</span><span class="pln"> </span><span class="typ">Sum</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> </span><span class="kwd">eval</span><span class="pun">(</span><span class="pln">e</span><span class="pun">.</span><span class="pln">right</span><span class="pun">)</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="kwd">eval</span><span class="pun">(</span><span class="pln">e</span><span class="pun">.</span><span class="pln">left</span><span class="pun">)</span><span class="pln">
+            </span><span class="typ">NotANumber</span><span class="pln"> </span><span class="pun">-&gt;</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">lang</span><span class="pun">.</span><span class="typ">Double</span><span class="pun">.</span><span class="kwd">NaN</span><span class="pln">
+        </span><span class="pun">}</span></code>
+</pre>
+
+                                <p>As you can see, there is no <code>else</code> branch. If you derive a new subclass from <code>Expr</code> class, the compiler will complain unless the subclass is handled in the <code>when</code> expression.</p>
+
+                                <hr>
+                                <h3><a id="sealed-notes" name="sealed-notes"></a>Few Important Notes</h3>
+
+                                <ul>
+                                    <li>All subclasses of a sealed class must be declared in the same file where sealed class is declared.</li>
+                                    <li>A sealed class is <a href="https://www.programiz.com/kotlin-programming/abstract-class" title="Kotlin Abstract class">abstract</a> by itself, and you cannot instantiate objects from it.</li>
+                                    <li>You cannot create non-private constructors of a sealed class; their constructors are <code>private</code> by default.</li>
+                                </ul>
+
+                                <hr>
+                                <h3><a id="enum-sealed" name="enum-sealed"></a>Difference Between Enum and Sealed Class</h3>
+
+                                <p><em>Enum class</em> and sealed class are pretty similar. The set of values for an enum type is also restricted like a sealed class.</p>
+
+                                <p>The only difference is that, enum can have just a single instance, whereas a subclass of a sealed class can have multiple instances.</p>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>

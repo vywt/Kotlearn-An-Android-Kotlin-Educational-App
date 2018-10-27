@@ -1,0 +1,173 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Recursion (Recursive Function) and Tail Recursion</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn to create recursive functions; a function that calls itself. Also, you will learn about tail recursive function.</div>
+
+        <div class="clearfix">
+
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1163" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/recursion" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Recursion (Recursive Function) and Tail Recursion" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><a id="introduction" name="introduction"></a>A <a href="/kotlin-programming/functions">function</a> that calls itself is known as recursive function. And, this technique is known as recursion.</p>
+
+                                <p>A physical world example would be to place two parallel mirrors facing each other. Any object in between them would be reflected recursively.</p>
+
+                                <hr>
+                                <h3><a id="working" name="working"></a>How does recursion work in programming?</h3>
+
+                                <pre>fun main(args: Array&lt;String&gt;) {
+    ... .. ...
+    recurse()
+    ... .. ...
+}
+
+fun recurse() {
+    ... .. ...
+    recurse()
+    ... .. ...
+}
+</pre>
+
+                                <p>Here, the <code>recurse()</code> function is called from the body of <code>recurse()</code> function itself. Here's how this program works:</p>
+
+                                <p><img alt="Recursive function call in Kotlin" src="./images/functions4image1.jpg" width="100%"></p>
+
+                                <p>Here, the recursive call continues forever causing infinite recursion.</p>
+
+                                <p>To avoid infinite recursion, <a href="/kotlin-programming/if-expression" title="C++ if...else">if...else</a> (or similar approach) can be used where one branch makes the recursive call and other doesn't.</p>
+
+                                <hr>
+                                <h3><a id="example-factorial" name="example-factorial"></a>Example: Find factorial of a Number using Recursion</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val number </span><span class="pun">=</span><span class="pln"> </span><span class="lit">4</span><span class="pln">
+    val result</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Long</span><span class="pln">
+
+    result </span><span class="pun">=</span><span class="pln"> factorial</span><span class="pun">(</span><span class="pln">number</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"Factorial of $number = $result"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun factorial</span><span class="pun">(</span><span class="pln">n</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Long</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">n </span><span class="pun">==</span><span class="pln"> </span><span class="lit">1</span><span class="pun">)</span><span class="pln"> n</span><span class="pun">.</span><span class="pln">toLong</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> n</span><span class="pun">*</span><span class="pln">factorial</span><span class="pun">(</span><span class="pln">n</span><span class="pun">-</span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>Factorial of 4 = 24</samp></pre>
+
+                                <hr>
+                                <h3><a id="working-of-factorial" name="working-of-factorial"></a>How this program works?</h3>
+
+                                <p>The recursive call of the <code>factorial()</code> function can be explained in the following figure:</p>
+
+                                <p><img alt="How recursion works in Kotlin?" src="./images/functions4image2.jpg" width="100%"></p>
+
+                                <p>Here are the steps involved:</p>
+
+                                <pre>factorial(4)              // 1st function call. Argument: 4
+4*factorial(3)            // 2nd function call. Argument: 3
+4*(3*factorial(2))        // 3rd function call. Argument: 2
+4*(3*(2*factorial(1)))    // 4th function call. Argument: 1
+4*(3*(2*1))
+24
+</pre>
+
+                                <hr>
+                                <h3><a id="tail-recursion" name="tail-recursion"></a>Kotlin Tail Recursion</h3>
+
+                                <p>Tail recursion is a generic concept rather than the feature of Kotlin language. Some programming languages including Kotlin use it to optimize recursive calls, whereas other languages (eg. Python) do not support them.</p>
+
+                                <hr>
+                                <h3>What is tail recursion?</h3>
+
+                                <p>In normal recursion, you perform all recursive calls first, and calculate the result from return values at last (as show in the above example). Hence, you don't get result until all recursive calls are made.</p>
+
+                                <p></p><div class="clearfix"></div><p>In tail recursion, calculations are performed first, then recursive calls are executed (the recursive call passes the result of your current step to the next recursive call). This makes the recursive call equivalent to looping, and avoids the risk of stack overflow.</p>
+
+                                <hr>
+                                <h3><a id="condition-tail-recursion" name="condition-tail-recursion"></a>Condition for tail recursion</h3>
+
+                                <p>A recursive function is eligible for tail recursion if the function call to itself is the last operation it performs. For example,</p>
+
+                                <p><strong>Example 1:</strong> Not eligible for tail recursion because the function call to itself <code>n*factorial(n-1)</code> is not the last operation.</p>
+
+                                <pre>fun factorial(n: Int): Long {
+
+    if (n == 1) {
+        return n.toLong()
+    } else {
+        return n*factorial(n - 1)
+    }
+}</pre>
+
+                                <p><strong>Example 2:</strong> Eligible for tail recursion because function call to itself <code>fibonacci(n-1, a+b, a)</code> is the last operation.</p>
+
+                                <pre>fun fibonacci(n: Int, a: Long, b: Long): Long {
+    return if (n == 0) b else fibonacci(n-1, a+b, a)
+}
+</pre>
+
+                                <hr>
+                                <p>To tell compiler to perform tail recursion in Kotlin, you need to mark the function with <code>tailrec</code> modifier.</p>
+
+                                <hr>
+                                <h3><a id="example-fibonacci-term" name="example-fibonacci-term"></a>Example: Tail Recursion</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">import</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">math</span><span class="pun">.</span><span class="typ">BigInteger</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val n </span><span class="pun">=</span><span class="pln"> </span><span class="lit">100</span><span class="pln">
+    val first </span><span class="pun">=</span><span class="pln"> </span><span class="typ">BigInteger</span><span class="pun">(</span><span class="str">"0"</span><span class="pun">)</span><span class="pln">
+    val second </span><span class="pun">=</span><span class="pln"> </span><span class="typ">BigInteger</span><span class="pun">(</span><span class="str">"1"</span><span class="pun">)</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="pln">fibonacci</span><span class="pun">(</span><span class="pln">n</span><span class="pun">,</span><span class="pln"> first</span><span class="pun">,</span><span class="pln"> second</span><span class="pun">))</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+tailrec fun fibonacci</span><span class="pun">(</span><span class="pln">n</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">,</span><span class="pln"> a</span><span class="pun">:</span><span class="pln"> </span><span class="typ">BigInteger</span><span class="pun">,</span><span class="pln"> b</span><span class="pun">:</span><span class="pln"> </span><span class="typ">BigInteger</span><span class="pun">):</span><span class="pln"> </span><span class="typ">BigInteger</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">n </span><span class="pun">==</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> a </span><span class="kwd">else</span><span class="pln"> fibonacci</span><span class="pun">(</span><span class="pln">n</span><span class="pun">-</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> b</span><span class="pun">,</span><span class="pln"> a</span><span class="pun">+</span><span class="pln">b</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>354224848179261915075</samp></pre>
+
+                                <p>This program computes the 100<sup>th</sup> term of the Fibonacci series. Since, the output can be a very large integer, we have imported <a href="https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html">BigInteger</a> class from Java standard library.</p>
+
+                                <p>Here, the function <code>fibonacci()</code> is marked with <code>tailrec</code> modifier and the function is eligible for tail recursive call. Hence, the compiler optimizes the recursion in this case.</p>
+
+                                <hr>
+                                <p>If you try to find the 20000<sup>th</sup> term (or any other big integer) of the Fibonacci series without using tail recursion, the compiler will throw <code>java.lang.StackOverflowError</code> exception. However, our program above works just fine. It's because we have used tail recursion which uses efficient loop based version instead of traditional recursion.</p>
+
+                                <hr>
+                                <h3><a id="factorial-tail-recursion" name="factorial-tail-recursion"></a>Example: Factorial Using Tail Recursion</h3>
+
+                                <p>The example to compute factorial of a number in the above example (first example) cannot be optimized for tail recursion. Here's a different program to perform the same task.</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val number </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"Factorial of $number = ${factorial(number)}"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+tailrec fun factorial</span><span class="pun">(</span><span class="pln">n</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">,</span><span class="pln"> run</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Long</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">n </span><span class="pun">==</span><span class="pln"> </span><span class="lit">1</span><span class="pun">)</span><span class="pln"> run</span><span class="pun">.</span><span class="pln">toLong</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> factorial</span><span class="pun">(</span><span class="pln">n</span><span class="pun">-</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> run</span><span class="pun">*</span><span class="pln">n</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>Factorial of 5 = 120</samp></pre>
+
+                                <p>The compiler can optimize the recursion in this program as the recursive function is eligible for tail recursion, and we have used <code>tailrec</code> modifier that tells compiler to optimize the recursion.</p>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>

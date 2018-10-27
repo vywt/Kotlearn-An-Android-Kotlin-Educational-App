@@ -1,0 +1,172 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Object Declarations and Expressions</h1>
+
+        <div class="page-short-description">
+            In this article, you will learn about object declarations (singletons) and object expressions with the help of examples.</div>
+
+        <div class="clearfix">
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div id="node-1427" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/object-singleton" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Object Declarations and Expressions" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h2><a id="object-declarations" name="object-declarations"></a>Object Declarations</h2>
+
+                                <p>Singleton is an object-oriented pattern where a class can have only one instance (object).</p>
+
+                                <p>For example, you are working an application having SQL database backend. You want to create a connection pool to access the database while reusing the same connection for all clients. For this, you can create the connection through singleton class so that every client get the same connection.</p>
+
+                                <hr>
+                                <p>Kotlin provides an easy way to create singletons using the object declaration feature. For that, <var>object</var> keyword is used.</p>
+
+                                <pre>object SingletonExample {
+    ... .. ...
+    // body of class
+    ... .. ...
+}</pre>
+
+                                <p>The above code combines a class declaration and a declaration of a single instance <var>SingletonExample</var> of the class.</p>
+
+                                <p>An object declaration can contain properties, methods and so on. However, they are not allowed to have constructors (which makes sense). <strong>Why?</strong></p>
+
+                                <p>Similar to objects of a normal class, you can call methods and access properties by using the <code>.</code> notation.</p>
+
+                                <hr>
+                                <h3><a id="example-object-declarations" name="example-object-declarations"></a>Example: Object Declaration</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="kwd">object</span><span class="pln"> </span><span class="typ">Test</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">var</span><span class="pln"> a</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> b</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pln">
+
+    fun makeMe12</span><span class="pun">():</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">12</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> a
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val result</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln">
+
+    result </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Test</span><span class="pun">.</span><span class="pln">makeMe12</span><span class="pun">()</span><span class="pln">
+
+    println</span><span class="pun">(</span><span class="str">"b = ${Test.b}"</span><span class="pun">)</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"result = $result"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>b = 1
+result = 12</samp></pre>
+
+                                <hr>
+                                <p>Object declaration can inherit from classes and interfaces in a similar way like normal classes.</p>
+
+                                <hr>
+                                <h3><a id="dependency-injection" name="dependency-injection"></a>Singletons and Dependency Injection</h3>
+
+                                <p>Object declarations can be useful sometimes. However, they are not ideal in large software systems that interact with many other parts of the system.</p>
+
+                                <p></p><div class="clearfix"></div><p><strong>Recommended Reading:</strong> <a href="https://stackoverflow.com/questions/2662842/dependency-injection-singleton-design-pattern">Dependency Injection &amp; Singleton Design pattern</a></p>
+
+                                <hr>
+                                <h2><a id="object-expressions" name="object-expressions"></a>Kotlin object Expressions</h2>
+
+                                <p>The <var>object</var> keyword can also be used to create objects of an anonymous class known as anonymous objects. They are used if you need to create an object of a slight modification of some class or interface without declaring a subclass for it. For example ,</p>
+
+                                <pre>window.addMouseListener(object : MouseAdapter() {
+    override fun mouseClicked(e: MouseEvent) {
+        // ...
+    }
+
+    override fun mouseEntered(e: MouseEvent) {
+        // ...
+    }
+})</pre>
+
+                                <p>(The example is taken from <a href="https://kotlinlang.org/docs/reference/object-declarations.html">official Kotlin docs page</a>.)</p>
+
+                                <p>Here, an anonymous object is declared extending <var>MouseAdapter</var> class.The program overrides two <code>MouseAdapter</code> methods: <code>mouseClicked()</code> and <code>mouseEntered()</code>.</p>
+
+                                <p>If necessary, you can assign a name to the anonymous object and store it in a variable. For example,</p>
+
+                                <pre>val obj = object : MouseAdapter() {
+    override fun mouseClicked(e: MouseEvent) {
+        // ...
+    }
+
+    override fun mouseEntered(e: MouseEvent) {
+        // ...
+    }
+}</pre>
+
+                                <hr>
+                                <h3><a id="object-expressions-example" name="object-expressions-example"></a>Example: Kotlin Object Expression</h3>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">open </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    fun eat</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"Eating food."</span><span class="pun">)</span><span class="pln">
+
+    fun talk</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"Talking with people."</span><span class="pun">)</span><span class="pln">
+
+    open fun pray</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"Praying god."</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val atheist </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">object</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">override</span><span class="pln"> fun pray</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"I don't pray. I am an atheist."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    atheist</span><span class="pun">.</span><span class="pln">eat</span><span class="pun">()</span><span class="pln">
+    atheist</span><span class="pun">.</span><span class="pln">talk</span><span class="pun">()</span><span class="pln">
+    atheist</span><span class="pun">.</span><span class="pln">pray</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>Eating food.
+Talking with people.
+I don't pray. I am an atheist.</samp></pre>
+
+                                <p>Here, anonymous object is stored in variable <var>atheist</var> which implements <var>Person</var> class with <code>pray()</code> method is overridden.</p>
+
+                                <hr>
+                                <p>If you are implementing a class that has a constructor to declare an anonymous object, you need to pass appropriate constructor parameters. For example,</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">open </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="pln">name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    init </span><span class="pun">{</span><span class="pln">
+        println</span><span class="pun">(</span><span class="str">"name: $name, age: $age"</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    fun eat</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"Eating food."</span><span class="pun">)</span><span class="pln">
+    fun talk</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"Talking with people."</span><span class="pun">)</span><span class="pln">
+    open fun pray</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"Praying god."</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+fun main</span><span class="pun">(</span><span class="pln">args</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val atheist </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">object</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="str">"Jack"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">29</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">override</span><span class="pln"> fun pray</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"I don't pray. I am an atheist."</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    atheist</span><span class="pun">.</span><span class="pln">eat</span><span class="pun">()</span><span class="pln">
+    atheist</span><span class="pun">.</span><span class="pln">talk</span><span class="pun">()</span><span class="pln">
+    atheist</span><span class="pun">.</span><span class="pln">pray</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>name: Jack, age: 29
+Eating food.
+Talking with people.
+I don't pray. I am an atheist.</samp></pre>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>
