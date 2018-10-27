@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
+            "outputFile": "/Users/victor/Desktop/Kotlearn/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/fabian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/11fc30aae4ff72a06d5fe4c11219d45e/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "source": "/Users/victor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/f081febf64370248056cd4ffcd35823a/res/values-h720dp-v13/values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

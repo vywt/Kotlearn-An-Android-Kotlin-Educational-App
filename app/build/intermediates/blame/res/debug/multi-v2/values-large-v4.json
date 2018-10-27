@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
+            "outputFile": "/Users/victor/Desktop/Kotlearn/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/Users/fabian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/11fc30aae4ff72a06d5fe4c11219d45e/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/victor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/f081febf64370248056cd4ffcd35823a/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/fabian/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/bcf2b0ea76ba32ba3f42aa8448aa4efe/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/victor/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/0b94b4ce802960c02112038d4ce54fed/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

@@ -1,16 +1,12 @@
 package com.kotlearn.kotlearn
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.NavigationView
-import android.support.design.widget.Snackbar
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import android.webkit.WebView
-import com.kotlearn.kotlearn.R.id.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
@@ -21,10 +17,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
+        val fragmentManager = supportFragmentManager
+        val transaction = fragmentManager.beginTransaction()
+
+        transaction.replace(R.id.fragmentUsed, Intro2VariablesBasicTypesFragment()).commit()
+
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
@@ -62,32 +59,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
+
+        val fragmentManager = supportFragmentManager
+        val transaction = fragmentManager.beginTransaction()
+
         when (item.itemId) {
             R.id.nav_intro1 -> {
-                    val myIntent = Intent(this, Intro1HelloWorld::class.java)
-                    startActivity(myIntent)
-
+                transaction.replace(R.id.fragmentUsed, Intro1HelloWorldFragment()).commit()
             }
             R.id.nav_intro2 -> {
-                val myIntent = Intent(this, Intro2VariablesBasicTypes::class.java)
-                startActivity(myIntent)
+                transaction.replace(R.id.fragmentUsed, Intro2VariablesBasicTypesFragment()).commit()
             }
             R.id.nav_intro3 -> {
-                val myIntent = Intent(this, Intro3Operators::class.java)
-                startActivity(myIntent)
+                transaction.replace(R.id.fragmentUsed, Intro3OperatorsFragment()).commit()
             }
             R.id.nav_intro4 -> {
-                val myIntent = Intent(this, Intro4TypeConversion::class.java)
-                startActivity(myIntent)
+                transaction.replace(R.id.fragmentUsed, Intro4TypeConversionFragment()).commit()
             }
             R.id.nav_intro5 -> {
-                val myIntent = Intent(this, Intro5Expression::class.java)
-                startActivity(myIntent)
-
+                transaction.replace(R.id.fragmentUsed, Intro5ExpressionFragment()).commit()
             }
             R.id.nav_intro6 -> {
-                val myIntent = Intent(this, Intro6BasicIO::class.java)
-                startActivity(myIntent)
+                transaction.replace(R.id.fragmentUsed, Intro6BasicIOFragment()).commit()
             }
         }
 

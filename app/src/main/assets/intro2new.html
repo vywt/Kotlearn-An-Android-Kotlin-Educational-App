@@ -1,0 +1,374 @@
+<link rel="stylesheet" href="styles.css">
+
+
+<div id="programiz-main-content">
+    <section class="main-content">
+        <h1>Kotlin Variables and Basic Types</h1>
+
+        <div class="page-short-description">
+            In this tutorial, you will learn about variables, how to create them, and basic data types that Kotlin supports for creating variables.</div>
+
+        <div class="clearfix">
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+                    <div class="content">
+                        <div id="node-1071" class="node node-kotlin-tutorial clearfix" about="/kotlin-programming/variable-types" typeof="sioc:Item foaf:Document">
+                            <span property="dc:title" content="Kotlin Variables and Basic Types" class="rdf-meta element-hidden"></span><div class="content clearfix">
+                            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>As you know, a variable is a location in memory (storage area) to hold data.</p>
+
+                                <p>To indicate the storage area, each variable should be given a unique name (identifier). Learn more about <a href="/kotlin-programming/keywords-identifiers" title="Java Keywords and Identifiers">How to name a variable in Kotlin?</a></p>
+
+                                <hr>
+                                <h3><a id="declaring-variables" name="declaring-variables"></a>How to declare a variable in Kotlin?</h3>
+
+                                <p>To declare a variable in Kotlin, either <code>var</code> or <code>val</code> keyword is used. Here is an example:</p>
+
+                                <pre>var language = "French"
+val score = 95</pre>
+
+                                <p>The difference in using <var>var</var> and <var>val</var> is discussed later in the article. For now, let's focus on variable declaration.</p>
+
+                                <p>Here, <var>language</var> is a variable of type <code>String</code>, and <code>score</code> is a variable of type <code>Int</code>. You don't have to specify the type of variables; Kotlin implicitly does that for you. The compiler knows this by initializer expression (<var>"French"</var> is a <code>String</code>, and <var>95</var> is an integer value in the above program). This is called type inference in programming.</p>
+
+                                <p>However, you can explicitly specify the type if you want to:</p>
+
+                                <pre>var language: String = "French"
+val score: Int = 95</pre>
+
+                                <p>We have initialized variable during declaration in above examples. However, it's not necessary. You can declare variable and specify its type in one statement, and initialize the variable in another statement later in the program.</p>
+
+                                <pre>var language: String      // variable declaration of type String
+... .. ...
+language = "French"       // variable initialization
+
+val score: Int          // variable declaration of type Int
+... .. ...
+score = 95             // variable initialization </pre>
+
+                                <hr>
+                                <p>Here are few examples that results into error.</p>
+
+                                <pre>var language           // Error
+language = "French"</pre>
+
+                                <p>Here, the type of <var>language</var> variable is not explicitly specified, nor the variable is initialized during declaration.</p>
+
+                                <pre>var language: String
+language = 14         // Error</pre>
+
+                                <p>​​​​Here, we are trying to assign 14 (integer value) to variable of different type (<code>String</code>).</p>
+
+                                <hr>
+                                <h3><a id="var-val" name="var-val"></a>Difference Between var and val</h3>
+
+                                <ul>
+                                    <li><strong>val</strong> (Immutable reference) - The variable declared using <code>val</code> keyword cannot be changed once the value is assigned. It is similar to <em>final variable in Java</em>.</li>
+                                    <li><strong>var</strong> (Mutable reference) - The variable declared using <code>var</code> keyword can be changed later in the program. It corresponds to regular Java variable.</li>
+                                </ul>
+
+                                <p>Here are few examples:</p>
+
+                                <pre>var language = "French"
+language = "German"     </pre>
+
+                                <p>Here, <code>language</code> variable is reassigned to <var>German</var>. Since, the variable is declared using <code>var</code>, this code work perfectly.</p>
+
+                                <pre>val language = "French"
+language = "German"      // Error</pre>
+
+                                <p>You cannot reassign <var>language</var> variable to <code>German</code> in the above example because the variable is declared using <code>val</code>.</p>
+
+                                <hr>
+                                <p>Now, you know what Kotlin variables are, it's time to learn different values a Kotlin variable can take.</p>
+
+                                <hr>
+                                <h2><a id="basic-types" name="basic-types"></a>Kotlin Basic Types</h2>
+
+                                <p>Kotlin is a statically typed language like Java. That is, the type of a variable is known during the compile time. For example,</p>
+
+                                <pre>val language: Int
+val marks = 12.3</pre>
+
+                                <p>Here, the compiler knows that <var>language</var> is of type <code>Int</code>, and <var>marks</var> is of type <code>Double</code> before the compile time.</p>
+
+                                <p>The built-in types in Kotlin can be categorized as:</p>
+
+                                <ul>
+                                    <li>Numbers</li>
+                                    <li>Characters</li>
+
+                                    <li>Booleans</li>
+                                    <li>Arrays</li>
+                                </ul>
+
+                                <h3><a id="numbers" name="numbers"></a>Number Type</h3>
+
+                                <hr>
+                                <p>Numbers in Kotlin are similar to Java. There are 6 built-in types representing numbers.</p>
+
+                                <ul>
+                                    <li>Byte</li>
+                                    <li>Short</li>
+                                    <li>Int</li>
+                                    <li>Long</li>
+                                    <li>Float</li>
+                                    <li>Double</li>
+                                </ul>
+
+                                <h4><a id="byte" name="byte"></a>1. Byte</h4>
+
+                                <hr>
+                                <ul>
+                                    <li>The <code>Byte</code> data type can have values from -128 to 127 (8-bit signed two's complement integer).</li>
+                                    <li>It is&nbsp;used instead of <code>Int</code> or other integer data types to save memory if it's certain that the value of a variable will be within [-128, 127]</li>
+                                    <li>Example:
+                                        <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    val range</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Byte</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">112</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"$range"</span><span class="pun">)</span><span class="pln">
+
+    </span><span class="com">// The code below gives error. Why?</span><span class="pln">
+    </span><span class="com">// val range1: Byte = 200</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+                                    </li>
+                                </ul>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre>112</pre>
+
+                                <h4><a id="short" name="short"></a>2. Short</h4>
+
+                                <hr>
+                                <ul>
+                                    <li>The <code>Short</code> data type can have values from -32768 to 32767 (16-bit signed two's complement integer).</li>
+                                    <li>It is&nbsp;used instead of other integer data types to save memory if it's certain that the value of the variable will be within [-32768, 32767].</li>
+                                    <li>Example:</li>
+                                </ul>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val temperature</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Short</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-</span><span class="lit">11245</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"$temperature"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>-11245</samp></pre>
+
+                                <h4><a id="int" name="int"></a>3. Int</h4>
+
+                                <hr>
+                                <ul>
+                                    <li>The <code>Int</code> data type can have values from <code>-2<sup>31</sup></code> to <code>2<sup>31</sup>-1</code> (32-bit signed two's complement integer).</li>
+                                    <li>Example:</li>
+                                </ul>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val score</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln">  </span><span class="lit">100000</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"$score"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre>100000</pre>
+
+                                <p>If you assign an integer between <code>-2<sup>31</sup></code> to <code>2<sup>31</sup>-1</code> to a variable without explicitly specifying its type, the variable will be of <code>Int</code> type. For example,</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+   </span><span class="com">// score is of type Int</span><span class="pln">
+    val score </span><span class="pun">=</span><span class="pln"> </span><span class="lit">10</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"$score"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+                                <p></p><div id="block-inject-1" class="block-inject block-inject-1"><div id="block-block-123" class="block block-block">
+
+
+                                    <div class="content">
+                                        <!-- /8095840/.2_A.34657.4_Programiz.com_tier1 -->
+                                        <div id="div-gpt-ad-1527670353707-0">
+                                            <script>
+if (window.innerWidth < 900) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+                                        </div>
+
+                                        <!-- /8095840/.2_A.34660.4_Programiz.com_tier1 -->
+                                        <div id="div-gpt-ad-1527670429257-0">
+                                            <script>
+if (window.innerWidth >= 900) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+                                        </div>  </div>
+                                </div>
+                                </div><div class="clearfix"></div><p>If you are using IntelliJ IDEA, you can place cursor inside the variable and press <code>Ctrl + Shift + P</code> to see its type.<br><br>
+                                    <img alt="View type of a variable in IntelliJ IDEA" src="./images/intro2image1.png" width="100%"></p>
+
+                                <h4><a id="long" name="long"></a>4. Long</h4>
+
+                                <hr>
+                                <ul>
+                                    <li>The <code>Long</code> data type can have values from <code>-2<sup>63</sup></code> to <code>2<sup>63</sup>-1</code> (64-bit signed two's complement integer).</li>
+                                    <li>Example:</li>
+                                </ul>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val highestScore</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Long</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">9999</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"$highestScore"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre>9999</pre>
+
+                                <p>If you assign an integer value greater than <code>2<sup>31</sup>-1</code> or less than <code>-2<sup>31</sup></code> to a variable (without explicitly specifying its type), the variable will be of <code>Long</code> type. For example,</p>
+
+                                <pre>val distance = 10000000000  // distance variable of type Long
+</pre>
+
+                                <p>Similarly, you can use capital letter <var>L</var> to specify that the variable is of type <code>Long</code>. For example,</p>
+
+                                <pre>val distance = 100L    // distance value of type Long</pre>
+
+                                <h4><a id="double" name="double"></a>5. Double</h4>
+
+                                <hr>
+                                <ul>
+                                    <li>The <code>Double</code> type is a double-precision 64-bit floating point.</li>
+                                    <li>Example:</li>
+                                </ul>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="com">// distance is of type Double</span><span class="pln">
+    val distance </span><span class="pun">=</span><span class="pln"> </span><span class="lit">999.5</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"$distance"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre>999.5</pre>
+
+                                <h4><a id="float" name="float"></a>Float</h4>
+
+                                <hr>
+                                <ul>
+                                    <li>The <code>Float</code> data type is a single-precision 32-bit floating point.</li>
+                                    <li>Example:</li>
+                                </ul>
+
+                                <pre>fun main(args : Array&lt;String&gt;) {
+
+    // distance is of type Float
+    val distance = 19.5F
+    println("$distance")
+}
+</pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>19.5</samp></pre>
+
+                                <p>Notice that, we have used <code><font face="monospace">19.5F</font></code> instead of <code>19.5</code>&nbsp;in the above program. It is because <code>19.5</code> is a <code>Double</code> literal, and you cannot assign <code>Double</code> value to a variable of type <code>Float</code>.</p>
+
+                                <p>To tell compiler to treat <code>19.5</code> as <code>Float</code>, you need to use <var>F</var> at the end.</p>
+
+                                <hr>
+                                <p>If you are not sure what number value&nbsp;a variable will be assigned in the program, you can specify it as <code>Number</code> type. This allows you to assign both integer and floating-point value to the variable (one at a time). For example:</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">var</span><span class="pln"> test</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Number</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">12.2</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"$test"</span><span class="pun">)</span><span class="pln">
+
+    test </span><span class="pun">=</span><span class="pln"> </span><span class="lit">12</span><span class="pln">
+    </span><span class="com">// Int smart cast from Number</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"$test"</span><span class="pun">)</span><span class="pln">
+
+    test </span><span class="pun">=</span><span class="pln"> </span><span class="lit">120L</span><span class="pln">
+    </span><span class="com">// Long smart cast from Number</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"$test"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre><samp>12.2
+12
+120</samp></pre>
+
+                                <p>To learn more, visit: <em>Kotlin smart casts</em></p>
+
+                                <hr>
+                                <h4><a id="char" name="char"></a>Char</h4>
+
+                                <p>To represent a character in Kotlin, <var>Char</var> types are used.</p>
+
+                                <p>Unlike Java, <var>Char</var> types cannot be treated as numbers. Visit this page to learn more about <a href="/java-programming/variables-primitive-data-types#char">Java char Type</a>.</p>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val letter</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Char</span><span class="pln">
+    letter </span><span class="pun">=</span><span class="pln"> </span><span class="str">'k'</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"$letter"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+
+                                <p>When you run the program, the output will be:</p>
+
+                                <pre>k
+</pre>
+
+                                <p>In Java, you can do something like:</p>
+
+                                <pre>char letter = 65;</pre>
+
+                                <p>However, the following code gives error in Kotlin.</p>
+
+                                <pre>var letter: Char = 65  // Error</pre>
+
+                                <hr>
+                                <h4><a id="boolean" name="boolean"></a>Boolean</h4>
+
+                                <ul>
+                                    <li>The&nbsp;<code>Boolean</code>&nbsp;data type has two possible values, either&nbsp;<code>true</code>&nbsp;or&nbsp;<code>false</code>.</li>
+                                    <li>Example:</li>
+                                </ul>
+
+                                <pre class="prettyprint prettyprinted" style=""><code><span class="pln">fun main</span><span class="pun">(</span><span class="pln">args </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    val flag </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+    println</span><span class="pun">(</span><span class="str">"$flag"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+                                <p>Booleans are used in decision making statements (will be discussed in later chapter).</p>
+
+                                <hr>
+                                <h2>Kotlin Arrays</h2>
+
+                                <p>An array is a container that holds data (values) of one single type. For example, you can create an array that can hold 100&nbsp;values of&nbsp;<code>Int</code>&nbsp;type.</p>
+
+                                <p>In Kotlin, arrays are&nbsp;represented by the&nbsp;<code>Array</code>&nbsp;class. The class has&nbsp;<code>get</code>&nbsp;and&nbsp;<code>set</code>&nbsp;functions, <code>size</code>&nbsp;property, and a few other useful member functions.</p>
+
+                                <p>To learn in detail about arrays, visit: <em>Kotlin Arrays</em></p>
+
+                                <hr>
+                                <h2>Kotlin Strings</h2>
+
+                                <p>In Kotlin, strings are represented by the <code>String</code> class. The string literals such as <var>"this is a string"</var>&nbsp;is implemented as an instance of this class.</p>
+
+                                <p>To learn in detail about strings, vist: <em>Kotlin Strings</em></p>
+
+                                <hr>
+                            </div></div></div></div>
+                        </div>  </div>
+                </div>
+            </div>
