@@ -137,6 +137,10 @@
                 android:id="@+id/nav_video"
                 android:icon="@drawable/ic_menu_camera"
                 android:title="Learn Through Videos" />
+            <item
+                android:id="@+id/nav_quiz"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="Do Quiz" />
         </menu>
     </item>
 

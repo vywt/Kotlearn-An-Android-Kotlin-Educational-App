@@ -31,6 +31,10 @@
             </intent-filter>
         </activity>
 
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
             android:authorities="com.kotlearn.kotlearn.com.android.tools.ir.server.InstantRunContentProvider"

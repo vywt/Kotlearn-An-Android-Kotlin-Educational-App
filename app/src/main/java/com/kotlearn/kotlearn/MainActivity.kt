@@ -160,9 +160,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_oop14 -> {
                 transaction.replace(R.id.fragmentUsed, OOP14OperatorOverloadingFragment()).addToBackStack("Frag30").commit()
             }
+            R.id.nav_quiz -> {
+                transaction.replace(R.id.fragmentUsed, QuizFragment()).addToBackStack("Frag31").commit()
+            }
 
             R.id.nav_video -> {
-                transaction.replace(R.id.fragmentUsed, LearnThroughVideoFragment()).addToBackStack("Frag31").commit()
+                transaction.replace(R.id.fragmentUsed, LearnThroughVideoFragment()).addToBackStack("Frag32").commit()
             }
         }
 
