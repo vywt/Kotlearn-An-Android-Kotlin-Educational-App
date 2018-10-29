@@ -1,13 +1,17 @@
 package com.kotlearn.kotlearn
 
 import android.app.AlertDialog
+import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
 import android.provider.MediaStore
+import android.support.design.widget.BottomSheetBehavior
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
 import android.widget.*
 import kotlinx.android.synthetic.*
 import org.w3c.dom.Text
@@ -18,6 +22,8 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 class QuizFragment : Fragment() {
+
+    lateinit var sharedPreferences: SharedPreferences
 
     var currentQuestionNumber : Int = 1
     var quizQuestions : QuizQuestions = QuizQuestions()
@@ -38,6 +44,30 @@ class QuizFragment : Fragment() {
         val submit = rootView.findViewById<Button>(R.id.quizSubmit)
         var tv_score = rootView.findViewById<TextView>(R.id.tv_score)
         var selectedAnswer : Int = 0
+
+        val bottomSheet : View = rootView.findViewById<View>(R.id.bottomSheet)
+        val bottomSheetBehavior : BottomSheetBehavior<View> = BottomSheetBehavior.from(bottomSheet)
+        bottomSheetBehavior.setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
+            override fun onSlide(bottomSheet: View, slideOffSet: Float) {
+                Toast.makeText(getContext(), "Onslide function called", Toast.LENGTH_LONG).show()
+            }
+
+            override fun onStateChanged(bottomSheet: View, newState: Int) {
+                when (newState) {
+                    BottomSheetBehavior.STATE_DRAGGING -> Toast.makeText(getContext(), "Dragging", Toast.LENGTH_LONG).show()
+                    BottomSheetBehavior.STATE_EXPANDED -> Toast.makeText(getContext(), "expanded", Toast.LENGTH_LONG).show()
+                    BottomSheetBehavior.STATE_COLLAPSED -> Toast.makeText(getContext(), "collapsed", Toast.LENGTH_LONG).show()
+                    BottomSheetBehavior.STATE_HIDDEN -> Toast.makeText(getContext(), "hidden", Toast.LENGTH_LONG).show()
+                    BottomSheetBehavior.STATE_SETTLING -> Toast.makeText(getContext(), "settling", Toast.LENGTH_LONG).show()
+                }
+            }
+        }
+        )
+
+        val wb = rootView.findViewById<WebView>(R.id.bottomSheet_webView)
+        wb.loadUrl("file:///android_asset/explanation1.html");
+
+        bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
 
         questionNumber.setText("Question " + currentQuestionNumber + ":")
         quizQuestion.setText(quizQuestions.getQuestion(1))
@@ -60,14 +90,14 @@ class QuizFragment : Fragment() {
                 } else if (option4.isChecked()) {
                     selectedAnswer = 4
                 }
-                updateQuestion(selectedAnswer, quizQuestion, option1, option2, option3, option4, questionNumber, radioGroup, tv_score, submit)
+                checkAnswer(selectedAnswer, quizQuestion, option1, option2, option3, option4, questionNumber, radioGroup, tv_score, submit, bottomSheetBehavior)
             }
         }
 
         return rootView
     }
 
-    fun updateQuestion(selectedAnswer : Int,
+    fun checkAnswer(selectedAnswer : Int,
                        quizQuestion : TextView,
                        option1 : RadioButton,
                        option2 : RadioButton,
@@ -76,9 +106,12 @@ class QuizFragment : Fragment() {
                        questionNumber : TextView,
                        radioGroup : RadioGroup,
                        tv_score : TextView,
-                       submit : Button) {
+                       submit : Button,
+                    bottomSheetBehavior: BottomSheetBehavior<View>) {
 
         //Toast.makeText(getContext(), "placeholder", Toast.LENGTH_LONG).show()
+
+        bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
 
         if (selectedAnswer == quizQuestions.getCorrectAnswer(currentQuestionNumber)) {
             score++
@@ -110,7 +143,7 @@ class QuizFragment : Fragment() {
 
         submit.setText("Next Question")
         submit.setOnClickListener{
-            changeQuestion(quizQuestion, option1, option2, option3, option4, questionNumber, radioGroup, tv_score, submit)
+            changeQuestion(quizQuestion, option1, option2, option3, option4, questionNumber, radioGroup, tv_score, submit, bottomSheetBehavior)
         }
 
 
@@ -124,8 +157,10 @@ class QuizFragment : Fragment() {
                           questionNumber : TextView,
                           radioGroup : RadioGroup,
                           tv_score : TextView,
-                          submit : Button) {
+                          submit : Button,
+                       bottomSheetBehavior: BottomSheetBehavior<View>) {
         currentQuestionNumber++
+        bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
         if (currentQuestionNumber <= quizQuestions.getLength()) {
             questionNumber.setText("Question " + currentQuestionNumber + ":")
             quizQuestion.setText(quizQuestions.getQuestion(currentQuestionNumber))
@@ -138,26 +173,33 @@ class QuizFragment : Fragment() {
             option3.setTextColor(Color.BLACK)
             option4.setTextColor(Color.BLACK)
             radioGroup.clearCheck()
-        }
 
-        var selectedAnswer : Int = 0
+            var selectedAnswer : Int = 0
 
-        submit.setText("Submit")
-        submit.setOnClickListener{
-            if (!option1.isChecked() && !option2.isChecked() && !option3.isChecked() && !option4.isChecked()) {
-                Toast.makeText(getContext(), "Please select an option!", Toast.LENGTH_LONG).show()
-            } else {
-                if (option1.isChecked()) {
-                    selectedAnswer = 1
-                } else if (option2.isChecked()) {
-                    selectedAnswer = 2
-                } else if (option3.isChecked()) {
-                    selectedAnswer = 3
-                } else if (option4.isChecked()) {
-                    selectedAnswer = 4
+            submit.setText("Submit")
+            submit.setOnClickListener{
+                if (!option1.isChecked() && !option2.isChecked() && !option3.isChecked() && !option4.isChecked()) {
+                    Toast.makeText(getContext(), "Please select an option!", Toast.LENGTH_LONG).show()
+                } else {
+                    if (option1.isChecked()) {
+                        selectedAnswer = 1
+                    } else if (option2.isChecked()) {
+                        selectedAnswer = 2
+                    } else if (option3.isChecked()) {
+                        selectedAnswer = 3
+                    } else if (option4.isChecked()) {
+                        selectedAnswer = 4
+                    }
+                    checkAnswer(selectedAnswer, quizQuestion, option1, option2, option3, option4, questionNumber, radioGroup, tv_score, submit, bottomSheetBehavior)
                 }
-                updateQuestion(selectedAnswer, quizQuestion, option1, option2, option3, option4, questionNumber, radioGroup, tv_score, submit)
             }
+        } else {
+            //end of quiz
+            val myIntent = Intent(getContext(), QuizCompletion::class.java)
+            myIntent.putExtra("Score", score)
+            startActivity(myIntent)
         }
+
+
     }
 }
