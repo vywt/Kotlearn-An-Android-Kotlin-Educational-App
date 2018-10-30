@@ -1,5 +1,6 @@
 package com.kotlearn.kotlearn
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
@@ -7,6 +8,7 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.google.firebase.auth.FirebaseAuth
 import com.kotlearn.kotlearn.LearnThroughTutorials.*
 import com.kotlearn.kotlearn.LearnThroughVideos.LearnThroughVideoFragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -14,10 +16,14 @@ import kotlinx.android.synthetic.main.app_bar_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
+    private lateinit var mAuth : FirebaseAuth;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
+        mAuth = FirebaseAuth.getInstance()
 
         val fragmentManager = supportFragmentManager
         val transaction = fragmentManager.beginTransaction()
@@ -166,6 +172,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             R.id.nav_video -> {
                 transaction.replace(R.id.fragmentUsed, LearnThroughVideoFragment()).addToBackStack("Frag32").commit()
+            }
+
+            R.id.chatroom -> {
+                var myintent = Intent(this, ChatroomActivity::class.java)
+                startActivity(myintent)
+            }
+
+            R.id.logout -> {
+                mAuth.signOut()
+                finish()
             }
         }
 

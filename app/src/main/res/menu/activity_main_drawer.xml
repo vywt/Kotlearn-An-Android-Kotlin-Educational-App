@@ -199,4 +199,13 @@
         </menu>
     </item>
 
+    <item
+        android:id="@+id/chatroom"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Chatroom" />
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Logout" />
 </menu>

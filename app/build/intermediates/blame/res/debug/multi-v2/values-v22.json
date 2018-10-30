@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
+            "outputFile": "/Users/victor/Desktop/Kotlearn/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "/Users/fabian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/11fc30aae4ff72a06d5fe4c11219d45e/res/values-v22/values-v22.xml",
+                    "source": "/Users/victor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/5b3f767b15e6fbc892fdf883cb8b91c4/res/values-v22/values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",
