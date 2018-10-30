@@ -1,0 +1,8 @@
+<link rel="stylesheet" href="explanationStyles.css">
+
+
+<div id="explanation-text" class="card-body">The <i>not-null assertion operator</i> <code>!!</code> makes sure the given nullable variable in fact is <i>not</i> <code>null</code>, and throws a <code>NullPointerException</code> if it is. It actually is the only way to have such an exception thrown in Kotlin. It is rarely required (mostly in legacy code) and should be used sparingly.
+
+    Example:
+    <pre class=" language-kotlin"><code class=" language-kotlin"><span class="token keyword">val</span> s <span class="token operator">:</span> String<span class="token operator">?</span> <span class="token operator">=</span> <span class="token keyword">null</span>
+<span class="token keyword">val</span> l <span class="token operator">=</span> s<span class="token operator">!!</span><span class="token punctuation">.</span>length <span class="token comment">// will throw NullPointerException</span></code></pre><h3 class="mt-3">See also</h3><ul class="links"><li><a href="https://kotlinlang.org/docs/reference/null-safety.html#the--operator" target="_blank">Official Documentation</a></li></ul></div>

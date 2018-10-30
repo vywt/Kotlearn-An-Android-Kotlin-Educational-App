@@ -1,24 +1,5 @@
-<style>
-    .token.atrule, .token.attr-value, .token.class-name, .token.keyword {
-    color: #1990b8;
-}
+<link rel="stylesheet" href="explanationStyles.css">
 
-pre[class*=language-]>code {
-    position: relative;
-    border-left: 10px solid #358ccb;
-    box-shadow: -1px 0 0 0 #358ccb, 0 0 0 1px #dfdfdf;
-    background-color: #fdfdfd;
-    background-image: linear-gradient(transparent 50%,rgba(69,142,209,.04) 50%);
-    background-size: 3em 3em;
-    background-origin: content-box;
-    background-attachment: local;
-}
-
-.token.boolean, .token.constant, .token.deleted, .token.function-name, .token.number, .token.property, .token.symbol, .token.tag {
-    color: #c92c2c;
-}
-
-</style>
 <div id="explanation-text" class="card-body">Variables with <code class=" language-kotlin"><span class="token keyword">val</span></code> are "read-only", that is <code class=" language-kotlin"><span class="token keyword">final</span></code>, in Kotlin. Compared to Java:
 
     <pre class=" language-kotlin"><code class=" language-kotlin"><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">33</span>	<span class="token comment">// int a = 33;</span>

@@ -1,0 +1,6 @@
+
+<link rel="stylesheet" href="explanationStyles.css">
+
+<div id="explanation-text" class="card-body">Arrays in Kotlin are represented by the generic <code class=" language-kotlin">Array<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span></code> class.
+    To avoid the boxing overhead, Kotlin also offers specialized arrays of primitives like <code class=" language-kotlin">ByteArray</code>, <code class=" language-kotlin">ShortArray</code>, <code class=" language-kotlin">IntArray</code> and so on, along with corresponding factory functions. So, for maximum performance, the question's code could be rewritten like this:
+    <pre class=" language-kotlin"><code class=" language-kotlin"><span class="token keyword">val</span> arr <span class="token operator">=</span> <span class="token function">intArrayOf</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span></code></pre><h3 class="mt-3">See also</h3><ul class="links"><li><a href="https://kotlinlang.org/docs/reference/basic-types.html#arrays" target="_blank">Official documentation about Arrays in Kotlin</a></li></ul></div>
