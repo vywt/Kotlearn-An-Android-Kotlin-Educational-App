@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="95dp"
-        android:text="Score"
+        android:text="Score %"
         android:textSize="70sp" />
 
     <TextView
@@ -23,6 +23,17 @@
         android:layout_below="@+id/tv_percentage"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:text="TextView"
+        android:text="XX Out of 22"
         android:textSize="24sp" />
+
+    <ImageButton
+        android:id="@+id/fbButton"
+        android:layout_width="244dp"
+        android:layout_height="92dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="210dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        app:srcCompat="@drawable/fbsharebutton" />
 </RelativeLayout>
