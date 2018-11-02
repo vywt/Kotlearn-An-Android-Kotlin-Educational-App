@@ -1,4 +1,4 @@
-#Wed Oct 31 01:27:50 SGT 2018
+#Wed Oct 31 23:23:30 SGT 2018
 base.0=/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

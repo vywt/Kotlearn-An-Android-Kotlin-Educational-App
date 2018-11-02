@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="navigation_view">
 
-    <item app:showAsAction="collapseActionView"  android:title="Learn Through Tutorials">
+    <item app:showAsAction="collapseActionView"  android:title="Learn Through Tutorials" >
         <menu>
             <item
                 android:id="@+id/nav_intro1"
@@ -155,36 +155,6 @@
         android:id="@+id/nav_intro9"
         android:icon="@drawable/ic_menu_camera"
         android:title="Connect with Learners" />
-
-
-
-
-    <!--<group android:checkableBehavior="single">-->
-        <!--<item-->
-            <!--android:id="@+id/nav_intro1"-->
-            <!--android:icon="@drawable/ic_menu_camera"-->
-            <!--android:title="Hello World" />-->
-        <!--<item-->
-            <!--android:id="@+id/nav_intro2"-->
-            <!--android:icon="@drawable/ic_menu_slideshow"-->
-            <!--android:title="Variables and Basic Types" />-->
-        <!--<item-->
-            <!--android:id="@+id/nav_intro3"-->
-            <!--android:icon="@drawable/ic_menu_manage"-->
-            <!--android:title="Kotlin Operators" />-->
-        <!--<item-->
-            <!--android:id="@+id/nav_intro4"-->
-            <!--android:icon="@drawable/ic_menu_manage"-->
-            <!--android:title="Type Conversion" />-->
-        <!--<item-->
-            <!--android:id="@+id/nav_intro5"-->
-            <!--android:icon="@drawable/ic_menu_manage"-->
-            <!--android:title="Kotlin Expressions" />-->
-        <!--<item-->
-            <!--android:id="@+id/nav_intro6"-->
-            <!--android:icon="@drawable/ic_menu_manage"-->
-            <!--android:title="Basic Input and Output" />-->
-    <!--</group>-->
 
     <item android:title="Facebook">
         <menu>
