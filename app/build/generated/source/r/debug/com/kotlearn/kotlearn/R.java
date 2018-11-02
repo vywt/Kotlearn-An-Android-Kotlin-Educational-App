@@ -5288,9 +5288,7 @@ public final class R {
     public static final int main=0x7f0e0001;
     public static final int menu_basic__syntax=0x7f0e0002;
     public static final int menu_intro=0x7f0e0003;
-    public static final int menu_intro_hello_world=0x7f0e0004;
-    public static final int menu_intro_variables_basic_types=0x7f0e0005;
-    public static final int navigation=0x7f0e0006;
+    public static final int navigation=0x7f0e0004;
   }
   public static final class mipmap {
     public static final int ic_launcher=0x7f0f0000;
