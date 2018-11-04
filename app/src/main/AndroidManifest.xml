@@ -33,6 +33,15 @@
                 <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         <!--</activity>-->
+<<<<<<< HEAD
+=======
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+>>>>>>> 49c2150c731e1ea958e0a5fa63922823e135ec7a
 
         <activity android:name=".SplashScreenActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -45,6 +54,7 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+<<<<<<< HEAD
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
@@ -59,6 +69,12 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name="WelcomeActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+=======
+        <activity android:name=".MainActivity" android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".QuizCompletion" android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".ChatroomActivity" android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
+>>>>>>> 49c2150c731e1ea958e0a5fa63922823e135ec7a
     </application>
 
 </manifest>

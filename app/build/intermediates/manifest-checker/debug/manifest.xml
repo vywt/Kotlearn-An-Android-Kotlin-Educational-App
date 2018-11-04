@@ -55,7 +55,12 @@
         <!-- </activity> -->
 
         <activity
+<<<<<<< HEAD
             android:name="com.kotlearn.kotlearn.SplashScreenActivity"
+=======
+            android:name="com.kotlearn.kotlearn.LoginActivity"
+            android:label="@string/app_name"
+>>>>>>> 49c2150c731e1ea958e0a5fa63922823e135ec7a
             android:theme="@style/Theme.AppCompat.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -70,12 +75,15 @@
 
         <activity
             android:name="com.kotlearn.kotlearn.MainActivity"
+<<<<<<< HEAD
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name="com.kotlearn.kotlearn.QuizCompletion"
+=======
+>>>>>>> 49c2150c731e1ea958e0a5fa63922823e135ec7a
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name="com.kotlearn.kotlearn.LoginActivity"
+            android:name="com.kotlearn.kotlearn.QuizCompletion"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name="com.kotlearn.kotlearn.ChatroomActivity"

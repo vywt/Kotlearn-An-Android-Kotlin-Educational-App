@@ -1,24 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
+<<<<<<< HEAD
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="27"
     build-mode="COLD"
     density="420dpi"
+=======
+    abi="x86"
+    api-level="28"
+    build-mode="HOT_WARM"
+    density="xhdpi"
+>>>>>>> 49c2150c731e1ea958e0a5fa63922823e135ec7a
     format="10"
     ir-eligibility="CLASS_ADDED"
     plugin-version="3.1.4"
+<<<<<<< HEAD
     timestamp="1541329240837"
     token="2194304967122335382"
     verifier="COLD_SWAP_REQUESTED" >
+=======
+    timestamp="1541232692806"
+    token="9011841343279150554"
+    verifier="COMPATIBLE" >
+>>>>>>> 49c2150c731e1ea958e0a5fa63922823e135ec7a
 
     <task
         name="javac"
         duration="0" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="75" />
     <task
         name="instant-run-transform"
+<<<<<<< HEAD
         duration="81" />
     <task
         name="verifier"
@@ -37,40 +51,115 @@
             type="SPLIT" />
         <artifact
             location="/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+=======
+        duration="92" />
+    <task
+        name="verifier"
+        duration="7" />
+
+    <artifact
+        location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
+
+    <build
+        build-mode="FULL"
+        timestamp="1541232139019"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+>>>>>>> 49c2150c731e1ea958e0a5fa63922823e135ec7a
+            type="SPLIT" />
+        <artifact
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
+<<<<<<< HEAD
             location="/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
             location="/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+=======
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+>>>>>>> 49c2150c731e1ea958e0a5fa63922823e135ec7a
+            type="SPLIT" />
+        <artifact
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+<<<<<<< HEAD
             location="/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
         <artifact
             location="/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+=======
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+>>>>>>> 49c2150c731e1ea958e0a5fa63922823e135ec7a
             type="SPLIT" />
         <artifact
-            location="/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1541232201385"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1541232436469"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/builds/debug/1541232436469/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1541232570768"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/builds/debug/1541232570768/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1541232597121"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/builds/debug/1541232597121/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1541232692806"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/victor/Desktop/Kotlearn/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
     </build>
     <build
         build-mode="COLD"
