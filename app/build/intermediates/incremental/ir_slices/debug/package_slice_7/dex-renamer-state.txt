@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-#Sun Nov 04 18:40:36 SGT 2018
-base.0=/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/transforms/dexMerger/debug/8
-=======
-#Sat Nov 03 15:58:04 SGT 2018
-base.0=/Users/victor/Desktop/Kotlearn/app/build/intermediates/transforms/dexMerger/debug/7
->>>>>>> 49c2150c731e1ea958e0a5fa63922823e135ec7a
+#Sun Nov 04 20:50:39 SGT 2018
+base.0=/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/transforms/dexMerger/debug/7
 path.0=classes.dex
 renamed.0=classes.dex
