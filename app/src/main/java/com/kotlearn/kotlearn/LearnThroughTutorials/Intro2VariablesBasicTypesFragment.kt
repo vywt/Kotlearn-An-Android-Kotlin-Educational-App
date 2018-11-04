@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
+import android.widget.Button
 import com.kotlearn.kotlearn.R
 
 
@@ -24,11 +25,26 @@ class Intro2VariablesBasicTypesFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        val rootview =  inflater.inflate(R.layout.fragment_intro2_variables_basic_types, container, false)
-        val wb = rootview.findViewById<WebView>(R.id.wbIntro2)
-        wb.loadUrl("file:///android_asset/intro2.html");
+        val rootView =  inflater.inflate(R.layout.fragment_intro2_variables_basic_types, container, false)
+        val wb = rootView.findViewById<WebView>(R.id.wbIntro2)
+        wb.loadUrl("file:///android_asset/intro2.html")
 
-        return rootview
+
+        val fragmentManager = getFragmentManager()
+        val transaction = fragmentManager!!.beginTransaction()
+
+        var btn_previous = rootView.findViewById<Button>(R.id.btn_Intro2_previous)
+        var btn_next = rootView.findViewById<Button>(R.id.btn_Intro2_next)
+
+        btn_next.setOnClickListener{
+            transaction.replace(R.id.fragmentUsed, Intro3OperatorsFragment()).commit()
+        }
+
+        btn_previous.setOnClickListener{
+            transaction.replace(R.id.fragmentUsed, Intro1HelloWorldFragment()).commit()
+        }
+
+        return rootView
     }
 
 

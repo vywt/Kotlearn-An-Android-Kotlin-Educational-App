@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
+import android.widget.Button
 
 import com.kotlearn.kotlearn.R
 
@@ -26,7 +27,16 @@ class OOP14OperatorOverloadingFragment : Fragment() {
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_oop14_operator_overloading, container, false)
         val wb = rootView.findViewById<WebView>(R.id.wbOOP14)
-        wb.loadUrl("file:///android_asset/oop14.html");
+        wb.loadUrl("file:///android_asset/oop14.html")
+        val fragmentManager = getFragmentManager()
+        val transaction = fragmentManager!!.beginTransaction()
+
+        var btn_previous = rootView.findViewById<Button>(R.id.btn_oop14_previous)
+
+        btn_previous.setOnClickListener{
+            transaction.replace(R.id.fragmentUsed, OOP13ExtensionFunctionFragment()).commit()
+        }
+
         return rootView
     }
 

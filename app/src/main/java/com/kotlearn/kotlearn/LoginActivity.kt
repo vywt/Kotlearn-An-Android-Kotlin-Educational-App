@@ -15,11 +15,12 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var mAuth : FirebaseAuth;
     private lateinit var emailAdd : String;
     private lateinit var password : String;
+    private var newUser : Boolean = false
 
     override fun onStart(){
         super.onStart()
         var currentUser : FirebaseUser? = mAuth.getCurrentUser()
-        updateUI(currentUser);
+        updateUI(currentUser, false);
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,12 +47,20 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    fun updateUI(firebaseUser : FirebaseUser?){
+    fun updateUI(firebaseUser : FirebaseUser?, newUser : Boolean){
+        this.newUser = newUser
         if (firebaseUser != null){
-            val myIntent = Intent(this, MainActivity::class.java)
-            startActivity(myIntent)
-        } else {
+            if (this.newUser == true) {
+                val myIntent = Intent(this, WelcomeActivity::class.java)
+                startActivity(myIntent)
+            } else {
+                val myIntent = Intent(this, MainActivity::class.java)
+                startActivity(myIntent)
 
+            }
+        } else {
+//            val myIntent = Intent(this, WelcomeActivity::class.java)
+//            startActivity(myIntent)
         }
     }
 
@@ -67,12 +76,12 @@ class LoginActivity : AppCompatActivity() {
                         // Sign in success, update UI with the signed-in user's information
                         Toast.makeText(this, "Logged in Successfully", Toast.LENGTH_SHORT).show()
                         val user = mAuth.currentUser
-                        updateUI(user)
+                        updateUI(user, false)
                     } else {
                         // If sign in fails, display a message to the user.
                         Toast.makeText(baseContext, "Authentication failed.",
                                 Toast.LENGTH_SHORT).show()
-                        updateUI(null)
+                        updateUI(null, false)
                     }
 
                 }
@@ -87,10 +96,10 @@ class LoginActivity : AppCompatActivity() {
                 addOnCompleteListener(this, OnCompleteListener {
                     if (it.isSuccessful) {
                         var user : FirebaseUser? = mAuth.currentUser
-                        updateUI(user)
+                        updateUI(user, true)
                     } else {
                         Toast.makeText(this, "Authentication failed!", Toast.LENGTH_SHORT).show()
-                        updateUI(null)
+                        updateUI(null, false)
                     }
                 }
                 )

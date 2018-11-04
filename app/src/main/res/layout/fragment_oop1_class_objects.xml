@@ -5,18 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LearnThroughTutorials.OOP1ClassObjectsFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
     <WebView
         android:id="@+id/wbOOP1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <Button
+        android:id="@+id/btn_oop1_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wbOOP1"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"
+        android:text="Previous" />
+
+    <Button
+        android:id="@+id/btn_oop1_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wbOOP1"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:text="Next" />
+
+</RelativeLayout>
+
+    </ScrollView>
 
 </FrameLayout>

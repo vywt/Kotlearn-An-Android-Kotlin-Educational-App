@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
+import android.widget.Button
 
 import com.kotlearn.kotlearn.R
 
@@ -26,7 +27,21 @@ class Functions4RecursionFragment : Fragment() {
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_functions4_recursion, container, false)
         val wb = rootView.findViewById<WebView>(R.id.wbFunctions4)
-        wb.loadUrl("file:///android_asset/functions4.html");
+        wb.loadUrl("file:///android_asset/functions4.html")
+        var btn_previous = rootView.findViewById<Button>(R.id.btn_Functions4_previous)
+        var btn_next = rootView.findViewById<Button>(R.id.btn_Functions4_next)
+
+        val fragmentManager = getFragmentManager()
+        val transaction = fragmentManager!!.beginTransaction()
+
+
+        btn_next.setOnClickListener{
+            transaction.replace(R.id.fragmentUsed, OOP1ClassObjectsFragment()).commit()
+        }
+
+        btn_previous.setOnClickListener{
+            transaction.replace(R.id.fragmentUsed, Functions3DefaultNamedArgumentsFragment()).commit()
+        }
         return rootView
     }
 

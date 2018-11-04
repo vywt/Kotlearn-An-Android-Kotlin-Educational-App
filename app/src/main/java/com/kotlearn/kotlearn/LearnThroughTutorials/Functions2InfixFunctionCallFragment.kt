@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
+import android.widget.Button
 
 import com.kotlearn.kotlearn.R
 
@@ -27,6 +28,20 @@ class Functions2InfixFunctionCallFragment : Fragment() {
         val rootView = inflater.inflate(R.layout.fragment_functions2_infix_function_call, container, false)
         val wb = rootView.findViewById<WebView>(R.id.wbFunctions2)
         wb.loadUrl("file:///android_asset/functions2.html");
+
+        val fragmentManager = getFragmentManager()
+        val transaction = fragmentManager!!.beginTransaction()
+
+        var btn_previous = rootView.findViewById<Button>(R.id.btn_Functions2_previous)
+        var btn_next = rootView.findViewById<Button>(R.id.btn_Functions2_next)
+
+        btn_next.setOnClickListener{
+            transaction.replace(R.id.fragmentUsed, Functions3DefaultNamedArgumentsFragment()).commit()
+        }
+
+        btn_previous.setOnClickListener{
+            transaction.replace(R.id.fragmentUsed, Functions1FunctionFragment()).commit()
+        }
         return rootView
     }
 

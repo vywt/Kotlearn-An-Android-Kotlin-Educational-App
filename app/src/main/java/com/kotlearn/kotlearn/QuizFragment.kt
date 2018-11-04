@@ -210,6 +210,20 @@ class QuizFragment : Fragment() {
             //end of quiz
             val myIntent = Intent(getContext(), QuizCompletion::class.java)
             myIntent.putExtra("Score", score)
+            score = 0
+            currentQuestionNumber = 1
+            questionNumber.setText("Question " + currentQuestionNumber + ":")
+            quizQuestion.setText(quizQuestions.getQuestion(currentQuestionNumber))
+            option1.setText(quizQuestions.getChoice(currentQuestionNumber,1))
+            option1.setTextColor(Color.WHITE)
+            option2.setText(quizQuestions.getChoice(currentQuestionNumber,2))
+            option2.setTextColor(Color.WHITE)
+            option3.setText(quizQuestions.getChoice(currentQuestionNumber,3))
+            option3.setTextColor(Color.WHITE)
+            option4.setText(quizQuestions.getChoice(currentQuestionNumber,4))
+            option4.setTextColor(Color.WHITE)
+            tv_score.setText("Score: 0")
+
             startActivity(myIntent)
         }
 

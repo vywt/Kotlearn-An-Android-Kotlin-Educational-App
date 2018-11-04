@@ -12,28 +12,51 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="95dp"
+        android:layout_marginTop="105dp"
         android:text="Score %"
-        android:textSize="70sp" />
+        android:textSize="70sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_percentage"
+android:layout_below="@+id/tv_percentage"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:text="XX Out of 22"
         android:textSize="24sp" />
 
-    <ImageButton
-        android:id="@+id/fbButton"
-        android:layout_width="244dp"
-        android:layout_height="92dp"
-        android:layout_alignParentBottom="true"
+    <Button
+        android:id="@+id/btn_tryagain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_score"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="210dp"
-        android:scaleX="0.5"
-        android:scaleY="0.5"
-        app:srcCompat="@drawable/fbsharebutton" />
+        android:layout_marginTop="15dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:text="Try Again" />
+
+    <Button
+        android:id="@+id/btn_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btn_tryagain"
+        android:layout_marginTop="10dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:text="Return" />
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/fbButton"-->
+        <!--android:layout_width="244dp"-->
+        <!--android:layout_height="92dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="210dp"-->
+        <!--android:scaleX="0.5"-->
+        <!--android:scaleY="0.5"-->
+        <!--app:srcCompat="@drawable/fbsharebutton" />-->
 </RelativeLayout>

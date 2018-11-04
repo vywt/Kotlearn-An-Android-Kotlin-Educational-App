@@ -17,6 +17,8 @@ import kotlinx.android.synthetic.main.app_bar_main.*
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var mAuth : FirebaseAuth;
+//    val fragmentManager = supportFragmentManager
+//    val transaction = fragmentManager.beginTransaction()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,8 +39,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
-
-
     }
 
     override fun onBackPressed() {
@@ -63,7 +63,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         when (item.itemId) {
-            R.id.action_settings -> return true
+            R.id.action_settings ->
+//                var myIntent = Intent(this, MainActivity::class.java)
+//            startActivity(myIntent)
+            return true
             else -> return super.onOptionsItemSelected(item)
         }
     }
@@ -76,7 +79,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         when (item.itemId) {
             R.id.nav_intro1 -> {
-                transaction.replace(R.id.fragmentUsed, Intro1HelloWorldFragment()).addToBackStack("Frag1").commit()
+                transaction.replace(R.id.fragmentUsed, TutorialFrontpageFragment()).addToBackStack("Frag1").commit()
             }
             R.id.nav_intro2 -> {
                 transaction.replace(R.id.fragmentUsed, Intro2VariablesBasicTypesFragment()).addToBackStack("Frag2").commit()

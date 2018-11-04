@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
+import android.widget.Button
 import com.kotlearn.kotlearn.R
 
 
@@ -24,11 +25,26 @@ class Intro5ExpressionFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        val rootview =  inflater.inflate(R.layout.fragment_intro5_expression, container, false)
-        val wb = rootview.findViewById<WebView>(R.id.wbIntro5)
+        val rootView =  inflater.inflate(R.layout.fragment_intro5_expression, container, false)
+        val wb = rootView.findViewById<WebView>(R.id.wbIntro5)
         wb.loadUrl("file:///android_asset/intro5.html")
 
-        return rootview
+
+        val fragmentManager = getFragmentManager()
+        val transaction = fragmentManager!!.beginTransaction()
+
+        var btn_previous = rootView.findViewById<Button>(R.id.btn_Intro5_previous)
+        var btn_next = rootView.findViewById<Button>(R.id.btn_Intro5_next)
+
+        btn_next.setOnClickListener{
+            transaction.replace(R.id.fragmentUsed, Intro6BasicIOFragment()).commit()
+        }
+
+        btn_previous.setOnClickListener{
+            transaction.replace(R.id.fragmentUsed, Intro4TypeConversionFragment()).commit()
+        }
+
+        return rootView
     }
 
 

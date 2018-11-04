@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
+import android.widget.Button
 
 import com.kotlearn.kotlearn.R
 
@@ -27,6 +28,21 @@ class OOP1ClassObjectsFragment : Fragment() {
         val rootView = inflater.inflate(R.layout.fragment_oop1_class_objects, container, false)
         val wb = rootView.findViewById<WebView>(R.id.wbOOP1)
         wb.loadUrl("file:///android_asset/oop1.html");
+
+        val fragmentManager = getFragmentManager()
+        val transaction = fragmentManager!!.beginTransaction()
+
+        var btn_previous = rootView.findViewById<Button>(R.id.btn_oop1_previous)
+        var btn_next = rootView.findViewById<Button>(R.id.btn_oop1_next)
+
+        btn_next.setOnClickListener{
+            transaction.replace(R.id.fragmentUsed, OOP2ConstructorsFragment()).commit()
+        }
+
+        btn_previous.setOnClickListener{
+            transaction.replace(R.id.fragmentUsed, Functions4RecursionFragment()).commit()
+        }
+
         return rootView
     }
 
