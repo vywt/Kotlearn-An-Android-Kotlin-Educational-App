@@ -206,6 +206,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 transaction.replace(R.id.fragmentUsed, EditorFragment()).addToBackStack("Frag33").commit()
             }
 
+            R.id.nav_share -> {
+                 val intent = Intent()
+                intent.action = Intent.ACTION_SEND
+                intent.putExtra(Intent.EXTRA_TEXT, "Hey, try out Kotlearn, the easiest yet most effective way of learning Kotlearn! Download using this link - www.google.com")
+                intent.type = "text/plain"
+                startActivity(Intent.createChooser(intent, "Share Kotlearn via... "))
+            }
+
             R.id.logout -> {
                 mAuth.signOut()
 //                finish()
