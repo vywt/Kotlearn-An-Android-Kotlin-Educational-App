@@ -94,142 +94,8 @@
             android:layout_below="@+id/quizRadioGroup"
             android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
-            android:text="Button" />
+            android:text="Submit" />
     </RelativeLayout>
-
-    <!--<RelativeLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent">-->
-
-        <!--<android.support.constraint.ConstraintLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent">-->
-
-            <!--<TextView-->
-                <!--android:id="@+id/quizQuestionNumber"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginEnd="8dp"-->
-                <!--android:layout_marginStart="8dp"-->
-                <!--android:layout_marginTop="36dp"-->
-                <!--android:text="Question: "-->
-                <!--android:textSize="24sp"-->
-                <!--android:textStyle="bold"-->
-                <!--app:layout_constraintEnd_toEndOf="parent"-->
-                <!--app:layout_constraintHorizontal_bias="0.501"-->
-                <!--app:layout_constraintStart_toStartOf="parent"-->
-                <!--app:layout_constraintTop_toTopOf="parent" />-->
-
-            <!--<TextView-->
-                <!--android:id="@+id/quizQuestion"-->
-                <!--android:layout_width="321dp"-->
-                <!--android:layout_height="140dp"-->
-                <!--android:layout_marginEnd="8dp"-->
-                <!--android:layout_marginStart="8dp"-->
-                <!--android:layout_marginTop="8dp"-->
-                <!--android:fontFamily="@font/roboto"-->
-                <!--android:text="TextView"-->
-                <!--android:textAlignment="center"-->
-                <!--android:textSize="16sp"-->
-                <!--app:layout_constraintEnd_toEndOf="parent"-->
-                <!--app:layout_constraintStart_toStartOf="parent"-->
-                <!--app:layout_constraintTop_toBottomOf="@+id/quizQuestionNumber" />-->
-
-            <!--<RadioGroup-->
-                <!--android:id="@+id/quizRadioGroup"-->
-                <!--android:layout_width="300dp"-->
-                <!--android:layout_height="230dp"-->
-                <!--android:layout_marginEnd="8dp"-->
-                <!--android:layout_marginStart="8dp"-->
-                <!--android:layout_marginTop="8dp"-->
-                <!--app:layout_constraintEnd_toEndOf="parent"-->
-                <!--app:layout_constraintHorizontal_bias="0.500"-->
-                <!--app:layout_constraintStart_toStartOf="parent"-->
-                <!--app:layout_constraintTop_toBottomOf="@+id/quizQuestion">-->
-
-                <!--<RadioButton-->
-                    <!--android:id="@+id/option1"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:fontFamily="@font/roboto"-->
-                    <!--android:text="RadioButton" />-->
-
-                <!--<RadioButton-->
-                    <!--android:id="@+id/option2"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="44dp"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:fontFamily="@font/roboto"-->
-                    <!--android:text="RadioButton" />-->
-
-                <!--<RadioButton-->
-                    <!--android:id="@+id/option3"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="43dp"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:fontFamily="@font/roboto"-->
-                    <!--android:text="RadioButton" />-->
-
-                <!--<RadioButton-->
-                    <!--android:id="@+id/option4"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:fontFamily="@font/roboto"-->
-                    <!--android:text="RadioButton" />-->
-
-            <!--</RadioGroup>-->
-
-            <!--<Button-->
-                <!--android:id="@+id/quizSubmit"-->
-                <!--style="@style/Widget.AppCompat.Button"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginBottom="8dp"-->
-                <!--android:layout_marginEnd="8dp"-->
-                <!--android:layout_marginStart="8dp"-->
-                <!--android:layout_marginTop="8dp"-->
-                <!--android:text="Submit Answer"-->
-                <!--app:layout_constraintBottom_toBottomOf="parent"-->
-                <!--app:layout_constraintEnd_toEndOf="parent"-->
-                <!--app:layout_constraintStart_toStartOf="parent"-->
-                <!--app:layout_constraintTop_toBottomOf="@+id/quizRadioGroup"-->
-                <!--app:layout_constraintVertical_bias="0.217" />-->
-
-            <!--<TextView-->
-                <!--android:id="@+id/tv_score"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginBottom="8dp"-->
-                <!--android:layout_marginEnd="8dp"-->
-                <!--android:layout_marginStart="8dp"-->
-                <!--android:layout_marginTop="8dp"-->
-                <!--android:text="TextView"-->
-                <!--app:layout_constraintBottom_toBottomOf="parent"-->
-                <!--app:layout_constraintEnd_toEndOf="parent"-->
-                <!--app:layout_constraintHorizontal_bias="0.87"-->
-                <!--app:layout_constraintStart_toEndOf="@+id/quizQuestionNumber"-->
-                <!--app:layout_constraintTop_toTopOf="parent"-->
-                <!--app:layout_constraintVertical_bias="0.002" />-->
-
-            <!--&lt;!&ndash;<Button&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/button2222"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_marginBottom="8dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_marginEnd="8dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_marginStart="8dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_marginTop="8dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:text="Button"&ndash;&gt;-->
-                <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;app:layout_constraintHorizontal_bias="0.87"&ndash;&gt;-->
-                <!--&lt;!&ndash;app:layout_constraintStart_toEndOf="@+id/quizQuestionNumber"&ndash;&gt;-->
-                <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;app:layout_constraintVertical_bias="0.002"/>&ndash;&gt;-->
-        <!--</android.support.constraint.ConstraintLayout>-->
-    <!--</RelativeLayout>-->
 
     <RelativeLayout
         android:id="@+id/bottomSheet"
@@ -237,7 +103,7 @@
         android:layout_height="match_parent"
         android:background="@color/colorPrimary"
         app:behavior_hideable="true"
-        app:behavior_peekHeight="50dp"
+        app:behavior_peekHeight="70dp"
         app:elevation="10dp"
         app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
 
@@ -247,7 +113,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_margin="20dp"
+            android:layout_margin="25dp"
             android:fontFamily="@font/roboto"
             android:text="Show Explanation"
             android:textColor="@android:color/white"
@@ -259,7 +125,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/bottomSheet_title"
-
             android:layout_centerHorizontal="true" />
 
     </RelativeLayout>

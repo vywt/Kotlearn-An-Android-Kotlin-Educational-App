@@ -9,12 +9,12 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="371dp"
-        android:layout_height="303dp"
+        android:layout_width="272dp"
+        android:layout_height="158dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        app:srcCompat="@drawable/logosquaretransparentwhite" />
+        android:layout_marginTop="60dp"
+        app:srcCompat="@drawable/logosquaretransparentwhitelarger" />
 
     <EditText
     android:id="@+id/emailText"
@@ -43,7 +43,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/btnRegister"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/password"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="100dp"/>
@@ -55,7 +55,7 @@
     android:text="@string/btnLogin"
 
         android:layout_below="@+id/password"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
 
         android:layout_toRightOf="@+id/btnRegister"
         android:layout_marginLeft="20dp"

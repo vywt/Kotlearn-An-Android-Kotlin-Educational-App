@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item
-        android:id="@+id/goHome"
-        android:orderInCategory="100"
-        android:title="Go Home"
-        app:showAsAction="always"
-        android:icon="@drawable/ic_action_home"/>
+    <!--<item-->
+        <!--android:id="@+id/goHome"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="Go Home"-->
+        <!--app:showAsAction="always"-->
+        <!--android:icon="@drawable/ic_action_home"/>-->
 </menu>

@@ -18,8 +18,8 @@ class SliderAdapter : PagerAdapter {
 
     private var context: Context
     private var images: IntArray
-    private var titles: Array<String?> = arrayOfNulls(5)
-    private var descriptions: Array<String?> = arrayOfNulls(5)
+    private var titles: Array<String?> = arrayOfNulls(6)
+    private var descriptions: Array<String?> = arrayOfNulls(6)
     lateinit var inflater: LayoutInflater
 
     constructor(context: Context, images: IntArray, titles : Array<String?>, descriptions : Array<String?>) : super() {
@@ -53,7 +53,7 @@ class SliderAdapter : PagerAdapter {
 //            btn_previous.visibility = Button.VISIBLE
 //        }
 
-        if (position == 4) {
+        if (position == 5) {
             btn_next.visibility = Button.VISIBLE
             btn_next.setOnClickListener {
                 var myIntent = Intent(context, MainActivity::class.java)

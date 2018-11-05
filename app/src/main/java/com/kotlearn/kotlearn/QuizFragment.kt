@@ -54,11 +54,11 @@ class QuizFragment : Fragment() {
 
             override fun onStateChanged(bottomSheet: View, newState: Int) {
                 when (newState) {
-                    BottomSheetBehavior.STATE_DRAGGING -> Toast.makeText(getContext(), "Dragging", Toast.LENGTH_LONG).show()
-                    BottomSheetBehavior.STATE_EXPANDED -> Toast.makeText(getContext(), "expanded", Toast.LENGTH_LONG).show()
-                    BottomSheetBehavior.STATE_COLLAPSED -> Toast.makeText(getContext(), "collapsed", Toast.LENGTH_LONG).show()
-                    BottomSheetBehavior.STATE_HIDDEN -> Toast.makeText(getContext(), "hidden", Toast.LENGTH_LONG).show()
-                    BottomSheetBehavior.STATE_SETTLING -> Toast.makeText(getContext(), "settling", Toast.LENGTH_LONG).show()
+//                    BottomSheetBehavior.STATE_DRAGGING -> Toast.makeText(getContext(), "Dragging", Toast.LENGTH_LONG).show()
+//                    BottomSheetBehavior.STATE_EXPANDED -> Toast.makeText(getContext(), "expanded", Toast.LENGTH_LONG).show()
+//                    BottomSheetBehavior.STATE_COLLAPSED -> Toast.makeText(getContext(), "collapsed", Toast.LENGTH_LONG).show()
+//                    BottomSheetBehavior.STATE_HIDDEN -> Toast.makeText(getContext(), "hidden", Toast.LENGTH_LONG).show()
+//                    BottomSheetBehavior.STATE_SETTLING -> Toast.makeText(getContext(), "settling", Toast.LENGTH_LONG).show()
                 }
             }
         }

@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import com.google.firebase.auth.FirebaseAuth
 import com.kotlearn.kotlearn.LearnThroughTutorials.*
 import com.kotlearn.kotlearn.LearnThroughVideos.LearnThroughVideoFragment
@@ -25,10 +26,25 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
+//        var btn_goHome = findViewById<Button>(R.id.goHome)
+//        btn_goHome.setOnClickListener {
+//
+////            val fragmentManager = cont
+////            val transaction = fragmentManager!!.beginTransaction()
+////
+////            transaction.replace(R.id.fragmentUsed, IntroHomeFragment()).addToBackStack("Frag32").commit()
+//
+//        }
+
         mAuth = FirebaseAuth.getInstance()
 
         val fragmentManager = supportFragmentManager
         val transaction = fragmentManager.beginTransaction()
+
+//        var btn_goHome = findViewById<Button>(R.id.goHome)
+//        btn_goHome.setOnClickListener {
+//            transaction.replace(R.id.fragmentUsed, IntroHomeFragment()).commit()
+//        }
 
         transaction.replace(R.id.fragmentUsed, IntroHomeFragment()).commit()
 
@@ -79,7 +95,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         when (item.itemId) {
             R.id.nav_intro1 -> {
-                transaction.replace(R.id.fragmentUsed, TutorialFrontpageFragment()).addToBackStack("Frag1").commit()
+                transaction.replace(R.id.fragmentUsed, Intro1HelloWorldFragment()).addToBackStack("Frag1").commit()
             }
             R.id.nav_intro2 -> {
                 transaction.replace(R.id.fragmentUsed, Intro2VariablesBasicTypesFragment()).addToBackStack("Frag2").commit()
@@ -182,9 +198,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(myintent)
             }
 
+            R.id.about -> {
+                transaction.replace(R.id.fragmentUsed, CreditsFragment()).addToBackStack("Frag32").commit()
+            }
+
+            R.id.nav_editor -> {
+                transaction.replace(R.id.fragmentUsed, EditorFragment()).addToBackStack("Frag33").commit()
+            }
+
             R.id.logout -> {
                 mAuth.signOut()
-                finish()
+//                finish()
+                var myIntent = Intent (this, LoginActivity::class.java)
+                startActivity(myIntent)
             }
         }
 
