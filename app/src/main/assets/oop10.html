@@ -34,7 +34,7 @@ fun </span><span class="kwd">eval</span><span class="pun">(</span><span class="p
                 </span><span class="kwd">throw</span><span class="pln"> </span><span class="typ">IllegalArgumentException</span><span class="pun">(</span><span class="str">"Unknown expression"</span><span class="pun">)</span><span class="pln">
         </span><span class="pun">}</span></code></pre>
 
-                                <p>In the above program, the base class <var>Expr</var> has two derived classes <var>Const</var> (represents a number) and <var>Sum</var> (represents sum of two expressions). Here, it's mandatory to use <code>else</code> branch for default condition in&nbsp;<a href="/kotlin-programming/when-expression" title="Kotlin when expression">when expression</a>.</p>
+                                <p>In the above program, the base class <var>Expr</var> has two derived classes <var>Const</var> (represents a number) and <var>Sum</var> (represents sum of two expressions). Here, it's mandatory to use <code>else</code> branch for default condition in&nbsp;<a href="https://www.programiz.com/kotlin-programming/when-expression" title="Kotlin when expression">when expression</a>.</p>
 
                                 <p>Now, if you derive a new subclass from <code>Expr</code> class, the compiler won't detect anything as <code>else</code> branch handles it which can lead to bugs. It would have been better if the compiler issued an error when we added a new subclass.</p>
 

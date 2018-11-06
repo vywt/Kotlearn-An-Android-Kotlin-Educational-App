@@ -30,7 +30,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:textSize="17dp"
-                android:text="By Victor Yeo and Fabian Lim \n AY2018/19S1 IS3261 Project" />
+                android:textAlignment="center"
+                android:text="By Victor Yeo and Fabian Lim\nNUS AY2018/19S1 IS3261 Project" />
 
             <TextView
                 android:id="@+id/credits_specialthanks"

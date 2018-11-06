@@ -39,7 +39,7 @@ class OOP4InheritanceFragment : Fragment() {
         }
 
         btn_previous.setOnClickListener{
-            transaction.replace(R.id.fragmentUsed, OOP4InheritanceFragment()).commit()
+            transaction.replace(R.id.fragmentUsed, OOP3GettersSettersFragment()).commit()
         }
 
         return rootView

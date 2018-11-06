@@ -220,6 +220,27 @@ class QuizFragment : Fragment() {
             option4.setTextColor(Color.WHITE)
             tv_score.setText("Score: 0")
 
+            submit.text = "SUBMIT"
+
+            var selectedAnswer : Int = 0
+
+            submit.setOnClickListener{
+                if (!option1.isChecked() && !option2.isChecked() && !option3.isChecked() && !option4.isChecked()) {
+                    Toast.makeText(getContext(), "Please select an option!", Toast.LENGTH_LONG).show()
+                } else {
+                    if (option1.isChecked()) {
+                        selectedAnswer = 1
+                    } else if (option2.isChecked()) {
+                        selectedAnswer = 2
+                    } else if (option3.isChecked()) {
+                        selectedAnswer = 3
+                    } else if (option4.isChecked()) {
+                        selectedAnswer = 4
+                    }
+                    checkAnswer(selectedAnswer, quizQuestion, option1, option2, option3, option4, questionNumber, radioGroup, tv_score, submit, bottomSheetBehavior, wb)
+                }
+            }
+
             startActivity(myIntent)
         }
 

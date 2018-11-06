@@ -17,9 +17,9 @@ class WelcomeActivity : AppCompatActivity() {
             "Learn kotlin!",
             "Test your understanding",
             "Watch from the best",
-            "Example Solutions",
+            "Practice on the go",
             "Discuss and Learn Togther!")
-    var descriptions: Array<String?> = arrayOf("Kotlearn is an application that lets you learn kotlin easily and effectively\n\n >>> Slide Right >>>",
+    var descriptions: Array<String?> = arrayOf("Kotlearn is an application that lets you learn kotlin easily and effectively\n\n" + ">>> Slide Right >>>",
             "Using tutorials, you can learn all about how to use Kotlin\n\n" +
                     " >>> Slide Right >>>",
             "Attempt Kotlin quizzes equipped with full fledged explanations!\n\n" +

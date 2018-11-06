@@ -40,7 +40,7 @@ class FlowControl5BreakFragment : Fragment() {
         }
 
         btn_previous.setOnClickListener{
-            transaction.replace(R.id.fragmentUsed, Intro4TypeConversionFragment()).commit()
+            transaction.replace(R.id.fragmentUsed, FlowControl4ForFragment()).commit()
         }
 
         return rootView

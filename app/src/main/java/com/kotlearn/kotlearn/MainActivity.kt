@@ -12,6 +12,8 @@ import android.widget.Button
 import com.google.firebase.auth.FirebaseAuth
 import com.kotlearn.kotlearn.LearnThroughTutorials.*
 import com.kotlearn.kotlearn.LearnThroughVideos.LearnThroughVideoFragment
+import com.kotlearn.kotlearn.R.id.drawer_layout
+import com.kotlearn.kotlearn.R.id.nav_view
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
@@ -94,6 +96,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val transaction = fragmentManager.beginTransaction()
 
         when (item.itemId) {
+            R.id.nav_home -> {
+                transaction.replace(R.id.fragmentUsed, IntroHomeFragment()).addToBackStack("Frag0").commit()
+            }
             R.id.nav_intro1 -> {
                 transaction.replace(R.id.fragmentUsed, Intro1HelloWorldFragment()).addToBackStack("Frag1").commit()
             }
@@ -209,7 +214,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_share -> {
                  val intent = Intent()
                 intent.action = Intent.ACTION_SEND
-                intent.putExtra(Intent.EXTRA_TEXT, "Hey, try out Kotlearn, the easiest yet most effective way of learning Kotlearn! Download using this link - www.google.com")
+                intent.putExtra(Intent.EXTRA_TEXT, "Hey, try out Kotlearn, the easiest yet most effective way of learning Kotlearn! Download using this link - https://play.google.com/store/apps/details?id=com.kotlearn.kotlearn")
                 intent.type = "text/plain"
                 startActivity(Intent.createChooser(intent, "Share Kotlearn via... "))
             }

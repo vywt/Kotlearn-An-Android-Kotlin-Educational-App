@@ -1,308 +1,370 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
-    android:orientation="vertical"
     tools:showIn="@layout/app_bar_main">
 
-    <TextView
-        android:id="@+id/videopage_title"
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/introhometv"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:backgroundTint="@color/diff_del_background"
-        />
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false"
+        android:rowCount="3"
+        android:padding="10dp">
 
-    <!--android:background="@drawable/ic_launcher_foreground"-->
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <ImageButton
+        <android.support.v7.widget.CardView
             android:id="@+id/learnthroughwords"
-            android:background="@null"
-            android:layout_width="wrap_content"
-            android:scaleType="fitXY"
-            android:layout_weight="1"
-            android:padding="1dp"
-            android:adjustViewBounds="true"
-            android:layout_height="wrap_content"
-            android:src="@drawable/learnthroughwords"/>
-
-        <ImageButton
-            android:id="@+id/learnthroughvideos"
-            android:background="@null"
-            android:layout_width="wrap_content"
-            android:scaleType="fitXY"
-            android:layout_weight="1"
-            android:padding="1dp"
-            android:adjustViewBounds="true"
-            android:layout_height="wrap_content"
-            android:src="@drawable/learnthroughvideos"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/learnthroughpractice"
-            android:background="@null"
-            android:layout_width="wrap_content"
-            android:scaleType="fitXY"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:padding="1dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/learnthroughpractice"/>
-
-        <ImageButton
-            android:id="@+id/learnthroughquestions"
-            android:background="@null"
-            android:layout_width="wrap_content"
-            android:scaleType="fitXY"
-            android:layout_weight="1"
-            android:padding="1dp"
-            android:adjustViewBounds="true"
-            android:layout_height="wrap_content"
-            android:src="@drawable/learnthroughquestions"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-        <ImageButton
-            android:id="@+id/community"
-            android:background="@null"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:padding="1dp"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
             android:layout_height="0dp"
-            android:src="@drawable/community"/>
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="10dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="4dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/tutorialwhite"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"/>
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="Learning\nby Words"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    ></TextView>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/learnthroughvideos"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="10dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="4dp"
+            >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:orientation="vertical">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/videowhite"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="Learning\nby Watching"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    ></TextView>
+    </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/learnthroughquestions"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="10dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="4dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/quizwhite"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="Learning\nby Questions"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    ></TextView>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/learnthroughpractice"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="10dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="4dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/practicewhite"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="Learning\nby Practicing"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    ></TextView>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/community"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="10dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="4dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/communitywhite"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="Learning\nwith others"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    ></TextView>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/about"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="10dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="4dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/aboutwhite"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="About App\nand credits"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    ></TextView>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </GridLayout>
 
 
-</LinearLayout>
+</RelativeLayout>
 
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+
+
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
     <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
     <!--xmlns:tools="http://schemas.android.com/tools"-->
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="match_parent"-->
-    <!--android:background="@drawable/ic_launcher_foreground"-->
+    <!--android:background="@drawable/background"-->
+
     <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
     <!--tools:context=".MainActivity"-->
     <!--android:orientation="vertical"-->
     <!--tools:showIn="@layout/app_bar_main">-->
-    <!---->
-    <!---->
 
-    <!--<GridLayout-->
+    <!--<TextView-->
+        <!--android:id="@+id/videopage_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/introhometv"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="20dp"-->
+        <!--android:backgroundTint="@color/diff_del_background"-->
+        <!--/>-->
+
+    <!--&lt;!&ndash;android:background="@drawable/ic_launcher_foreground"&ndash;&gt;-->
+
+    <!--<LinearLayout-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="0dp"-->
         <!--android:layout_weight="1"-->
-        <!--android:columnCount="2"-->
-        <!--android:alignmentMode="alignMargins"-->
-        <!--android:columnOrderPreserved="false"-->
-        <!--android:rowCount="3"-->
-        <!--android:padding="14dp">-->
+        <!--android:orientation="horizontal">-->
 
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:id="@+id/cv1"-->
+        <!--<ImageButton-->
+            <!--android:id="@+id/learnthroughwords"-->
+            <!--android:background="@null"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:layout_weight="1"-->
+            <!--android:padding="1dp"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/learnthroughwords"/>-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/learnthroughvideos"-->
+            <!--android:background="@null"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:layout_weight="1"-->
+            <!--android:padding="1dp"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/learnthroughvideos"/>-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/learnthroughpractice"-->
+            <!--android:background="@null"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:layout_weight="1"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:padding="1dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/learnthroughpractice"/>-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/learnthroughquestions"-->
+            <!--android:background="@null"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:layout_weight="1"-->
+            <!--android:padding="1dp"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/learnthroughquestions"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/community"-->
+            <!--android:background="@null"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:padding="1dp"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:adjustViewBounds="true"-->
             <!--android:layout_height="0dp"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_columnWeight="1"-->
-            <!--android:layout_rowWeight="1"-->
-            <!--android:layout_marginBottom="16dp"-->
-            <!--android:layout_marginLeft="16dp"-->
-            <!--android:layout_marginRight="16dp"-->
-            <!--app:cardElevation="8dp"-->
-            <!--app:cardCornerRadius="8dp"-->
-            <!--&gt;-->
-            <!--<RelativeLayout-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center_horizontal|center_vertical"-->
-                <!--android:orientation="vertical">-->
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:layout_alignParentBottom="true"-->
-                    <!--android:layout_alignParentRight="true"-->
-                    <!--android:layout_margin="10dp"-->
-                    <!--android:text="Introduction"-->
-                    <!--&gt;</TextView>-->
-            <!--</RelativeLayout>-->
+            <!--android:src="@drawable/community"/>-->
 
-        <!--</android.support.v7.widget.CardView>-->
-
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:id="@+id/cv2"-->
-            <!--android:layout_height="0dp"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_columnWeight="1"-->
-            <!--android:layout_rowWeight="1"-->
-            <!--android:layout_marginBottom="16dp"-->
-            <!--android:layout_marginLeft="16dp"-->
-            <!--android:layout_marginRight="16dp"-->
-            <!--app:cardElevation="8dp"-->
-            <!--app:cardCornerRadius="8dp"-->
-            <!--&gt;-->
-            <!--<LinearLayout-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center_horizontal|center_vertical"-->
-                <!--android:layout_margin="16dp"-->
-                <!--android:orientation="vertical">-->
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:text="Getting Started"-->
-                    <!--&gt;</TextView>-->
-            <!--</LinearLayout>-->
-
-        <!--</android.support.v7.widget.CardView>-->
-
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:id="@+id/cv3"-->
-            <!--android:layout_height="0dp"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_columnWeight="1"-->
-            <!--android:layout_rowWeight="1"-->
-            <!--android:layout_marginBottom="16dp"-->
-            <!--android:layout_marginLeft="16dp"-->
-            <!--android:layout_marginRight="16dp"-->
-            <!--app:cardElevation="8dp"-->
-            <!--app:cardCornerRadius="8dp"-->
-            <!--&gt;-->
-            <!--<LinearLayout-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center_horizontal|center_vertical"-->
-                <!--android:layout_margin="16dp"-->
-                <!--android:orientation="vertical">-->
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:text="Basics"-->
-                    <!--&gt;</TextView>-->
-            <!--</LinearLayout>-->
-
-        <!--</android.support.v7.widget.CardView>-->
-
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:id="@+id/cv4"-->
-            <!--android:layout_height="0dp"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_columnWeight="1"-->
-            <!--android:layout_rowWeight="1"-->
-            <!--android:layout_marginBottom="16dp"-->
-            <!--android:layout_marginLeft="16dp"-->
-            <!--android:layout_marginRight="16dp"-->
-            <!--app:cardElevation="8dp"-->
-            <!--app:cardCornerRadius="8dp"-->
-            <!--&gt;-->
-            <!--<LinearLayout-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center_horizontal|center_vertical"-->
-                <!--android:layout_margin="16dp"-->
-                <!--android:orientation="vertical">-->
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:text="Classes and Objects"-->
-                    <!--&gt;</TextView>-->
-            <!--</LinearLayout>-->
-
-        <!--</android.support.v7.widget.CardView>-->
-
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:id="@+id/cv5"-->
-            <!--android:layout_height="0dp"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_columnWeight="1"-->
-            <!--android:layout_rowWeight="1"-->
-            <!--android:layout_marginBottom="16dp"-->
-            <!--android:layout_marginLeft="16dp"-->
-            <!--android:layout_marginRight="16dp"-->
-            <!--app:cardElevation="8dp"-->
-            <!--app:cardCornerRadius="8dp"-->
-            <!--&gt;-->
-            <!--<LinearLayout-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center_horizontal|center_vertical"-->
-                <!--android:layout_margin="16dp"-->
-                <!--android:orientation="vertical">-->
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:text="Functions and Lambdas"-->
-                    <!--&gt;</TextView>-->
-            <!--</LinearLayout>-->
-
-        <!--</android.support.v7.widget.CardView>-->
-
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:id="@+id/cv6"-->
-            <!--android:layout_height="0dp"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_columnWeight="1"-->
-            <!--android:layout_rowWeight="1"-->
-            <!--android:layout_marginBottom="16dp"-->
-            <!--android:layout_marginLeft="16dp"-->
-            <!--android:layout_marginRight="16dp"-->
-            <!--app:cardElevation="8dp"-->
-            <!--app:cardCornerRadius="8dp"-->
-            <!--&gt;-->
-            <!--<LinearLayout-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center_horizontal|center_vertical"-->
-                <!--android:layout_margin="16dp"-->
-                <!--android:orientation="vertical">-->
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:text="Others"-->
-                    <!--&gt;</TextView>-->
-            <!--</LinearLayout>-->
-
-        <!--</android.support.v7.widget.CardView>-->
-
-    <!--</GridLayout>-->
+    <!--</LinearLayout>-->
 
 
 <!--</LinearLayout>-->
