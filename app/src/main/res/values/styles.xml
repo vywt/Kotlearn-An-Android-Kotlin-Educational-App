@@ -13,8 +13,12 @@
         <item name="windowNoTitle">true</item>
         <item name="android:background">@drawable/background1</item>
     </style>
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:background">@drawable/background1</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" >
+        <item name="android:background">@drawable/background1</item>
+    </style>
     <style name="SplashTheme" parent="AppTheme.NoActionBar">
 
 
