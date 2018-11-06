@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-54:12
+ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-51:12
 MERGED from [com.google.firebase:firebase-core:11.6.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/firebase-core-11.6.0.aar/b49b8d37bbe000119182a4ed42af3259/AndroidManifest.xml:2:1-6:12
 MERGED from [com.android.support:design:28.0.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/6875a976999782684873d65fb21a7a2e/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:cardview-v7:28.0.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/a7a6cdc0591ab0ca7d9da161b3df281b/AndroidManifest.xml:17:1-22:12
@@ -59,25 +59,25 @@ MERGED from [com.google.android.gms:play-services-tasks-license:11.6.0] /Users/v
 MERGED from [com.google.firebase:firebase-database-connection-license:11.6.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-license-11.6.0.aar/d925132e96f2136002b27a3ad27826e1/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-license-11.6.0.aar/6a58f448a3a2df1430ed1cc0a94cbee8/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-iid-license:11.6.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/firebase-iid-license-11.6.0.aar/8474b177802ae00434c9dffc368d381a/AndroidManifest.xml:2:1-6:12
-INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-51:12
 	package
 		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:3:5-36
 		INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-54:12
-		INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml
-	android:versionCode
-		INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-54:12
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:1-51:12
 		INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:5:5-67
+ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:6:5-67
 MERGED from [com.google.firebase:firebase-analytics:11.6.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.0.aar/93462191737412c6d7961ce8dc4176e0/AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-analytics:11.6.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.0.aar/93462191737412c6d7961ce8dc4176e0/AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-analytics-impl:11.6.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.0.aar/9b2d70f33e2b7b6644d7083798a32036/AndroidManifest.xml:20:5-66
@@ -85,21 +85,9 @@ MERGED from [com.google.firebase:firebase-analytics-impl:11.6.0] /Users/victor/.
 MERGED from [com.google.firebase:firebase-iid:11.6.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.0.aar/933ef6f6ff104fca31a7524b5d87d236/AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-iid:11.6.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.0.aar/933ef6f6ff104fca31a7524b5d87d236/AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:5:22-64
-uses-permission#android.permission.GET_ACCOUNTS
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:7:5-71
-	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:7:22-68
-uses-permission#android.permission.READ_PROFILE
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:8:5-71
-	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:8:22-68
-uses-permission#android.permission.READ_CONTACTS
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:9:5-72
-	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:9:22-69
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:6:22-64
 application
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:11:5-52:19
+ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:8:5-49:19
 MERGED from [com.google.firebase:firebase-core:11.6.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/firebase-core-11.6.0.aar/b49b8d37bbe000119182a4ed42af3259/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-core:11.6.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/firebase-core-11.6.0.aar/b49b8d37bbe000119182a4ed42af3259/AndroidManifest.xml:5:5-20
 MERGED from [com.android.support:design:28.0.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/6875a976999782684873d65fb21a7a2e/AndroidManifest.xml:22:5-20
@@ -151,83 +139,83 @@ MERGED from [com.google.firebase:firebase-iid-license:11.6.0] /Users/victor/.gra
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] /Users/victor/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/086389194e7dc704fd49b01b5cc6a3fc/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:16:9-35
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:13:9-35
 	android:label
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:14:9-41
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:11:9-41
 	android:roundIcon
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:15:9-54
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:12:9-54
 	android:icon
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:13:9-43
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:10:9-43
 	android:allowBackup
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:17:9-40
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:14:9-40
 activity#com.kotlearn.kotlearn.LoginActivity
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:18:9-22:66
+ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:15:9-19:66
 	android:screenOrientation
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:21:13-49
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:18:13-49
 	android:windowSoftInputMode
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:20:13-55
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:17:13-55
 	android:theme
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:22:13-63
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:19:13-63
 	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:19:13-42
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:16:13-42
 activity#com.kotlearn.kotlearn.SplashScreenActivity
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:23:9-29:20
+ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:20:9-26:20
 	android:theme
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:24:13-63
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:21:13-63
 	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:23:19-55
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:20:19-55
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:25:9-28:25
+ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:22:9-25:25
 action#android.intent.action.MAIN
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:26:13-65
+ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:23:13-65
 	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:26:21-62
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:23:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:27:13-73
+ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:24:13-73
 	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:27:23-70
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:24:23-70
 meta-data#preloaded_fonts
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:31:9-33:57
+ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:28:9-30:57
 	android:resource
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:33:13-54
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:30:13-54
 	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:32:13-43
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:29:13-43
 activity#com.kotlearn.kotlearn.MainActivity
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:34:9-37:66
+ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:31:9-34:66
 	android:screenOrientation
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:36:13-49
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:33:13-49
 	android:theme
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:37:13-63
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:34:13-63
 	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:35:13-41
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:32:13-41
 activity#com.kotlearn.kotlearn.QuizCompletion
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:38:9-41:66
+ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:35:9-38:66
 	android:screenOrientation
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:40:13-49
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:37:13-49
 	android:theme
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:41:13-63
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:38:13-63
 	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:39:13-43
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:36:13-43
 activity#com.kotlearn.kotlearn.ChatroomActivity
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:42:9-46:57
+ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:39:9-43:57
 	android:screenOrientation
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:44:13-49
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:41:13-49
 	android:windowSoftInputMode
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:46:13-55
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:43:13-55
 	android:theme
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:45:13-63
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:42:13-63
 	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:43:13-45
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:40:13-45
 activity#com.kotlearn.kotlearn.WelcomeActivity
-ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:48:9-50:66
+ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:45:9-47:66
 	android:screenOrientation
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:49:13-49
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:46:13-49
 	android:theme
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:50:13-63
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:47:13-63
 	android:name
-		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:48:19-49
+		ADDED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml:45:19-49
 uses-sdk
 INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/victor/Desktop/Kotlearn/app/src/main/AndroidManifest.xml

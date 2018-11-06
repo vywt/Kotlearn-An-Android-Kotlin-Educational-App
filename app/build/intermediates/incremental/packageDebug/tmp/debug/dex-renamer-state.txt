@@ -1,13 +1,4 @@
-#Tue Nov 06 14:56:29 SGT 2018
-path.3=classes.dex
-path.2=classes.dex
-path.1=classes.dex
+#Tue Nov 06 15:37:43 SGT 2018
+base.0=/Users/victor/Desktop/Kotlearn/app/build/intermediates/transforms/dexMerger/debug/17
 path.0=classes.dex
-renamed.3=classes4.dex
-renamed.2=classes3.dex
-renamed.1=classes2.dex
 renamed.0=classes.dex
-base.3=/Users/victor/Desktop/Kotlearn/app/build/intermediates/transforms/dexMerger/debug/14
-base.2=/Users/victor/Desktop/Kotlearn/app/build/intermediates/transforms/dexMerger/debug/13
-base.1=/Users/victor/Desktop/Kotlearn/app/build/intermediates/transforms/dexMerger/debug/15
-base.0=/Users/victor/Desktop/Kotlearn/app/build/intermediates/transforms/dexMerger/debug/12
