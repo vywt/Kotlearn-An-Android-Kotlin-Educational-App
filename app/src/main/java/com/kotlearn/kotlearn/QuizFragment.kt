@@ -1,11 +1,9 @@
 package com.kotlearn.kotlearn
 
-import android.app.AlertDialog
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
-import android.provider.MediaStore
 import android.support.design.widget.BottomSheetBehavior
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -13,8 +11,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.widget.*
-import kotlinx.android.synthetic.*
-import org.w3c.dom.Text
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -49,7 +45,7 @@ class QuizFragment : Fragment() {
         val bottomSheetBehavior : BottomSheetBehavior<View> = BottomSheetBehavior.from(bottomSheet)
         bottomSheetBehavior.setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
             override fun onSlide(bottomSheet: View, slideOffSet: Float) {
-                Toast.makeText(getContext(), "Onslide function called", Toast.LENGTH_LONG).show()
+//                Toast.makeText(getContext(), "Onslide function called", Toast.LENGTH_LONG).show()
             }
 
             override fun onStateChanged(bottomSheet: View, newState: Int) {

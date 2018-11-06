@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".QuizCompletion">
 
     <ImageView
@@ -16,12 +17,21 @@
         android:layout_marginTop="60dp"
         app:srcCompat="@drawable/logosquaretransparentwhitelarger" />
 
+    <TextView
+        android:id="@+id/loginPageTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="10dp"
+        android:text="@string/loginPage"/>
+
     <EditText
     android:id="@+id/emailText"
     android:layout_width="292dp"
     android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:layout_below="@+id/logo"
+        android:layout_below="@+id/loginPageTv"
         android:layout_centerHorizontal="true"
     android:ems="10"
     android:hint="Email"
@@ -38,29 +48,33 @@
     android:hint="Password"
     android:inputType="textPassword" />
 
-    <Button
-    android:id="@+id/btnRegister"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/btnRegister"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/password"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="100dp"/>
-
-    <Button
-    android:id="@+id/btnLogin"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/btnLogin"
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/password"
         android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:windowSoftInputMode="adjustResize"
+        android:orientation="vertical">
 
-        android:layout_toRightOf="@+id/btnRegister"
-        android:layout_marginLeft="20dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="100dp"/>
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnLogin"
+            />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnRegister"
+           />
+
+    </LinearLayout>
+
+
+
 
 </RelativeLayout>
 

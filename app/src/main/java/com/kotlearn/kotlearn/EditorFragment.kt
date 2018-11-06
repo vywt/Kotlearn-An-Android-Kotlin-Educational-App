@@ -25,7 +25,17 @@ class EditorFragment : Fragment() {
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_editor, container, false)
         val wb = rootView.findViewById<WebView>(R.id.wbEditor)
-        wb.loadUrl("https://try.kotlinlang.org/#/Examples/Hello,%20world!/Simplest%20version/Simplest%20version.kt");
+        wb.getSettings().setJavaScriptEnabled(true);
+        wb.getSettings().setLoadWithOverviewMode(true);
+        wb.getSettings().setUseWideViewPort(true);
+        wb.getSettings().setDomStorageEnabled(true);
+        wb.getSettings().setSupportZoom(true);
+        wb.getSettings().setBuiltInZoomControls(true);
+        wb.getSettings().setDisplayZoomControls(false);
+
+        wb.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
+        wb.setScrollbarFadingEnabled(false);
+        wb.loadUrl("https://rextester.com/l/kotlin_online_compiler");
         return rootView
     }
 

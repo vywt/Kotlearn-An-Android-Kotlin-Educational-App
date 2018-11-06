@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".ChatroomActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.7"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_weight="1"
         android:text="Chatbox"
         android:textStyle="bold"
         android:textSize="35dp"
@@ -24,7 +23,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="6"
-        android:layout_margin="13dp"
         android:scrollbars="vertical"
         android:scrollbarStyle="insideInset"
         />
@@ -32,9 +30,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginRight="13dp"
-        android:layout_marginBottom="10dp"
         android:orientation="horizontal"
         android:layout_weight="1">
 

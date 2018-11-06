@@ -35,7 +35,9 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.kotlearn.kotlearn.LoginActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.kotlearn.kotlearn.SplashScreenActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" >
@@ -52,15 +54,20 @@
 
         <activity
             android:name="com.kotlearn.kotlearn.MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name="com.kotlearn.kotlearn.QuizCompletion"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name="com.kotlearn.kotlearn.ChatroomActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.kotlearn.kotlearn.WelcomeActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
 
         <receiver

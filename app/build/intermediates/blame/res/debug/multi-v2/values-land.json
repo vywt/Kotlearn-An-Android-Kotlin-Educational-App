@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/fabian/Documents/GitHub/Kotlearn/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "/Users/victor/Desktop/Kotlearn/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/fabian/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/ab4761459462140fc5946de1c26fbfb7/res/values-land/values-land.xml",
+                    "source": "/Users/victor/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/6875a976999782684873d65fb21a7a2e/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/fabian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/36531c88eb8e8760025de51739e61a44/res/values-land/values-land.xml",
+                    "source": "/Users/victor/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/5b3f767b15e6fbc892fdf883cb8b91c4/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
