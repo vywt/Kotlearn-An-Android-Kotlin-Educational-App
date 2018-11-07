@@ -3,6 +3,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-
     <color name="black_overlay">#66000000</color>
+    <color name="pastel_blue">#87CEFA</color>
+    <color name="pastel_red">#ffb3ba</color>
+    <color name="pastel_orange">#ffa500</color>
+    <color name="pastel_green">#66cdaa</color>
+    <color name="pastel_red2">#FA8072</color>
+    <color name="pastel_grey">#C0C0C0</color>
+
 </resources>

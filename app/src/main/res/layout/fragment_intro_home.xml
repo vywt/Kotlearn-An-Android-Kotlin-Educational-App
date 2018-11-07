@@ -35,13 +35,14 @@
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:orientation="vertical">
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:id="@+id/learnthroughwords_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:src="@drawable/tutorialwhite"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"/>
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -52,8 +53,8 @@
                     android:text="Learning\nby Words"
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
-                    android:textSize="20dp"
-                    ></TextView>
+                    android:textColor="@color/pastel_red"
+                    android:textSize="20dp"/>
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>
@@ -66,21 +67,22 @@
             android:layout_rowWeight="1"
             android:layout_margin="10dp"
             app:cardElevation="8dp"
-            app:cardCornerRadius="4dp"
-            >
-    <RelativeLayout
+            app:cardCornerRadius="4dp">
+
+            <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal|center_vertical"
         android:orientation="vertical">
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:id="@+id/learnthroughvideos_images"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:src="@drawable/videowhite"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"/>
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -91,8 +93,8 @@
                     android:text="Learning\nby Watching"
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
-                    android:textSize="20dp"
-                    ></TextView>
+                    android:textColor="@color/pastel_red2"
+                    android:textSize="20dp" />
     </RelativeLayout>
 
         </android.support.v7.widget.CardView>
@@ -113,13 +115,14 @@
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:orientation="vertical">
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:id="@+id/learnthroughquestions_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:src="@drawable/quizwhite"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"/>
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -131,7 +134,8 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
                     android:textSize="20dp"
-                    ></TextView>
+                    android:textColor="@color/pastel_orange"
+                   />
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>
@@ -152,13 +156,14 @@
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:orientation="vertical">
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:id="@+id/learnthroughpractice_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:src="@drawable/practicewhite"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"/>
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -170,7 +175,8 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
                     android:textSize="20dp"
-                    ></TextView>
+                    android:textColor="@color/pastel_blue"
+                    />
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>
@@ -191,13 +197,14 @@
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:orientation="vertical">
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:id="@+id/community_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:src="@drawable/communitywhite"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"/>
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -209,7 +216,8 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
                     android:textSize="20dp"
-                    ></TextView>
+                    android:textColor="@color/pastel_green"
+                    />
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>
@@ -230,13 +238,14 @@
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:orientation="vertical">
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:id="@+id/about_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:src="@drawable/aboutwhite"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"/>
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -248,124 +257,11 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
                     android:textSize="20dp"
-                    ></TextView>
+                    android:textColor="@color/pastel_grey"
+                    />
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>
 
     </GridLayout>
-
-
 </RelativeLayout>
-
-
-
-    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:background="@drawable/background"-->
-
-    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
-    <!--tools:context=".MainActivity"-->
-    <!--android:orientation="vertical"-->
-    <!--tools:showIn="@layout/app_bar_main">-->
-
-    <!--<TextView-->
-        <!--android:id="@+id/videopage_title"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="@string/introhometv"-->
-        <!--android:textAlignment="center"-->
-        <!--android:textStyle="bold"-->
-        <!--android:textSize="20dp"-->
-        <!--android:backgroundTint="@color/diff_del_background"-->
-        <!--/>-->
-
-    <!--&lt;!&ndash;android:background="@drawable/ic_launcher_foreground"&ndash;&gt;-->
-
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="1"-->
-        <!--android:orientation="horizontal">-->
-
-        <!--<ImageButton-->
-            <!--android:id="@+id/learnthroughwords"-->
-            <!--android:background="@null"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:scaleType="fitXY"-->
-            <!--android:layout_weight="1"-->
-            <!--android:padding="1dp"-->
-            <!--android:adjustViewBounds="true"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:src="@drawable/learnthroughwords"/>-->
-
-        <!--<ImageButton-->
-            <!--android:id="@+id/learnthroughvideos"-->
-            <!--android:background="@null"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:scaleType="fitXY"-->
-            <!--android:layout_weight="1"-->
-            <!--android:padding="1dp"-->
-            <!--android:adjustViewBounds="true"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:src="@drawable/learnthroughvideos"/>-->
-
-
-    <!--</LinearLayout>-->
-
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="1"-->
-        <!--android:orientation="horizontal">-->
-
-        <!--<ImageButton-->
-            <!--android:id="@+id/learnthroughpractice"-->
-            <!--android:background="@null"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:scaleType="fitXY"-->
-            <!--android:layout_weight="1"-->
-            <!--android:adjustViewBounds="true"-->
-            <!--android:padding="1dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:src="@drawable/learnthroughpractice"/>-->
-
-        <!--<ImageButton-->
-            <!--android:id="@+id/learnthroughquestions"-->
-            <!--android:background="@null"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:scaleType="fitXY"-->
-            <!--android:layout_weight="1"-->
-            <!--android:padding="1dp"-->
-            <!--android:adjustViewBounds="true"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:src="@drawable/learnthroughquestions"/>-->
-
-    <!--</LinearLayout>-->
-
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="1"-->
-        <!--android:orientation="vertical">-->
-
-        <!--<ImageButton-->
-            <!--android:id="@+id/community"-->
-            <!--android:background="@null"-->
-            <!--android:layout_gravity="center_horizontal"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_weight="1"-->
-            <!--android:padding="1dp"-->
-            <!--android:scaleType="fitXY"-->
-            <!--android:adjustViewBounds="true"-->
-            <!--android:layout_height="0dp"-->
-            <!--android:src="@drawable/community"/>-->
-
-    <!--</LinearLayout>-->
-
-
-<!--</LinearLayout>-->
-

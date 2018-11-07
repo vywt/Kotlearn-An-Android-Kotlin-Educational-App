@@ -1,6 +1,9 @@
 package com.kotlearn.kotlearn
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.PorterDuff
+import android.media.Image
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.CardView
@@ -8,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.ImageView
 import com.kotlearn.kotlearn.LearnThroughTutorials.Intro1HelloWorldFragment
 import com.kotlearn.kotlearn.LearnThroughVideos.LearnThroughVideoFragment
 
@@ -28,9 +32,55 @@ class IntroHomeFragment : Fragment() {
         val btnabout = rootview.findViewById<CardView>(R.id.about)
 
 
-
         val fragmentManager = getFragmentManager()
         val transaction = fragmentManager!!.beginTransaction()
+
+        val wordsIcon = rootview.findViewById<ImageView>(R.id.learnthroughwords_image)
+        wordsIcon.drawable.setColorFilter(Color.parseColor("#ffb3ba"), PorterDuff.Mode.MULTIPLY)
+
+
+        val videosIcon = rootview.findViewById<ImageView>(R.id.learnthroughvideos_images)
+        videosIcon.drawable.setColorFilter(Color.parseColor("#FA8072"), PorterDuff.Mode.MULTIPLY)
+
+
+        val questionsIcon = rootview.findViewById<ImageView>(R.id.learnthroughquestions_image)
+        questionsIcon.drawable.setColorFilter(Color.parseColor("#ffa500"), PorterDuff.Mode.MULTIPLY)
+
+
+        val practiceIcon = rootview.findViewById<ImageView>(R.id.learnthroughpractice_image)
+        practiceIcon.drawable.setColorFilter(Color.parseColor("#87CEFA"), PorterDuff.Mode.MULTIPLY)
+
+
+        val communityIcon = rootview.findViewById<ImageView>(R.id.community_image)
+        communityIcon.drawable.setColorFilter(Color.parseColor("#66cdaa"), PorterDuff.Mode.MULTIPLY)
+
+
+        val aboutIcon = rootview.findViewById<ImageView>(R.id.about_image)
+        aboutIcon.drawable.setColorFilter(Color.parseColor("#C0C0C0"), PorterDuff.Mode.MULTIPLY)
+
+
+
+//        val wordsIcon = rootview.findViewById<ImageView>(R.id.learnthroughwords_image)
+//        wordsIcon.drawable.setColorFilter(Color.parseColor("#87CEFA"), PorterDuff.Mode.MULTIPLY)
+//
+//        val videosIcon = rootview.findViewById<ImageView>(R.id.learnthroughvideos_images)
+//        videosIcon.drawable.setColorFilter(Color.parseColor("#ffb3ba"), PorterDuff.Mode.MULTIPLY)
+//
+//
+//        val questionsIcon = rootview.findViewById<ImageView>(R.id.learnthroughquestions_image)
+//        questionsIcon.drawable.setColorFilter(Color.parseColor("#ffa500"), PorterDuff.Mode.MULTIPLY)
+//
+//        val practiceIcon = rootview.findViewById<ImageView>(R.id.learnthroughpractice_image)
+//        practiceIcon.drawable.setColorFilter(Color.parseColor("#66cdaa"), PorterDuff.Mode.MULTIPLY)
+//
+//        val communityIcon = rootview.findViewById<ImageView>(R.id.community_image)
+//        communityIcon.drawable.setColorFilter(Color.parseColor("#FA8072"), PorterDuff.Mode.MULTIPLY)
+//
+//
+//        val aboutIcon = rootview.findViewById<ImageView>(R.id.about_image)
+//        aboutIcon.drawable.setColorFilter(Color.parseColor("#C0C0C0"), PorterDuff.Mode.MULTIPLY)
+//
+
 
         btnwords.setOnClickListener {
             transaction.replace(R.id.fragmentUsed, Intro1HelloWorldFragment()).commit()
